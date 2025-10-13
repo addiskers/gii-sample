@@ -32,7 +32,6 @@ from typing import Optional, Dict, List, Any
 import concurrent.futures
 import threading
 
-# Ball configuration for market impacting factors
 BALL_VALUES = {"High": 3, "Medium": 2, "Low": 1}
 BALL_COLOR = RGBColor(108, 63, 197)  # Purple
 EMPTY_COLOR = RGBColor(255, 255, 255)  # White
@@ -129,16 +128,13 @@ def replace_text_preserve_format(paragraph, old_text, new_text):
     
     runs = list(paragraph.runs)
     
-    # Simple case: placeholder is in a single run
     for run in runs:
         if old_text in run.text:
             run.text = run.text.replace(old_text, new_text)
             return True
     
-    # Complex case: placeholder spans multiple runs
     new_full_text = full_text.replace(old_text, new_text)
     
-    # Keep first run's formatting
     if runs:
         first_run = runs[0]
         font_info = {
@@ -149,14 +145,11 @@ def replace_text_preserve_format(paragraph, old_text, new_text):
             'color': first_run.font.color.rgb if first_run.font.color.type == 1 else None
         }
         
-        # Clear paragraph
         for run in runs:
             run.text = ''
         
-        # Set new text in first run
         first_run.text = new_full_text
         
-        # Restore formatting
         if font_info['name']:
             first_run.font.name = font_info['name']
         if font_info['size']:
@@ -184,10 +177,8 @@ def apply_success_factors_to_slide(slide, success_factors_data):
     
     replacements = 0
     
-    # Process all shapes
     for shape_idx, shape in enumerate(slide.shapes):
         
-        # Check text frames
         if shape.has_text_frame:
             for para_idx, paragraph in enumerate(shape.text_frame.paragraphs):
                 full_text = paragraph.text
@@ -297,8 +288,7 @@ def apply_success_factors_to_slide(slide, success_factors_data):
 
 def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
     """Build a single batch prompt for all definitions - OPTIMIZED"""
-    headline_clean = headline.replace("Global ", "").replace("global ", "")
-
+    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "")
     definitions_needed = []
     for level_0_name, level_1_dict in nested_dict.items():
         for level_1_name, level_2_dict in level_1_dict.items():
@@ -308,10 +298,9 @@ def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
             )
             definitions_needed.append({"name": level_1_name, "sub_areas": sub_areas})
 
-    # OPTIMIZED: More concise prompt for faster response
-    prompt = f"""Generate brief market definitions for {headline}.
+    prompt = f"""Generate brief definitions for {headline}.
 
-Overall market definition:
+Overall  definition:
 {headline_clean}: [Write 1-2 concise sentences]
 
 Segment definitions (1-2 sentences each):
@@ -357,10 +346,8 @@ def generate_all_definitions_batch(nested_dict: dict, headline: str) -> dict:
 
     definitions = json.loads(response.choices[0].message.content)
     
-    # OPTIMIZED: Strip extra whitespace and newlines
     cleaned_definitions = {}
     for key, value in definitions.items():
-        # Remove extra newlines and spaces
         cleaned_value = ' '.join(value.split())
         cleaned_definitions[key] = cleaned_value
     
@@ -388,7 +375,7 @@ def build_table_data(nested_dict: dict, definitions: dict, headline: str) -> lis
             definition = definitions.get(level_1_name, f"Definition for {level_1_name}")
             table_rows.append({"title": level_1_name, "definition": definition})
 
-        table_sections.append({"header": level_0_name, "rows": table_rows})
+        table_sections.append({"header": level_0_name.upper(), "rows": table_rows})
 
     return table_sections
 

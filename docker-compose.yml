@@ -11,7 +11,7 @@ services:
     volumes:
       - ./templates:/app/templates:ro
       - ./generated_ppts:/app/generated_ppts
-      - ./testppt.pptx:/app/testppt.pptx:ro
+      - ./testppt.pptx:/app/testpptgii.pptx:ro
       - ./logs:/app/logs
     ports:
       - "5020:5000"
