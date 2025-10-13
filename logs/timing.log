@@ -1,0 +1,2000 @@
+2025-09-19 11:59:56,490 - werkzeug - INFO - [background-thread] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.44:5000
+2025-09-19 11:59:56,491 - werkzeug - INFO - [background-thread] - [33mPress CTRL+C to quit[0m
+2025-09-19 11:59:56,500 - werkzeug - INFO - [background-thread] -  * Restarting with watchdog (windowsapi)
+2025-09-19 11:59:59,467 - werkzeug - WARNING - [background-thread] -  * Debugger is active!
+2025-09-19 11:59:59,470 - werkzeug - INFO - [background-thread] -  * Debugger PIN: 278-680-281
+2025-09-19 12:00:05,445 - ppt_generator - INFO - [89f9782e] - Request started: GET /
+2025-09-19 12:00:05,455 - ppt_generator - INFO - [89f9782e] - Request completed: GET / - Status: 200 - Duration: 0.01s
+2025-09-19 12:00:05,455 - werkzeug - INFO - [89f9782e] - 192.168.1.44 - - [19/Sep/2025 12:00:05] "GET / HTTP/1.1" 200 -
+2025-09-19 12:00:06,225 - ppt_generator - INFO - [f56d9a3f] - Request started: GET /favicon.ico
+2025-09-19 12:00:06,226 - ppt_generator - INFO - [f56d9a3f] - Request completed: GET /favicon.ico - Status: 404 - Duration: 0.00s
+2025-09-19 12:00:06,226 - werkzeug - INFO - [f56d9a3f] - 192.168.1.44 - - [19/Sep/2025 12:00:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-19 12:00:24,614 - ppt_generator - INFO - [1b159fd9] - Request started: POST /generate-ppt
+2025-09-19 12:00:24,615 - timing - INFO - [1b159fd9] - Starting PPT Generation Request
+2025-09-19 12:00:24,615 - ppt_generator - INFO - [1b159fd9] - Starting PowerPoint generation request
+2025-09-19 12:00:24,616 - timing - INFO - [1b159fd9] - Starting Segment Hierarchy Validation
+2025-09-19 12:00:24,617 - ppt_generator - INFO - [1b159fd9] - Validating segment hierarchy structure
+2025-09-19 12:00:24,617 - timing - INFO - [1b159fd9] - Completed Segment Hierarchy Validation in 0.00s
+2025-09-19 12:00:24,617 - timing - INFO - [1b159fd9] - Form validation completed in 0.00s
+2025-09-19 12:00:24,618 - timing - INFO - [1b159fd9] - Data extraction completed in 0.00s
+2025-09-19 12:00:24,618 - timing - INFO - [1b159fd9] - Starting Segment Input Parsing
+2025-09-19 12:00:24,618 - ppt_generator - INFO - [1b159fd9] - Parsing segment input into nested dictionary
+2025-09-19 12:00:24,618 - timing - INFO - [1b159fd9] - Completed Segment Input Parsing in 0.00s
+2025-09-19 12:00:24,619 - timing - INFO - [1b159fd9] - Context generation completed in 0.00s
+2025-09-19 12:00:24,619 - ppt_generator - INFO - [1b159fd9] - Generated context: By Technology: Machine Learning (Deep Learning, Neural Networks), Natural Language Processing
+By Application: Healthcare, Financial Services, Manufacturing
+By Region: North America, Europe, Asia-Pacific, Latin America, Middle East & Africa
+2025-09-19 12:00:24,619 - timing - INFO - [1b159fd9] - Starting TOC Data Generation
+2025-09-19 12:00:24,619 - ppt_generator - INFO - [1b159fd9] - Generating Table of Contents data
+2025-09-19 12:00:24,620 - timing - INFO - [1b159fd9] - Completed TOC Data Generation in 0.00s
+2025-09-19 12:00:24,620 - timing - INFO - [1b159fd9] - TOC generation completed in 0.00s
+2025-09-19 12:00:24,620 - ppt_generator - INFO - [1b159fd9] - Starting parallel AI content generation...
+2025-09-19 12:00:24,621 - timing - INFO - [1b159fd9] - Starting Parallel AI Content Generation
+2025-09-19 12:00:24,621 - ai_service - INFO - [1b159fd9] - Starting parallel AI content generation
+2025-09-19 12:00:24,622 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,622 - ai_service - INFO - [1b159fd9] - Generating content for executive_summary
+2025-09-19 12:00:24,622 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,623 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,623 - timing - INFO - [1b159fd9] - Starting Executive Summary Generation
+2025-09-19 12:00:24,623 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,624 - ai_service - INFO - [1b159fd9] - Generating content for market_enablers
+2025-09-19 12:00:24,624 - ai_service - INFO - [1b159fd9] - Generating content for industry_expansion
+2025-09-19 12:00:24,624 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,624 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,625 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:00:24,625 - ai_service - INFO - [1b159fd9] - Generating content for investment_challenges
+2025-09-19 12:00:24,626 - timing - INFO - [1b159fd9] - Starting Market Enablers Generation
+2025-09-19 12:00:24,626 - timing - INFO - [1b159fd9] - Starting Industry Expansion Generation
+2025-09-19 12:00:24,627 - ai_service - INFO - [1b159fd9] - Generating content for research_journals
+2025-09-19 12:00:24,627 - ai_service - INFO - [1b159fd9] - Generating content for industry_associations
+2025-09-19 12:00:24,627 - ai_service - INFO - [1b159fd9] - Generating content for company_info
+2025-09-19 12:00:24,628 - timing - INFO - [1b159fd9] - Starting Investment Challenges Generation
+2025-09-19 12:00:24,629 - timing - INFO - [1b159fd9] - Starting Research Journals Generation
+2025-09-19 12:00:24,629 - timing - INFO - [1b159fd9] - Starting Industry Associations Generation
+2025-09-19 12:00:24,630 - timing - INFO - [1b159fd9] - Starting Company Info Generation
+2025-09-19 12:00:33,536 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:00:33,548 - ai_service - INFO - [1b159fd9] - Industry associations API call completed in 8.92s
+2025-09-19 12:00:33,548 - timing - INFO - [1b159fd9] - Completed Industry Associations Generation in 8.92s
+2025-09-19 12:00:33,549 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 8.92s
+2025-09-19 12:00:33,549 - ai_service - INFO - [1b159fd9] - Completed industry_associations in 0.00s
+2025-09-19 12:00:33,759 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:00:33,762 - ai_service - INFO - [1b159fd9] - Research journals API call completed in 9.13s
+2025-09-19 12:00:33,763 - timing - INFO - [1b159fd9] - Completed Research Journals Generation in 9.13s
+2025-09-19 12:00:33,763 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 9.14s
+2025-09-19 12:00:33,763 - ai_service - INFO - [1b159fd9] - Completed research_journals in 0.00s
+2025-09-19 12:00:49,367 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:00:49,370 - ai_service - INFO - [1b159fd9] - Market enablers API call completed in 24.74s
+2025-09-19 12:00:49,370 - timing - INFO - [1b159fd9] - Completed Market Enablers Generation in 24.74s
+2025-09-19 12:00:49,371 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 24.75s
+2025-09-19 12:00:49,371 - ai_service - INFO - [1b159fd9] - Completed market_enablers in 0.00s
+2025-09-19 12:00:49,839 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:00:49,843 - ai_service - INFO - [1b159fd9] - OpenAI API call completed in 25.22s
+2025-09-19 12:00:49,844 - timing - INFO - [1b159fd9] - Completed Executive Summary Generation in 25.22s
+2025-09-19 12:00:49,845 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 25.22s
+2025-09-19 12:00:49,846 - ai_service - INFO - [1b159fd9] - Completed executive_summary in 0.00s
+2025-09-19 12:01:16,114 - ppt_generator - INFO - [ba4369de] - Request started: GET /
+2025-09-19 12:01:16,115 - ppt_generator - INFO - [ba4369de] - Request completed: GET / - Status: 200 - Duration: 0.00s
+2025-09-19 12:01:16,115 - werkzeug - INFO - [ba4369de] - 127.0.0.1 - - [19/Sep/2025 12:01:16] "GET / HTTP/1.1" 200 -
+2025-09-19 12:01:16,763 - ppt_generator - INFO - [74ad825a] - Request started: GET /favicon.ico
+2025-09-19 12:01:16,763 - ppt_generator - INFO - [74ad825a] - Request completed: GET /favicon.ico - Status: 404 - Duration: 0.00s
+2025-09-19 12:01:16,764 - werkzeug - INFO - [74ad825a] - 127.0.0.1 - - [19/Sep/2025 12:01:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-19 12:01:18,218 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-09-19 12:01:18,301 - ai_service - INFO - [1b159fd9] - Company info API call completed in 53.67s
+2025-09-19 12:01:18,301 - timing - INFO - [1b159fd9] - Completed Company Info Generation in 53.67s
+2025-09-19 12:01:18,301 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 53.68s
+2025-09-19 12:01:18,302 - ai_service - INFO - [1b159fd9] - Completed company_info in 0.00s
+2025-09-19 12:01:32,791 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:01:32,804 - ai_service - INFO - [1b159fd9] - Investment challenges API call completed in 68.17s
+2025-09-19 12:01:32,804 - timing - INFO - [1b159fd9] - Completed Investment Challenges Generation in 68.18s
+2025-09-19 12:01:32,804 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 68.18s
+2025-09-19 12:01:32,805 - ai_service - INFO - [1b159fd9] - Completed investment_challenges in 0.00s
+2025-09-19 12:01:33,208 - httpx - INFO - [1b159fd9] - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-19 12:01:33,211 - ai_service - INFO - [1b159fd9] - Industry expansion API call completed in 68.58s
+2025-09-19 12:01:33,212 - timing - INFO - [1b159fd9] - Completed Industry Expansion Generation in 68.59s
+2025-09-19 12:01:33,212 - timing - INFO - [1b159fd9] - Completed AI Content Generation in 68.59s
+2025-09-19 12:01:33,212 - ai_service - INFO - [1b159fd9] - Completed industry_expansion in 0.00s
+2025-09-19 12:01:33,213 - ai_service - INFO - [1b159fd9] - Phase 1 completed in 68.59s
+2025-09-19 12:01:33,213 - timing - INFO - [1b159fd9] - Starting AI Content Generation
+2025-09-19 12:01:33,213 - ai_service - INFO - [1b159fd9] - Generating content for industry_expansion_1
+2025-09-19 12:01:33,213 - timing - INFO - [1b159fd9] - Starting Industry Expansion 1 Generation
+2025-09-19 12:02:54,311 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\openai\\_streaming.py', reloading
+2025-09-19 12:02:54,339 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\google\\generativeai\\client.py', reloading
+2025-09-19 12:02:55,258 - werkzeug - INFO - [background-thread] -  * Restarting with watchdog (windowsapi)
+2025-09-19 12:02:58,515 - werkzeug - WARNING - [background-thread] -  * Debugger is active!
+2025-09-19 12:02:58,519 - werkzeug - INFO - [background-thread] -  * Debugger PIN: 278-680-281
+2025-09-19 12:04:27,083 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\flask\\globals.py', reloading
+2025-09-19 12:04:27,085 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\flask\\wrappers.py', reloading
+2025-09-19 12:04:27,089 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-09-19 12:04:27,105 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-09-19 12:04:27,126 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-09-19 12:04:27,454 - werkzeug - INFO - [background-thread] -  * Restarting with watchdog (windowsapi)
+2025-09-19 12:04:30,452 - werkzeug - WARNING - [background-thread] -  * Debugger is active!
+2025-09-19 12:04:30,456 - werkzeug - INFO - [background-thread] -  * Debugger PIN: 278-680-281
+2025-09-19 12:04:47,714 - werkzeug - INFO - [background-thread] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.44:5000
+2025-09-19 12:04:47,714 - werkzeug - INFO - [background-thread] - [33mPress CTRL+C to quit[0m
+2025-09-19 12:04:47,723 - werkzeug - INFO - [background-thread] -  * Restarting with watchdog (windowsapi)
+2025-09-19 12:04:50,702 - werkzeug - WARNING - [background-thread] -  * Debugger is active!
+2025-09-19 12:04:50,706 - werkzeug - INFO - [background-thread] -  * Debugger PIN: 278-680-281
+2025-09-19 12:05:10,652 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\OneDrive\\Desktop\\SQ\\ppt-generator\\app.py', reloading
+2025-09-19 12:05:10,657 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\OneDrive\\Desktop\\SQ\\ppt-generator\\app.py', reloading
+2025-09-19 12:05:10,658 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\OneDrive\\Desktop\\SQ\\ppt-generator\\app.py', reloading
+2025-09-19 12:05:10,659 - werkzeug - INFO - [background-thread] -  * Detected change in 'C:\\Users\\adity\\OneDrive\\Desktop\\SQ\\ppt-generator\\app.py', reloading
+2025-09-19 12:05:11,431 - werkzeug - INFO - [background-thread] -  * Restarting with watchdog (windowsapi)
+2025-09-19 12:57:39 - research_journals completed in 10.24s
+2025-09-19 12:57:40 - executive_summary completed in 10.77s
+2025-09-19 12:57:48 - industry_associations completed in 19.67s
+2025-09-19 12:57:57 - market_enablers completed in 28.60s
+2025-09-19 12:59:16 - investment_challenges completed in 106.93s
+2025-09-19 12:59:46 - industry_expansion completed in 136.82s
+2025-09-19 12:59:54 - company_info completed in 145.73s
+2025-09-19 13:00:55 - industry_expansion_1 completed in 60.67s
+2025-09-19 13:00:55 - Parallel AI generation completed in 206.40s
+2025-09-19 13:00:55 - [req_1758266849] AI content generation completed in 206.41s
+2025-09-19 13:00:56 - [req_1758266849] PPT processing completed in 0.87s
+2025-09-19 13:00:56 - [req_1758266849] Total request completed in 207.28s
+2025-09-19 13:59:17 - industry_associations completed in 10.37s
+2025-09-19 13:59:19 - executive_summary completed in 11.53s
+2025-09-19 13:59:31 - research_journals completed in 24.23s
+2025-09-19 13:59:33 - market_enablers completed in 25.78s
+2025-09-19 14:00:09 - investment_challenges completed in 61.80s
+2025-09-19 14:00:33 - industry_expansion completed in 85.53s
+2025-09-19 14:02:37 - company_info completed in 209.72s
+2025-09-19 14:03:21 - industry_expansion_1 completed in 44.41s
+2025-09-19 14:03:21 - Parallel AI generation completed in 254.14s
+2025-09-19 14:03:21 - [req_1758270547] AI content generation completed in 254.14s
+2025-09-19 14:03:22 - [req_1758270547] PPT processing completed in 1.02s
+2025-09-19 14:03:22 - [req_1758270547] Total request completed in 255.17s
+2025-09-19 14:05:28 - File download completed in 0.00s: Global Low Voltage DC Circuit Breaker Market_20250919_140322.pptx
+2025-09-19 15:04:46 - research_journals completed in 6.69s
+2025-09-19 15:04:46 - executive_summary completed in 7.66s
+2025-09-19 15:04:51 - industry_associations completed in 12.19s
+2025-09-19 15:05:02 - market_enablers completed in 22.84s
+2025-09-19 15:05:50 - investment_challenges completed in 70.75s
+2025-09-19 15:05:57 - industry_expansion completed in 77.99s
+2025-09-19 15:06:00 - company_info completed in 81.23s
+2025-09-19 15:06:54 - industry_expansion_1 completed in 53.96s
+2025-09-19 15:06:54 - Parallel AI generation completed in 135.20s
+2025-09-19 15:06:54 - [req_1758274479] AI content generation completed in 135.20s
+2025-09-19 15:06:55 - [req_1758274479] PPT processing completed in 0.91s
+2025-09-19 15:06:55 - [req_1758274479] Total request completed in 136.13s
+2025-09-19 15:07:58 - File download completed in 0.01s: ETL Software Market_20250919_150654.pptx
+2025-09-19 15:12:23 - industry_associations completed in 7.45s
+2025-09-19 15:12:23 - research_journals completed in 8.19s
+2025-09-19 15:12:24 - executive_summary completed in 8.60s
+2025-09-19 15:12:38 - market_enablers completed in 22.41s
+2025-09-19 15:13:11 - investment_challenges completed in 55.50s
+2025-09-19 15:13:26 - industry_expansion completed in 70.78s
+2025-09-19 15:13:44 - company_info completed in 88.51s
+2025-09-19 15:15:30 - industry_expansion_1 completed in 106.08s
+2025-09-19 15:15:30 - Parallel AI generation completed in 194.60s
+2025-09-19 15:15:30 - [req_1758274935] AI content generation completed in 194.60s
+2025-09-19 15:15:31 - [req_1758274935] PPT processing completed in 1.04s
+2025-09-19 15:15:31 - [req_1758274935] Total request completed in 195.66s
+2025-09-19 15:16:13 - File download completed in 0.01s: ETL Software Market_20250919_151530.pptx
+2025-09-22 18:35:14 - research_journals completed in 6.09s
+2025-09-22 18:35:17 - industry_associations completed in 9.20s
+2025-09-22 18:35:20 - executive_summary completed in 12.22s
+2025-09-22 18:35:37 - market_enablers completed in 28.85s
+2025-09-22 18:36:02 - investment_challenges completed in 54.00s
+2025-09-22 18:36:33 - industry_expansion completed in 84.87s
+2025-09-22 18:36:53 - company_info completed in 105.28s
+2025-09-22 18:38:20 - industry_expansion_1 completed in 86.74s
+2025-09-22 18:38:20 - Parallel AI generation completed in 192.03s
+2025-09-22 18:38:20 - [req_1758546308] AI content generation completed in 192.03s
+2025-09-22 18:38:21 - [req_1758546308] PPT processing completed in 1.33s
+2025-09-22 18:38:21 - [req_1758546308] Total request completed in 193.38s
+2025-09-22 18:38:44 - File download completed in 0.03s: Global Healthcare Biotechnology Market_20250922_183821.pptx
+2025-09-22 18:39:55 - research_journals completed in 8.04s
+2025-09-22 18:39:59 - industry_associations completed in 12.04s
+2025-09-22 18:40:01 - executive_summary completed in 14.07s
+2025-09-22 18:40:08 - market_enablers completed in 21.16s
+2025-09-22 18:40:52 - investment_challenges completed in 64.58s
+2025-09-22 18:40:53 - company_info completed in 66.07s
+2025-09-22 18:41:21 - industry_expansion completed in 93.92s
+2025-09-22 18:42:41 - industry_expansion_1 completed in 79.91s
+2025-09-22 18:42:41 - Parallel AI generation completed in 173.83s
+2025-09-22 18:42:41 - [req_1758546587] AI content generation completed in 173.83s
+2025-09-22 18:42:42 - [req_1758546587] PPT processing completed in 1.18s
+2025-09-22 18:42:42 - [req_1758546587] Total request completed in 175.01s
+2025-09-22 18:42:45 - File download completed in 0.02s: Global Renewable Energy Coatings Market_20250922_184242.pptx
+2025-09-22 19:36:50 - executive_summary completed in 16.81s
+2025-09-22 19:36:55 - research_journals completed in 22.35s
+2025-09-22 19:37:02 - industry_associations completed in 28.80s
+2025-09-22 19:37:13 - market_enablers completed in 39.91s
+2025-09-22 19:37:44 - company_info completed in 70.67s
+2025-09-22 19:38:08 - investment_challenges completed in 94.77s
+2025-09-22 19:38:14 - industry_expansion completed in 100.91s
+2025-09-22 19:40:44 - industry_expansion_1 completed in 150.43s
+2025-09-22 19:40:44 - Parallel AI generation completed in 251.36s
+2025-09-22 19:40:44 - [req_1758549993] AI content generation completed in 251.36s
+2025-09-22 19:40:46 - [req_1758549993] PPT processing completed in 1.28s
+2025-09-22 19:40:46 - [req_1758549993] Total request completed in 252.67s
+2025-09-22 19:40:58 - File download completed in 0.07s: Piling Machine Market_20250922_194045.pptx
+2025-09-23 11:39:18 - research_journals completed in 5.49s
+2025-09-23 11:39:26 - industry_associations completed in 13.42s
+2025-09-23 11:39:35 - executive_summary completed in 22.62s
+2025-09-23 11:39:45 - market_enablers completed in 32.55s
+2025-09-23 11:39:54 - research_journals completed in 9.95s
+2025-09-23 11:39:54 - executive_summary completed in 9.97s
+2025-09-23 11:40:00 - industry_associations completed in 16.26s
+2025-09-23 11:40:03 - market_enablers completed in 19.48s
+2025-09-23 11:40:15 - investment_challenges completed in 62.07s
+2025-09-23 11:40:39 - company_info completed in 86.15s
+2025-09-23 11:40:44 - industry_expansion completed in 91.01s
+2025-09-23 11:40:58 - investment_challenges completed in 74.18s
+2025-09-23 11:41:26 - industry_expansion completed in 102.78s
+2025-09-23 11:41:39 - company_info completed in 115.67s
+2025-09-23 11:41:42 - industry_expansion_1 completed in 58.14s
+2025-09-23 11:41:42 - Parallel AI generation completed in 149.15s
+2025-09-23 11:41:42 - [req_1758607753] AI content generation completed in 149.15s
+2025-09-23 11:41:43 - [req_1758607753] PPT processing completed in 0.98s
+2025-09-23 11:41:43 - [req_1758607753] Total request completed in 150.14s
+2025-09-23 11:41:46 - File download completed in 0.02s: US Vehicle Electrification Market_20250923_114142.pptx
+2025-09-23 11:41:58 - research_journals completed in 5.88s
+2025-09-23 11:42:02 - industry_associations completed in 9.65s
+2025-09-23 11:42:05 - executive_summary completed in 12.65s
+2025-09-23 11:42:12 - market_enablers completed in 20.20s
+2025-09-23 11:42:34 - industry_expansion completed in 41.30s
+2025-09-23 11:42:44 - industry_expansion_1 completed in 64.94s
+2025-09-23 11:42:44 - Parallel AI generation completed in 180.62s
+2025-09-23 11:42:44 - [req_1758607784] AI content generation completed in 180.62s
+2025-09-23 11:42:45 - [req_1758607784] PPT processing completed in 0.99s
+2025-09-23 11:42:45 - [req_1758607784] Total request completed in 181.61s
+2025-09-23 11:42:48 - investment_challenges completed in 55.97s
+2025-09-23 11:43:22 - File download completed in 0.01s: Global Ornamental Fish Market_20250923_114245.pptx
+2025-09-23 11:43:44 - company_info completed in 112.15s
+2025-09-23 11:45:05 - industry_expansion_1 completed in 80.22s
+2025-09-23 11:45:05 - Parallel AI generation completed in 192.38s
+2025-09-23 11:45:05 - [req_1758607912] AI content generation completed in 192.38s
+2025-09-23 11:45:06 - [req_1758607912] PPT processing completed in 1.42s
+2025-09-23 11:45:06 - [req_1758607912] Total request completed in 193.82s
+2025-09-23 11:45:10 - File download completed in 0.02s: Global Precision Oncology Market_20250923_114505.pptx
+2025-09-23 11:57:08 - research_journals completed in 7.18s
+2025-09-23 11:57:14 - executive_summary completed in 12.72s
+2025-09-23 11:57:21 - industry_associations completed in 19.87s
+2025-09-23 11:57:32 - market_enablers completed in 31.06s
+2025-09-23 11:58:12 - investment_challenges completed in 70.36s
+2025-09-23 11:58:30 - company_info completed in 88.92s
+2025-09-23 11:58:44 - industry_expansion completed in 103.17s
+2025-09-23 12:00:20 - industry_expansion_1 completed in 95.44s
+2025-09-23 12:00:20 - Parallel AI generation completed in 198.62s
+2025-09-23 12:00:20 - [req_1758608821] AI content generation completed in 198.62s
+2025-09-23 12:00:21 - [req_1758608821] PPT processing completed in 1.00s
+2025-09-23 12:00:21 - [req_1758608821] Total request completed in 199.62s
+2025-09-23 12:02:32 - File download completed in 0.01s: Global Precision Oncology Market_20250923_120020.pptx
+2025-09-23 14:48:37 - research_journals completed in 5.61s
+2025-09-23 14:48:40 - executive_summary completed in 9.48s
+2025-09-23 14:48:42 - industry_associations completed in 11.23s
+2025-09-23 14:48:53 - market_enablers completed in 21.69s
+2025-09-23 14:49:21 - industry_expansion completed in 50.34s
+2025-09-23 14:49:36 - investment_challenges completed in 64.91s
+2025-09-23 14:51:25 - company_info completed in 173.89s
+2025-09-23 14:52:16 - research_journals completed in 7.36s
+2025-09-23 14:52:17 - executive_summary completed in 8.41s
+2025-09-23 14:52:33 - industry_associations completed in 24.99s
+2025-09-23 14:52:34 - market_enablers completed in 25.77s
+2025-09-23 14:53:01 - industry_expansion completed in 52.46s
+2025-09-23 14:53:37 - investment_challenges completed in 88.95s
+2025-09-23 14:56:57 - company_info completed in 288.87s
+2025-09-23 14:57:59 - industry_associations completed in 6.67s
+2025-09-23 14:58:01 - research_journals completed in 8.47s
+2025-09-23 14:58:16 - market_enablers completed in 23.55s
+2025-09-23 14:58:24 - executive_summary completed in 31.68s
+2025-09-23 14:58:52 - industry_expansion completed in 59.71s
+2025-09-23 14:58:53 - investment_challenges completed in 61.33s
+2025-09-23 15:01:00 - company_info completed in 187.62s
+2025-09-23 15:03:04 - industry_expansion_1 completed in 124.08s
+2025-09-23 15:03:04 - Parallel AI generation completed in 311.71s
+2025-09-23 15:03:04 - [req_1758619672] AI content generation completed in 311.71s
+2025-09-23 15:03:05 - [req_1758619672] PPT processing completed in 0.86s
+2025-09-23 15:03:05 - [req_1758619672] Total request completed in 312.59s
+2025-09-23 15:09:37 - industry_associations completed in 10.74s
+2025-09-23 15:09:40 - research_journals completed in 14.00s
+2025-09-23 15:09:40 - executive_summary completed in 14.22s
+2025-09-23 15:09:43 - market_enablers completed in 17.54s
+2025-09-23 15:09:46 - executive_summary completed in 8.84s
+2025-09-23 15:09:47 - research_journals completed in 9.14s
+2025-09-23 15:09:48 - industry_associations completed in 10.49s
+2025-09-23 15:10:04 - market_enablers completed in 26.13s
+2025-09-23 15:10:28 - investment_challenges completed in 50.08s
+2025-09-23 15:10:32 - investment_challenges completed in 65.75s
+2025-09-23 15:10:38 - company_info completed in 71.89s
+2025-09-23 15:10:54 - industry_expansion completed in 88.15s
+2025-09-23 15:11:29 - industry_expansion completed in 111.29s
+2025-09-23 15:11:29 - company_info completed in 111.76s
+2025-09-23 15:11:56 - industry_expansion_1 completed in 62.41s
+2025-09-23 15:11:56 - Parallel AI generation completed in 150.56s
+2025-09-23 15:11:56 - [req_1758620366] AI content generation completed in 150.56s
+2025-09-23 15:11:57 - [req_1758620366] PPT processing completed in 1.02s
+2025-09-23 15:11:57 - [req_1758620366] Total request completed in 151.58s
+2025-09-23 15:12:35 - File download completed in 0.02s: German Pharmacy Compounding Market_20250923_151157.pptx
+2025-09-23 15:12:40 - industry_expansion_1 completed in 70.39s
+2025-09-23 15:12:40 - Parallel AI generation completed in 182.15s
+2025-09-23 15:12:40 - [req_1758620378] AI content generation completed in 182.15s
+2025-09-23 15:12:41 - [req_1758620378] PPT processing completed in 1.07s
+2025-09-23 15:12:41 - [req_1758620378] Total request completed in 183.23s
+2025-09-23 15:12:44 - File download completed in 0.01s: Global CubeSat Market_20250923_151240.pptx
+2025-09-23 15:17:49 - research_journals completed in 10.03s
+2025-09-23 15:17:51 - industry_associations completed in 11.65s
+2025-09-23 15:17:53 - executive_summary completed in 13.43s
+2025-09-23 15:18:12 - market_enablers completed in 32.15s
+2025-09-23 15:18:29 - investment_challenges completed in 49.68s
+2025-09-23 15:18:55 - industry_expansion completed in 76.06s
+2025-09-23 15:19:09 - company_info completed in 89.39s
+2025-09-23 15:21:11 - industry_expansion_1 completed in 121.96s
+2025-09-23 15:21:11 - Parallel AI generation completed in 211.36s
+2025-09-23 15:21:11 - [req_1758620859] AI content generation completed in 211.36s
+2025-09-23 15:21:12 - [req_1758620859] PPT processing completed in 1.01s
+2025-09-23 15:21:12 - [req_1758620859] Total request completed in 212.37s
+2025-09-23 15:21:17 - File download completed in 0.02s: Global Toy Market_20250923_152111.pptx
+2025-09-23 15:43:18 - research_journals completed in 10.68s
+2025-09-23 15:43:24 - executive_summary completed in 16.50s
+2025-09-23 15:43:24 - industry_associations completed in 16.66s
+2025-09-23 15:43:47 - market_enablers completed in 39.50s
+2025-09-23 15:44:01 - investment_challenges completed in 54.41s
+2025-09-23 15:45:12 - company_info completed in 125.07s
+2025-09-23 15:45:42 - industry_expansion completed in 154.77s
+2025-09-23 15:46:44 - industry_expansion_1 completed in 62.55s
+2025-09-23 15:46:44 - Parallel AI generation completed in 217.33s
+2025-09-23 15:46:44 - [req_1758622387] AI content generation completed in 217.33s
+2025-09-23 15:46:45 - [req_1758622387] PPT processing completed in 1.07s
+2025-09-23 15:46:45 - [req_1758622387] Total request completed in 218.40s
+2025-09-23 15:47:29 - research_journals completed in 9.68s
+2025-09-23 15:47:31 - executive_summary completed in 11.24s
+2025-09-23 15:47:35 - industry_associations completed in 15.30s
+2025-09-23 15:47:44 - market_enablers completed in 24.37s
+2025-09-23 15:48:09 - investment_challenges completed in 50.11s
+2025-09-23 15:48:15 - industry_expansion completed in 55.45s
+2025-09-23 15:49:13 - company_info completed in 113.80s
+2025-09-23 15:49:28 - executive_summary completed in 10.88s
+2025-09-23 15:49:30 - industry_associations completed in 12.97s
+2025-09-23 15:49:39 - market_enablers completed in 21.80s
+2025-09-23 15:49:41 - research_journals completed in 23.83s
+2025-09-23 15:50:16 - industry_expansion completed in 58.81s
+2025-09-23 15:50:48 - investment_challenges completed in 90.84s
+2025-09-23 15:51:03 - company_info completed in 106.12s
+2025-09-23 15:52:04 - industry_expansion_1 completed in 60.60s
+2025-09-23 15:52:04 - Parallel AI generation completed in 166.73s
+2025-09-23 15:52:04 - [req_1758622757] AI content generation completed in 166.73s
+2025-09-23 15:52:05 - [req_1758622757] PPT processing completed in 1.14s
+2025-09-23 15:52:05 - [req_1758622757] Total request completed in 167.87s
+2025-09-23 15:52:07 - File download completed in 0.02s: German Extract-Based Magistrals Market_20250923_155204.pptx
+2025-09-23 15:52:13 - research_journals completed in 8.96s
+2025-09-23 15:52:19 - executive_summary completed in 15.53s
+2025-09-23 15:52:20 - industry_associations completed in 16.19s
+2025-09-23 15:52:40 - market_enablers completed in 36.00s
+2025-09-23 15:53:28 - industry_expansion completed in 84.73s
+2025-09-23 15:53:30 - investment_challenges completed in 86.16s
+2025-09-23 15:54:23 - company_info completed in 139.40s
+2025-09-23 15:55:40 - industry_expansion_1 completed in 76.80s
+2025-09-23 15:55:40 - Parallel AI generation completed in 216.21s
+2025-09-23 15:55:40 - [req_1758622924] AI content generation completed in 216.21s
+2025-09-23 15:55:41 - [req_1758622924] PPT processing completed in 0.95s
+2025-09-23 15:55:41 - [req_1758622924] Total request completed in 217.17s
+2025-09-23 16:07:53 - research_journals completed in 6.83s
+2025-09-23 16:07:59 - industry_associations completed in 13.31s
+2025-09-23 16:08:00 - executive_summary completed in 14.48s
+2025-09-23 16:08:11 - market_enablers completed in 24.90s
+2025-09-23 16:08:49 - investment_challenges completed in 63.01s
+2025-09-23 16:09:25 - industry_expansion completed in 99.58s
+2025-09-23 16:10:23 - company_info completed in 157.18s
+2025-09-23 16:11:21 - industry_expansion_1 completed in 57.98s
+2025-09-23 16:11:21 - Parallel AI generation completed in 215.17s
+2025-09-23 16:11:21 - [req_1758623866] AI content generation completed in 215.17s
+2025-09-23 16:11:22 - [req_1758623866] PPT processing completed in 1.01s
+2025-09-23 16:11:22 - [req_1758623866] Total request completed in 216.18s
+2025-09-23 16:13:41 - industry_associations completed in 7.26s
+2025-09-23 16:13:42 - research_journals completed in 8.40s
+2025-09-23 16:13:59 - executive_summary completed in 25.59s
+2025-09-23 16:14:14 - market_enablers completed in 40.32s
+2025-09-23 16:14:39 - investment_challenges completed in 65.39s
+2025-09-23 16:15:06 - company_info completed in 92.35s
+2025-09-23 16:15:21 - industry_expansion completed in 107.37s
+2025-09-23 16:17:24 - industry_expansion_1 completed in 122.63s
+2025-09-23 16:17:24 - Parallel AI generation completed in 230.00s
+2025-09-23 16:17:24 - [req_1758624214] AI content generation completed in 230.00s
+2025-09-23 16:17:25 - [req_1758624214] PPT processing completed in 0.94s
+2025-09-23 16:17:25 - [req_1758624214] Total request completed in 230.95s
+2025-09-23 16:36:10 - research_journals completed in 7.42s
+2025-09-23 16:36:16 - industry_associations completed in 13.82s
+2025-09-23 16:36:21 - executive_summary completed in 18.15s
+2025-09-23 16:36:55 - market_enablers completed in 52.90s
+2025-09-23 16:37:17 - investment_challenges completed in 74.96s
+2025-09-23 16:37:24 - industry_expansion completed in 81.28s
+2025-09-23 16:37:26 - company_info completed in 83.12s
+2025-09-23 16:37:35 - executive_summary completed in 9.13s
+2025-09-23 16:37:36 - research_journals completed in 10.12s
+2025-09-23 16:37:38 - industry_associations completed in 11.63s
+2025-09-23 16:38:07 - market_enablers completed in 41.22s
+2025-09-23 16:38:54 - industry_expansion completed in 88.06s
+2025-09-23 16:39:09 - investment_challenges completed in 102.97s
+2025-09-23 16:39:10 - industry_expansion_1 completed in 104.88s
+2025-09-23 16:39:10 - Parallel AI generation completed in 188.01s
+2025-09-23 16:39:10 - [req_1758625562] AI content generation completed in 188.01s
+2025-09-23 16:39:11 - [req_1758625562] PPT processing completed in 0.89s
+2025-09-23 16:39:11 - [req_1758625562] Total request completed in 188.90s
+2025-09-23 16:39:26 - company_info completed in 120.52s
+2025-09-23 16:40:55 - industry_expansion_1 completed in 88.88s
+2025-09-23 16:40:55 - Parallel AI generation completed in 209.40s
+2025-09-23 16:40:55 - [req_1758625646] AI content generation completed in 209.40s
+2025-09-23 16:40:56 - [req_1758625646] PPT processing completed in 1.01s
+2025-09-23 16:40:56 - [req_1758625646] Total request completed in 210.42s
+2025-09-24 14:36:33 - research_journals completed in 10.84s
+2025-09-24 14:36:40 - industry_associations completed in 17.86s
+2025-09-24 14:36:45 - executive_summary completed in 23.04s
+2025-09-24 14:36:50 - market_enablers completed in 28.19s
+2025-09-24 14:37:20 - industry_expansion completed in 57.75s
+2025-09-24 14:37:59 - company_info completed in 96.94s
+2025-09-24 14:38:05 - investment_challenges completed in 102.99s
+2025-09-24 14:39:12 - industry_expansion_1 completed in 66.80s
+2025-09-24 14:39:12 - Parallel AI generation completed in 169.80s
+2025-09-24 14:39:12 - [req_1758704782] AI content generation completed in 169.80s
+2025-09-24 14:39:13 - [req_1758704782] PPT processing completed in 1.05s
+2025-09-24 14:39:13 - [req_1758704782] Total request completed in 170.87s
+2025-09-24 15:28:00 - market_enablers completed in 50.19s
+2025-09-24 15:28:20 - research_journals completed in 7.79s
+2025-09-24 15:28:29 - executive_summary completed in 16.03s
+2025-09-24 15:28:29 - industry_associations completed in 16.16s
+2025-09-24 15:28:43 - market_enablers completed in 30.51s
+2025-09-24 15:29:16 - investment_challenges completed in 63.09s
+2025-09-24 15:29:25 - industry_expansion completed in 72.74s
+2025-09-24 15:29:26 - company_info completed in 73.68s
+2025-09-24 15:30:52 - industry_expansion_1 completed in 85.19s
+2025-09-24 15:30:52 - Parallel AI generation completed in 158.88s
+2025-09-24 15:30:52 - [req_1758707893] AI content generation completed in 158.88s
+2025-09-24 15:30:52 - [req_1758707893] PPT processing completed in 0.98s
+2025-09-24 15:30:52 - [req_1758707893] Total request completed in 159.86s
+2025-09-24 15:36:10 - industry_associations completed in 13.38s
+2025-09-24 15:36:12 - executive_summary completed in 15.97s
+2025-09-24 15:36:21 - research_journals completed in 25.16s
+2025-09-24 15:36:44 - market_enablers completed in 47.69s
+2025-09-24 15:37:03 - investment_challenges completed in 66.77s
+2025-09-24 15:37:12 - industry_expansion completed in 75.59s
+2025-09-24 15:38:12 - company_info completed in 135.82s
+2025-09-24 15:39:18 - industry_expansion_1 completed in 65.79s
+2025-09-24 15:39:18 - Parallel AI generation completed in 201.62s
+2025-09-24 15:39:18 - [req_1758708356] AI content generation completed in 201.62s
+2025-09-24 15:39:19 - [req_1758708356] PPT processing completed in 1.00s
+2025-09-24 15:39:19 - [req_1758708356] Total request completed in 202.63s
+2025-09-24 15:41:46 - research_journals completed in 9.54s
+2025-09-24 15:41:51 - industry_associations completed in 15.20s
+2025-09-24 15:41:53 - executive_summary completed in 16.97s
+2025-09-24 15:41:58 - market_enablers completed in 21.82s
+2025-09-24 15:42:39 - investment_challenges completed in 63.08s
+2025-09-24 15:42:43 - industry_expansion completed in 66.91s
+2025-09-24 15:43:32 - company_info completed in 115.58s
+2025-09-24 15:44:59 - industry_expansion_1 completed in 87.06s
+2025-09-24 15:44:59 - Parallel AI generation completed in 202.65s
+2025-09-24 15:44:59 - [req_1758708696] AI content generation completed in 202.65s
+2025-09-24 15:45:00 - [req_1758708696] PPT processing completed in 0.96s
+2025-09-24 15:45:00 - [req_1758708696] Total request completed in 203.62s
+2025-09-24 15:48:27 - industry_associations completed in 12.40s
+2025-09-24 15:48:43 - executive_summary completed in 28.72s
+2025-09-24 15:48:44 - research_journals completed in 29.46s
+2025-09-24 15:49:08 - market_enablers completed in 53.47s
+2025-09-24 15:49:20 - company_info completed in 65.46s
+2025-09-24 15:49:48 - investment_challenges completed in 93.31s
+2025-09-24 15:49:58 - industry_expansion completed in 103.90s
+2025-09-24 15:51:54 - industry_expansion_1 completed in 115.19s
+2025-09-24 15:51:54 - Parallel AI generation completed in 219.10s
+2025-09-24 15:51:54 - [req_1758709094] AI content generation completed in 219.10s
+2025-09-24 15:51:55 - [req_1758709094] PPT processing completed in 0.96s
+2025-09-24 15:51:55 - [req_1758709094] Total request completed in 220.07s
+2025-09-24 15:54:45 - research_journals completed in 9.99s
+2025-09-24 15:54:51 - executive_summary completed in 15.79s
+2025-09-24 15:54:51 - industry_associations completed in 16.07s
+2025-09-24 15:55:30 - market_enablers completed in 54.55s
+2025-09-24 15:55:53 - company_info completed in 78.06s
+2025-09-24 15:56:02 - industry_expansion completed in 86.84s
+2025-09-24 15:56:05 - investment_challenges completed in 89.61s
+2025-09-24 15:58:02 - industry_expansion_1 completed in 117.38s
+2025-09-24 15:58:02 - Parallel AI generation completed in 207.00s
+2025-09-24 15:58:02 - [req_1758709475] AI content generation completed in 207.00s
+2025-09-24 15:58:04 - [req_1758709475] PPT processing completed in 1.48s
+2025-09-24 15:58:04 - [req_1758709475] Total request completed in 208.49s
+2025-09-24 16:03:24 - research_journals completed in 11.65s
+2025-09-24 16:03:25 - executive_summary completed in 12.55s
+2025-09-24 16:03:45 - market_enablers completed in 32.53s
+2025-09-24 16:04:16 - industry_associations completed in 63.09s
+2025-09-24 16:04:36 - investment_challenges completed in 83.21s
+2025-09-24 16:04:54 - company_info completed in 101.92s
+2025-09-24 16:05:13 - industry_expansion completed in 120.14s
+2025-09-24 16:06:21 - industry_expansion_1 completed in 68.56s
+2025-09-24 16:06:21 - Parallel AI generation completed in 188.70s
+2025-09-24 16:06:21 - [req_1758709993] AI content generation completed in 188.70s
+2025-09-24 16:06:22 - [req_1758709993] PPT processing completed in 1.15s
+2025-09-24 16:06:22 - [req_1758709993] Total request completed in 189.86s
+2025-09-24 16:13:57 - executive_summary completed in 9.50s
+2025-09-24 16:14:00 - research_journals completed in 12.91s
+2025-09-24 16:14:01 - industry_associations completed in 13.77s
+2025-09-24 16:14:24 - market_enablers completed in 36.98s
+2025-09-24 16:14:42 - company_info completed in 55.33s
+2025-09-24 16:15:10 - industry_expansion completed in 83.04s
+2025-09-24 16:15:29 - investment_challenges completed in 102.07s
+2025-09-24 16:16:49 - industry_associations completed in 14.01s
+2025-09-24 16:16:50 - executive_summary completed in 15.12s
+2025-09-24 16:16:51 - research_journals completed in 15.96s
+2025-09-24 16:17:01 - market_enablers completed in 26.52s
+2025-09-24 16:17:59 - company_info completed in 84.86s
+2025-09-24 16:18:20 - investment_challenges completed in 105.21s
+2025-09-24 16:18:26 - industry_expansion completed in 111.02s
+2025-09-24 16:20:11 - industry_expansion_1 completed in 105.61s
+2025-09-24 16:20:11 - Parallel AI generation completed in 216.64s
+2025-09-24 16:20:11 - [req_1758710795] AI content generation completed in 216.64s
+2025-09-24 16:20:12 - [req_1758710795] PPT processing completed in 0.88s
+2025-09-24 16:20:12 - [req_1758710795] Total request completed in 217.53s
+2025-09-25 10:54:28 - research_journals completed in 11.57s
+2025-09-25 10:54:33 - industry_associations completed in 16.74s
+2025-09-25 10:54:36 - executive_summary completed in 19.81s
+2025-09-25 10:54:46 - market_enablers completed in 29.49s
+2025-09-25 10:55:21 - investment_challenges completed in 64.69s
+2025-09-25 10:56:04 - industry_expansion completed in 107.53s
+2025-09-25 10:56:09 - company_info completed in 112.22s
+2025-09-25 10:57:22 - industry_expansion_1 completed in 72.94s
+2025-09-25 10:57:22 - Parallel AI generation completed in 185.16s
+2025-09-25 10:57:22 - [req_1758777856] AI content generation completed in 185.16s
+2025-09-25 10:57:22 - [req_1758777856] PPT processing completed in 0.89s
+2025-09-25 10:57:22 - [req_1758777856] Total request completed in 186.06s
+2025-09-25 11:02:48 - research_journals completed in 7.24s
+2025-09-25 11:02:53 - industry_associations completed in 12.94s
+2025-09-25 11:02:56 - executive_summary completed in 15.20s
+2025-09-25 11:03:10 - market_enablers completed in 29.51s
+2025-09-25 11:04:00 - industry_expansion completed in 79.78s
+2025-09-25 11:04:01 - investment_challenges completed in 81.09s
+2025-09-25 11:04:20 - company_info completed in 99.55s
+2025-09-25 11:06:16 - industry_expansion_1 completed in 115.75s
+2025-09-25 11:06:16 - Parallel AI generation completed in 215.30s
+2025-09-25 11:06:16 - [req_1758778360] AI content generation completed in 215.30s
+2025-09-25 11:06:16 - [req_1758778360] PPT processing completed in 0.86s
+2025-09-25 11:06:16 - [req_1758778360] Total request completed in 216.17s
+2025-09-25 15:25:59 - research_journals completed in 2.16s
+2025-09-25 15:26:00 - industry_associations completed in 3.04s
+2025-09-25 15:26:00 - executive_summary completed in 3.19s
+2025-09-25 15:26:03 - company_info completed in 6.47s
+2025-09-25 15:26:57 - industry_associations completed in 2.36s
+2025-09-25 15:26:57 - executive_summary completed in 2.37s
+2025-09-25 15:26:58 - research_journals completed in 3.26s
+2025-09-25 15:27:01 - company_info completed in 5.85s
+2025-09-25 15:27:43 - research_journals completed in 1.51s
+2025-09-25 15:27:43 - industry_associations completed in 1.65s
+2025-09-25 15:27:43 - executive_summary completed in 1.70s
+2025-09-25 15:27:47 - company_info completed in 5.59s
+2025-09-25 15:53:49 - research_journals completed in 8.13s
+2025-09-25 15:53:53 - industry_associations completed in 12.06s
+2025-09-25 15:54:01 - executive_summary completed in 19.47s
+2025-09-25 15:54:21 - market_enablers completed in 39.70s
+2025-09-25 15:54:25 - research_journals completed in 5.88s
+2025-09-25 15:54:29 - executive_summary completed in 9.86s
+2025-09-25 15:54:30 - industry_associations completed in 10.31s
+2025-09-25 15:54:50 - company_info completed in 68.46s
+2025-09-25 15:54:55 - industry_expansion completed in 74.15s
+2025-09-25 15:54:58 - market_enablers completed in 38.23s
+2025-09-25 15:55:23 - investment_challenges completed in 101.39s
+2025-09-25 15:55:34 - industry_expansion completed in 73.91s
+2025-09-25 15:55:34 - investment_challenges completed in 74.18s
+2025-09-25 15:55:36 - company_info completed in 75.92s
+2025-09-25 15:55:48 - research_journals completed in 7.84s
+2025-09-25 15:55:50 - industry_associations completed in 10.28s
+2025-09-25 15:55:52 - executive_summary completed in 12.35s
+2025-09-25 15:56:02 - market_enablers completed in 21.82s
+2025-09-25 15:56:18 - industry_expansion_1 completed in 55.38s
+2025-09-25 15:56:18 - Parallel AI generation completed in 156.77s
+2025-09-25 15:56:18 - [req_1758795821] AI content generation completed in 156.77s
+2025-09-25 15:56:19 - [req_1758795821] PPT processing completed in 1.38s
+2025-09-25 15:56:19 - [req_1758795821] Total request completed in 158.16s
+2025-09-25 16:03:01 - research_journals completed in 8.74s
+2025-09-25 16:03:02 - industry_associations completed in 9.31s
+2025-09-25 16:03:05 - executive_summary completed in 11.91s
+2025-09-25 16:03:28 - research_journals completed in 8.92s
+2025-09-25 16:03:34 - industry_associations completed in 14.88s
+2025-09-25 16:03:41 - market_enablers completed in 21.23s
+2025-09-25 16:03:44 - executive_summary completed in 24.22s
+2025-09-25 16:04:07 - investment_challenges completed in 47.56s
+2025-09-25 16:04:09 - industry_expansion completed in 49.44s
+2025-09-25 16:04:29 - company_info completed in 69.61s
+2025-09-25 16:05:25 - industry_expansion_1 completed in 55.63s
+2025-09-25 16:05:25 - Parallel AI generation completed in 125.25s
+2025-09-25 16:05:25 - [req_1758796399] AI content generation completed in 125.25s
+2025-09-25 16:05:25 - [req_1758796399] PPT processing completed in 0.86s
+2025-09-25 16:05:25 - [req_1758796399] Total request completed in 126.12s
+2025-09-25 16:07:30 - research_journals completed in 7.14s
+2025-09-25 16:07:34 - industry_associations completed in 11.97s
+2025-09-25 16:07:55 - executive_summary completed in 32.29s
+2025-09-25 16:07:56 - market_enablers completed in 33.39s
+2025-09-25 16:08:15 - company_info completed in 52.51s
+2025-09-25 16:08:20 - industry_expansion completed in 57.48s
+2025-09-25 16:08:28 - investment_challenges completed in 65.72s
+2025-09-25 17:59:52 - research_journals completed in 9.48s
+2025-09-25 17:59:56 - industry_associations completed in 13.01s
+2025-09-25 17:59:56 - executive_summary completed in 13.32s
+2025-09-25 18:00:10 - market_enablers completed in 27.15s
+2025-09-25 18:00:41 - investment_challenges completed in 58.10s
+2025-09-25 18:00:53 - company_info completed in 69.95s
+2025-09-25 18:01:13 - industry_expansion completed in 90.57s
+2025-09-25 18:02:21 - industry_expansion_1 completed in 67.29s
+2025-09-25 18:02:21 - Parallel AI generation completed in 157.86s
+2025-09-25 18:02:21 - [req_1758803383] AI content generation completed in 157.87s
+2025-09-25 18:02:22 - [req_1758803383] PPT processing completed in 0.99s
+2025-09-25 18:02:22 - [req_1758803383] Total request completed in 158.88s
+2025-09-26 11:08:10 - research_journals completed in 7.04s
+2025-09-26 11:08:12 - industry_associations completed in 8.89s
+2025-09-26 11:08:15 - executive_summary completed in 12.29s
+2025-09-26 11:08:30 - investment_challenges completed in 26.47s
+2025-09-26 11:08:48 - market_enablers completed in 44.54s
+2025-09-26 11:09:48 - company_info completed in 105.27s
+2025-09-26 11:09:49 - industry_expansion completed in 105.58s
+2025-09-26 11:11:19 - industry_expansion_1 completed in 90.26s
+2025-09-26 11:11:19 - Parallel AI generation completed in 195.85s
+2025-09-26 11:11:19 - [req_1758865083] AI content generation completed in 195.85s
+2025-09-26 11:11:20 - [req_1758865083] PPT processing completed in 1.00s
+2025-09-26 11:11:20 - [req_1758865083] Total request completed in 196.86s
+2025-10-01 17:37:43 - research_journals completed in 6.50s
+2025-10-01 17:37:48 - executive_summary completed in 11.11s
+2025-10-01 17:37:48 - industry_associations completed in 11.52s
+2025-10-01 17:38:12 - market_enablers completed in 35.46s
+2025-10-01 17:38:53 - industry_expansion completed in 76.59s
+2025-10-01 17:39:58 - company_info completed in 141.74s
+2025-10-01 17:40:09 - investment_challenges completed in 152.43s
+2025-10-01 17:40:11 - financial_overview completed in 154.67s
+2025-10-01 17:41:48 - industry_expansion_1 completed in 96.86s
+2025-10-01 17:41:48 - Parallel AI generation completed in 251.55s
+2025-10-01 17:41:48 - [req_1759320457] AI content generation completed in 251.55s
+2025-10-01 17:41:49 - [req_1759320457] PPT processing completed in 0.95s
+2025-10-01 17:41:49 - [req_1759320457] Total request completed in 252.52s
+2025-10-01 17:44:14 - research_journals completed in 7.41s
+2025-10-01 17:44:17 - executive_summary completed in 10.23s
+2025-10-01 17:44:23 - industry_associations completed in 15.95s
+2025-10-01 17:45:17 - investment_challenges completed in 70.62s
+2025-10-01 17:45:18 - company_info completed in 70.92s
+2025-10-01 17:45:30 - market_enablers completed in 83.31s
+2025-10-01 17:46:16 - industry_expansion completed in 128.78s
+2025-10-01 17:46:32 - financial_overview completed in 144.96s
+2025-10-01 17:46:50 - research_journals completed in 7.24s
+2025-10-01 17:46:57 - industry_associations completed in 14.34s
+2025-10-01 17:46:58 - executive_summary completed in 15.27s
+2025-10-01 17:47:12 - market_enablers completed in 29.30s
+2025-10-01 17:47:47 - investment_challenges completed in 64.01s
+2025-10-01 17:47:55 - industry_expansion completed in 72.31s
+2025-10-01 17:48:29 - company_info completed in 105.88s
+2025-10-01 17:48:33 - financial_overview completed in 110.35s
+2025-10-01 17:49:53 - industry_expansion_1 completed in 79.39s
+2025-10-01 17:49:53 - Parallel AI generation completed in 189.77s
+2025-10-01 17:49:53 - [req_1759321003] AI content generation completed in 189.78s
+2025-10-01 17:49:54 - [req_1759321003] PPT processing completed in 1.12s
+2025-10-01 17:49:54 - [req_1759321003] Total request completed in 190.93s
+2025-10-06 10:47:35 - research_journals completed in 7.92s
+2025-10-06 10:47:39 - industry_associations completed in 12.05s
+2025-10-06 10:47:42 - executive_summary completed in 15.26s
+2025-10-06 10:47:57 - market_enablers completed in 30.79s
+2025-10-06 10:48:18 - investment_challenges completed in 51.21s
+2025-10-06 10:48:45 - company_info completed in 78.33s
+2025-10-06 10:48:55 - industry_expansion completed in 88.66s
+2025-10-06 10:49:41 - financial_overview completed in 134.52s
+2025-10-06 10:51:00 - industry_expansion_1 completed in 78.50s
+2025-10-06 10:51:00 - Parallel AI generation completed in 213.03s
+2025-10-06 10:51:00 - [req_1759727847] AI content generation completed in 213.04s
+2025-10-06 10:51:01 - [req_1759727847] PPT processing completed in 0.99s
+2025-10-06 10:51:01 - [req_1759727847] Total request completed in 214.03s
+2025-10-06 10:57:19 - research_journals completed in 11.08s
+2025-10-06 10:57:25 - industry_associations completed in 16.88s
+2025-10-06 10:57:41 - executive_summary completed in 32.31s
+2025-10-06 10:57:47 - market_enablers completed in 38.64s
+2025-10-06 10:58:30 - company_info completed in 81.81s
+2025-10-06 10:58:59 - investment_challenges completed in 111.07s
+2025-10-06 10:59:46 - research_journals completed in 8.75s
+2025-10-06 10:59:53 - industry_associations completed in 15.12s
+2025-10-06 10:59:59 - executive_summary completed in 20.94s
+2025-10-06 11:00:21 - market_enablers completed in 43.15s
+2025-10-06 11:00:56 - investment_challenges completed in 78.70s
+2025-10-06 11:01:19 - company_info completed in 101.44s
+2025-10-06 11:01:45 - financial_overview completed in 127.07s
+2025-10-06 11:01:55 - industry_expansion completed in 137.20s
+2025-10-06 11:03:35 - industry_expansion_1 completed in 100.67s
+2025-10-06 11:03:36 - Parallel AI generation completed in 237.88s
+2025-10-06 11:03:36 - [req_1759728578] AI content generation completed in 237.88s
+2025-10-06 11:06:09 - research_journals completed in 14.53s
+2025-10-06 11:06:12 - executive_summary completed in 17.24s
+2025-10-06 11:06:18 - industry_associations completed in 22.97s
+2025-10-06 11:06:42 - market_enablers completed in 47.44s
+2025-10-06 11:07:20 - industry_expansion completed in 85.30s
+2025-10-06 11:07:45 - company_info completed in 110.32s
+2025-10-06 11:07:50 - financial_overview completed in 115.30s
+2025-10-06 11:08:25 - investment_challenges completed in 150.39s
+2025-10-06 11:12:43 - industry_expansion_1 completed in 258.04s
+2025-10-06 11:12:43 - Parallel AI generation completed in 408.44s
+2025-10-06 11:12:43 - [req_1759728955] AI content generation completed in 408.44s
+2025-10-06 11:12:44 - [req_1759728955] PPT processing completed in 0.85s
+2025-10-06 11:12:44 - [req_1759728955] Total request completed in 409.30s
+2025-10-06 11:20:13 - research_journals completed in 6.37s
+2025-10-06 11:20:22 - executive_summary completed in 15.11s
+2025-10-06 11:20:24 - industry_associations completed in 17.27s
+2025-10-06 11:20:36 - market_enablers completed in 29.80s
+2025-10-06 11:21:37 - investment_challenges completed in 90.62s
+2025-10-06 11:21:45 - company_info completed in 98.47s
+2025-10-06 11:22:09 - industry_expansion completed in 122.12s
+2025-10-06 11:22:41 - financial_overview completed in 153.86s
+2025-10-06 11:24:15 - industry_expansion_1 completed in 94.24s
+2025-10-06 11:24:15 - Parallel AI generation completed in 248.11s
+2025-10-06 11:24:15 - [req_1759729807] AI content generation completed in 248.11s
+2025-10-06 11:24:16 - [req_1759729807] PPT processing completed in 0.82s
+2025-10-06 11:24:16 - [req_1759729807] Total request completed in 248.95s
+2025-10-06 11:27:51 - research_journals completed in 6.62s
+2025-10-06 11:28:02 - industry_associations completed in 17.95s
+2025-10-06 11:28:14 - market_enablers completed in 29.75s
+2025-10-06 11:28:14 - executive_summary completed in 30.54s
+2025-10-06 11:29:12 - company_info completed in 88.33s
+2025-10-06 11:29:13 - industry_expansion completed in 89.16s
+2025-10-06 11:29:22 - investment_challenges completed in 97.86s
+2025-10-06 11:30:11 - financial_overview completed in 146.99s
+2025-10-06 11:32:01 - industry_expansion_1 completed in 110.26s
+2025-10-06 11:32:01 - Parallel AI generation completed in 257.26s
+2025-10-06 11:32:01 - [req_1759730264] AI content generation completed in 257.26s
+2025-10-06 11:32:02 - [req_1759730264] PPT processing completed in 0.89s
+2025-10-06 11:32:02 - [req_1759730264] Total request completed in 258.15s
+2025-10-06 11:37:57 - executive_summary completed in 7.03s
+2025-10-06 11:38:00 - research_journals completed in 10.15s
+2025-10-06 11:38:06 - industry_associations completed in 15.56s
+2025-10-06 11:38:22 - market_enablers completed in 31.79s
+2025-10-06 11:38:51 - investment_challenges completed in 60.96s
+2025-10-06 11:38:54 - industry_expansion completed in 64.07s
+2025-10-06 11:39:17 - company_info completed in 86.80s
+2025-10-06 11:39:36 - financial_overview completed in 105.72s
+2025-10-06 11:41:59 - industry_expansion_1 completed in 143.05s
+2025-10-06 11:41:59 - Parallel AI generation completed in 248.78s
+2025-10-06 11:41:59 - [req_1759730870] AI content generation completed in 248.78s
+2025-10-06 11:42:16 - research_journals completed in 6.60s
+2025-10-06 11:42:19 - industry_associations completed in 9.10s
+2025-10-06 11:42:20 - executive_summary completed in 10.92s
+2025-10-06 11:42:44 - market_enablers completed in 35.03s
+2025-10-06 11:42:45 - industry_expansion completed in 35.61s
+2025-10-06 11:42:49 - investment_challenges completed in 39.57s
+2025-10-06 11:44:03 - company_info completed in 113.94s
+2025-10-06 11:44:30 - financial_overview completed in 140.28s
+2025-10-06 11:45:44 - industry_expansion_1 completed in 74.77s
+2025-10-06 11:45:44 - Parallel AI generation completed in 215.06s
+2025-10-06 11:45:44 - [req_1759731129] AI content generation completed in 215.07s
+2025-10-06 11:45:45 - [req_1759731129] PPT processing completed in 0.85s
+2025-10-06 11:45:45 - [req_1759731129] Total request completed in 215.92s
+2025-10-06 14:50:17 - research_journals completed in 2.37s
+2025-10-06 14:50:17 - industry_associations completed in 2.46s
+2025-10-06 14:50:17 - executive_summary completed in 2.98s
+2025-10-06 14:50:21 - company_info completed in 6.50s
+2025-10-06 14:50:28 - financial_overview completed in 13.57s
+2025-10-06 14:59:11 - research_journals completed in 3.04s
+2025-10-06 14:59:12 - industry_associations completed in 4.23s
+2025-10-06 14:59:13 - executive_summary completed in 4.73s
+2025-10-06 15:00:47 - company_info completed in 99.02s
+2025-10-06 15:01:13 - financial_overview completed in 124.81s
+2025-10-06 15:03:10 - industry_associations completed in 2.70s
+2025-10-06 15:03:10 - research_journals completed in 2.88s
+2025-10-06 15:03:10 - executive_summary completed in 3.07s
+2025-10-06 15:05:14 - company_info completed in 126.64s
+2025-10-06 15:08:38 - research_journals completed in 1.72s
+2025-10-06 15:08:38 - executive_summary completed in 2.15s
+2025-10-06 15:08:39 - industry_associations completed in 3.01s
+2025-10-06 15:09:09 - research_journals completed in 2.04s
+2025-10-06 15:09:10 - executive_summary completed in 2.54s
+2025-10-06 15:09:10 - industry_associations completed in 2.77s
+2025-10-06 15:09:13 - company_info completed in 5.24s
+2025-10-06 15:09:23 - financial_overview completed in 15.42s
+2025-10-06 15:11:42 - industry_associations completed in 2.23s
+2025-10-06 15:11:42 - research_journals completed in 2.24s
+2025-10-06 15:11:42 - executive_summary completed in 2.47s
+2025-10-06 15:13:23 - financial_overview completed in 103.17s
+2025-10-06 15:13:44 - company_info completed in 124.16s
+2025-10-06 15:15:28 - research_journals completed in 2.09s
+2025-10-06 15:15:28 - industry_associations completed in 2.17s
+2025-10-06 15:15:28 - executive_summary completed in 2.30s
+2025-10-06 15:16:05 - industry_associations completed in 1.79s
+2025-10-06 15:16:05 - research_journals completed in 1.85s
+2025-10-06 15:16:05 - executive_summary completed in 1.89s
+2025-10-06 15:17:38 - financial_overview completed in 95.06s
+2025-10-06 15:18:08 - company_info completed in 124.54s
+2025-10-06 15:20:24 - research_journals completed in 1.76s
+2025-10-06 15:20:24 - industry_associations completed in 2.15s
+2025-10-06 15:20:24 - executive_summary completed in 2.52s
+2025-10-06 15:21:13 - research_journals completed in 1.68s
+2025-10-06 15:21:14 - executive_summary completed in 2.18s
+2025-10-06 15:21:14 - industry_associations completed in 2.51s
+2025-10-06 15:22:31 - company_info completed in 79.31s
+2025-10-06 15:23:05 - financial_overview completed in 112.85s
+2025-10-06 15:26:01 - industry_associations completed in 2.20s
+2025-10-06 15:26:01 - research_journals completed in 2.21s
+2025-10-06 15:26:02 - executive_summary completed in 2.65s
+2025-10-06 15:27:11 - company_info completed in 72.16s
+2025-10-06 15:27:49 - financial_overview completed in 109.71s
+2025-10-06 15:29:53 - executive_summary completed in 2.08s
+2025-10-06 15:29:53 - industry_associations completed in 2.08s
+2025-10-06 15:29:54 - research_journals completed in 2.67s
+2025-10-06 15:29:59 - industry_expansion completed in 7.23s
+2025-10-06 15:31:19 - company_info completed in 87.73s
+2025-10-06 15:31:57 - executive_summary completed in 2.18s
+2025-10-06 15:31:57 - industry_associations completed in 2.20s
+2025-10-06 15:31:57 - research_journals completed in 2.52s
+2025-10-06 15:32:00 - company_info completed in 5.29s
+2025-10-06 15:32:08 - financial_overview completed in 13.19s
+2025-10-06 15:34:30 - industry_associations completed in 1.88s
+2025-10-06 15:34:30 - research_journals completed in 1.91s
+2025-10-06 15:34:31 - executive_summary completed in 2.07s
+2025-10-06 15:34:33 - company_info completed in 4.50s
+2025-10-06 15:34:40 - financial_overview completed in 12.01s
+2025-10-06 15:35:05 - research_journals completed in 1.63s
+2025-10-06 15:35:05 - executive_summary completed in 1.63s
+2025-10-06 15:35:06 - industry_associations completed in 1.78s
+2025-10-06 15:35:10 - company_info completed in 6.32s
+2025-10-06 15:35:15 - financial_overview completed in 11.46s
+2025-10-06 15:39:40 - research_journals completed in 7.43s
+2025-10-06 15:39:43 - executive_summary completed in 10.51s
+2025-10-06 15:39:48 - industry_associations completed in 15.17s
+2025-10-06 15:40:27 - investment_challenges completed in 54.86s
+2025-10-06 15:40:31 - company_info completed in 59.00s
+2025-10-06 15:40:38 - market_enablers completed in 65.32s
+2025-10-06 15:40:44 - financial_overview completed in 71.58s
+2025-10-06 15:40:49 - industry_expansion completed in 76.68s
+2025-10-06 15:42:34 - executive_summary completed in 11.43s
+2025-10-06 15:42:35 - research_journals completed in 11.86s
+2025-10-06 15:42:37 - industry_associations completed in 14.36s
+2025-10-06 15:42:51 - market_enablers completed in 28.06s
+2025-10-06 15:43:16 - company_info completed in 53.62s
+2025-10-06 15:43:35 - industry_expansion completed in 72.28s
+2025-10-06 15:43:38 - financial_overview completed in 75.00s
+2025-10-06 15:43:41 - investment_challenges completed in 78.33s
+2025-10-06 15:45:21 - industry_expansion_1 completed in 99.82s
+2025-10-06 15:45:21 - Parallel AI generation completed in 178.17s
+2025-10-06 15:45:21 - [req_1759745543] AI content generation completed in 178.17s
+2025-10-06 15:47:42 - research_journals completed in 8.03s
+2025-10-06 15:47:48 - industry_associations completed in 14.13s
+2025-10-06 15:47:49 - executive_summary completed in 14.89s
+2025-10-06 15:48:22 - market_enablers completed in 47.47s
+2025-10-06 15:48:24 - company_info completed in 49.65s
+2025-10-06 15:48:42 - investment_challenges completed in 68.08s
+2025-10-06 15:49:06 - industry_expansion completed in 91.59s
+2025-10-06 15:49:08 - financial_overview completed in 93.18s
+2025-10-06 15:49:54 - industry_expansion_1 completed in 46.83s
+2025-10-06 15:49:54 - Parallel AI generation completed in 140.02s
+2025-10-06 15:49:54 - [req_1759745854] AI content generation completed in 140.03s
+2025-10-06 15:52:30 - industry_associations completed in 9.55s
+2025-10-06 15:52:30 - research_journals completed in 9.82s
+2025-10-06 15:52:38 - executive_summary completed in 17.75s
+2025-10-06 15:52:56 - company_info completed in 36.06s
+2025-10-06 15:52:57 - market_enablers completed in 37.08s
+2025-10-06 15:53:29 - financial_overview completed in 68.86s
+2025-10-06 15:53:33 - industry_expansion completed in 73.30s
+2025-10-06 15:53:37 - investment_challenges completed in 76.75s
+2025-10-06 15:55:28 - industry_expansion_1 completed in 111.60s
+2025-10-06 15:55:28 - Parallel AI generation completed in 188.35s
+2025-10-06 15:55:28 - [req_1759746140] AI content generation completed in 188.35s
+2025-10-06 15:55:49 - [req_1759746140] PPT processing completed in 1759746161.22s
+2025-10-06 15:55:49 - [req_1759746140] Total request completed in 209.01s
+2025-10-06 16:03:34 - research_journals completed in 8.81s
+2025-10-06 16:03:41 - executive_summary completed in 16.26s
+2025-10-06 16:05:45 - research_journals completed in 10.17s
+2025-10-06 16:05:48 - industry_associations completed in 12.92s
+2025-10-06 16:05:49 - executive_summary completed in 13.93s
+2025-10-06 16:06:08 - market_enablers completed in 32.68s
+2025-10-06 16:06:34 - company_info completed in 58.80s
+2025-10-06 16:06:53 - industry_expansion completed in 78.00s
+2025-10-06 16:06:54 - financial_overview completed in 79.32s
+2025-10-06 16:06:58 - investment_challenges completed in 82.58s
+2025-10-06 16:07:26 - industry_associations completed in 12.45s
+2025-10-06 16:07:26 - executive_summary completed in 12.88s
+2025-10-06 16:07:27 - research_journals completed in 13.62s
+2025-10-06 16:08:05 - investment_challenges completed in 51.43s
+2025-10-06 16:08:14 - company_info completed in 60.91s
+2025-10-06 16:08:16 - market_enablers completed in 62.41s
+2025-10-06 16:08:17 - financial_overview completed in 63.96s
+2025-10-06 16:08:40 - industry_expansion completed in 86.54s
+2025-10-06 16:09:39 - industry_expansion_1 completed in 58.57s
+2025-10-06 16:09:39 - Parallel AI generation completed in 145.12s
+2025-10-06 16:09:39 - [req_1759747034] AI content generation completed in 145.12s
+2025-10-06 16:12:33 - research_journals completed in 10.62s
+2025-10-06 16:12:38 - executive_summary completed in 15.19s
+2025-10-06 16:12:39 - industry_associations completed in 16.71s
+2025-10-06 16:12:54 - market_enablers completed in 30.99s
+2025-10-06 16:13:11 - company_info completed in 48.18s
+2025-10-06 16:13:48 - financial_overview completed in 85.33s
+2025-10-06 16:14:06 - investment_challenges completed in 103.15s
+2025-10-06 16:14:10 - industry_expansion completed in 107.25s
+2025-10-06 16:15:35 - industry_expansion_1 completed in 85.40s
+2025-10-06 16:15:35 - Parallel AI generation completed in 192.66s
+2025-10-06 16:15:35 - [req_1759747343] AI content generation completed in 192.66s
+2025-10-06 16:17:04 - research_journals completed in 10.23s
+2025-10-06 16:17:05 - industry_associations completed in 10.70s
+2025-10-06 16:17:06 - executive_summary completed in 12.29s
+2025-10-06 16:17:24 - market_enablers completed in 30.06s
+2025-10-06 16:17:42 - company_info completed in 47.80s
+2025-10-06 16:18:42 - financial_overview completed in 108.09s
+2025-10-06 16:18:48 - industry_expansion completed in 114.51s
+2025-10-06 16:19:07 - investment_challenges completed in 133.45s
+2025-10-06 16:20:41 - industry_expansion_1 completed in 93.24s
+2025-10-06 16:20:41 - Parallel AI generation completed in 226.72s
+2025-10-06 16:20:41 - [req_1759747614] AI content generation completed in 226.72s
+2025-10-06 16:21:05 - [req_1759747614] PPT processing completed in 1759747639.02s
+2025-10-06 16:21:05 - [req_1759747614] Total request completed in 251.31s
+2025-10-06 16:24:34 - industry_associations completed in 14.36s
+2025-10-06 16:24:36 - executive_summary completed in 17.15s
+2025-10-06 16:24:57 - research_journals completed in 37.47s
+2025-10-06 16:25:03 - market_enablers completed in 43.64s
+2025-10-06 16:25:07 - company_info completed in 47.53s
+2025-10-06 16:25:14 - financial_overview completed in 54.33s
+2025-10-06 16:25:23 - industry_expansion completed in 64.06s
+2025-10-06 16:25:33 - investment_challenges completed in 73.80s
+2025-10-06 16:26:30 - industry_expansion_1 completed in 56.92s
+2025-10-06 16:26:30 - Parallel AI generation completed in 130.73s
+2025-10-06 16:26:30 - [req_1759748059] AI content generation completed in 130.73s
+2025-10-06 16:26:50 - [req_1759748059] PPT processing completed in 1759748079.32s
+2025-10-06 16:26:50 - [req_1759748059] Total request completed in 150.29s
+2025-10-06 16:28:25 - industry_associations completed in 9.93s
+2025-10-06 16:28:27 - research_journals completed in 11.99s
+2025-10-06 16:28:35 - market_enablers completed in 19.59s
+2025-10-06 16:28:44 - executive_summary completed in 28.95s
+2025-10-06 16:28:51 - company_info completed in 35.77s
+2025-10-06 16:29:41 - financial_overview completed in 85.73s
+2025-10-06 16:30:12 - industry_expansion completed in 116.70s
+2025-10-06 16:30:58 - investment_challenges completed in 162.86s
+2025-10-06 16:31:55 - industry_expansion_1 completed in 56.23s
+2025-10-06 16:31:55 - Parallel AI generation completed in 219.10s
+2025-10-06 16:31:55 - [req_1759748295] AI content generation completed in 219.11s
+2025-10-06 16:32:37 - [req_1759748295] PPT processing completed in 1759748338.37s
+2025-10-06 16:32:37 - [req_1759748295] Total request completed in 261.53s
+2025-10-06 16:33:56 - research_journals completed in 10.19s
+2025-10-06 16:33:56 - industry_associations completed in 10.19s
+2025-10-06 16:34:00 - executive_summary completed in 14.40s
+2025-10-06 16:34:16 - market_enablers completed in 30.35s
+2025-10-06 16:34:37 - investment_challenges completed in 51.23s
+2025-10-06 16:34:38 - company_info completed in 51.88s
+2025-10-06 16:34:58 - industry_expansion completed in 72.45s
+2025-10-06 16:35:07 - financial_overview completed in 80.88s
+2025-10-06 16:37:25 - industry_expansion_1 completed in 138.74s
+2025-10-06 16:37:25 - Parallel AI generation completed in 219.63s
+2025-10-06 16:37:25 - [req_1759748626] AI content generation completed in 219.64s
+2025-10-06 16:37:47 - [req_1759748626] PPT processing completed in 1759748647.85s
+2025-10-06 16:37:47 - [req_1759748626] Total request completed in 241.17s
+2025-10-06 16:41:05 - research_journals completed in 8.73s
+2025-10-06 16:41:07 - industry_associations completed in 10.40s
+2025-10-06 16:41:11 - executive_summary completed in 15.12s
+2025-10-06 16:41:22 - market_enablers completed in 26.06s
+2025-10-06 16:41:24 - company_info completed in 27.75s
+2025-10-06 16:42:00 - investment_challenges completed in 63.61s
+2025-10-06 16:42:12 - financial_overview completed in 76.07s
+2025-10-06 16:42:40 - industry_expansion completed in 103.76s
+2025-10-06 16:43:42 - industry_expansion_1 completed in 61.76s
+2025-10-06 16:43:42 - Parallel AI generation completed in 165.53s
+2025-10-06 16:43:42 - [req_1759749056] AI content generation completed in 165.53s
+2025-10-06 16:44:02 - [req_1759749056] PPT processing completed in 1759749076.84s
+2025-10-06 16:44:02 - [req_1759749056] Total request completed in 185.76s
+2025-10-06 16:45:00 - executive_summary completed in 11.05s
+2025-10-06 16:45:00 - industry_associations completed in 11.11s
+2025-10-06 16:45:01 - research_journals completed in 11.99s
+2025-10-06 16:45:25 - market_enablers completed in 36.36s
+2025-10-06 16:45:35 - company_info completed in 46.02s
+2025-10-06 16:45:57 - financial_overview completed in 68.41s
+2025-10-06 16:45:57 - industry_expansion completed in 68.43s
+2025-10-06 16:46:13 - investment_challenges completed in 84.43s
+2025-10-06 16:47:12 - industry_expansion_1 completed in 58.18s
+2025-10-06 16:47:12 - Parallel AI generation completed in 142.62s
+2025-10-06 16:47:12 - [req_1759749289] AI content generation completed in 142.62s
+2025-10-06 16:47:33 - [req_1759749289] PPT processing completed in 1759749311.12s
+2025-10-06 16:47:33 - [req_1759749289] Total request completed in 164.26s
+2025-10-06 16:50:17 - research_journals completed in 10.46s
+2025-10-06 16:50:23 - industry_associations completed in 16.79s
+2025-10-06 16:50:24 - executive_summary completed in 17.20s
+2025-10-06 16:50:31 - market_enablers completed in 24.57s
+2025-10-06 16:50:40 - company_info completed in 33.59s
+2025-10-06 16:51:15 - investment_challenges completed in 67.99s
+2025-10-06 16:51:23 - industry_expansion completed in 76.06s
+2025-10-06 16:54:09 - research_journals completed in 9.82s
+2025-10-06 16:54:18 - industry_associations completed in 19.11s
+2025-10-06 16:54:21 - executive_summary completed in 22.39s
+2025-10-06 16:54:40 - market_enablers completed in 41.23s
+2025-10-06 16:55:00 - company_info completed in 60.97s
+2025-10-06 16:55:13 - investment_challenges completed in 74.67s
+2025-10-06 16:55:16 - industry_expansion completed in 76.88s
+2025-10-06 16:55:23 - financial_overview completed in 84.29s
+2025-10-06 16:56:46 - industry_expansion_1 completed in 83.42s
+2025-10-06 16:56:46 - Parallel AI generation completed in 167.73s
+2025-10-06 16:56:46 - [req_1759749839] AI content generation completed in 167.73s
+2025-10-06 16:57:11 - [req_1759749839] PPT processing completed in 1759749863.90s
+2025-10-06 16:57:11 - [req_1759749839] Total request completed in 192.40s
+2025-10-06 17:07:04 - research_journals completed in 11.84s
+2025-10-06 17:07:07 - industry_associations completed in 14.87s
+2025-10-06 17:07:11 - executive_summary completed in 19.18s
+2025-10-06 17:07:18 - market_enablers completed in 25.72s
+2025-10-06 17:07:43 - company_info completed in 51.45s
+2025-10-06 17:07:45 - investment_challenges completed in 52.83s
+2025-10-06 17:08:34 - industry_expansion completed in 102.01s
+2025-10-06 17:08:46 - financial_overview completed in 114.45s
+2025-10-06 17:10:29 - industry_expansion_1 completed in 102.49s
+2025-10-06 17:10:29 - Parallel AI generation completed in 216.96s
+2025-10-06 17:10:29 - [req_1759750612] AI content generation completed in 216.96s
+2025-10-06 17:10:49 - [req_1759750612] PPT processing completed in 1759750632.88s
+2025-10-06 17:10:49 - [req_1759750612] Total request completed in 237.39s
+2025-10-06 18:02:44 - research_journals completed in 9.36s
+2025-10-06 18:02:46 - executive_summary completed in 11.69s
+2025-10-06 18:02:47 - industry_associations completed in 12.09s
+2025-10-06 18:03:19 - market_enablers completed in 44.50s
+2025-10-06 18:03:29 - company_info completed in 53.86s
+2025-10-06 18:03:54 - industry_expansion completed in 79.67s
+2025-10-06 18:04:02 - financial_overview completed in 87.50s
+2025-10-06 18:04:12 - investment_challenges completed in 97.58s
+2025-10-06 18:05:21 - industry_expansion_1 completed in 68.23s
+2025-10-06 18:05:21 - Parallel AI generation completed in 165.82s
+2025-10-06 18:05:21 - [req_1759753955] AI content generation completed in 165.82s
+2025-10-06 18:05:39 - [req_1759753955] PPT processing completed in 1759753973.47s
+2025-10-06 18:05:39 - [req_1759753955] Total request completed in 184.08s
+2025-10-06 18:07:30 - research_journals completed in 7.53s
+2025-10-06 18:07:34 - industry_associations completed in 11.62s
+2025-10-06 18:07:37 - executive_summary completed in 14.23s
+2025-10-06 18:08:19 - company_info completed in 55.76s
+2025-10-06 18:08:28 - market_enablers completed in 65.29s
+2025-10-06 18:08:32 - industry_expansion completed in 68.77s
+2025-10-06 18:08:46 - financial_overview completed in 83.57s
+2025-10-06 18:09:21 - investment_challenges completed in 117.94s
+2025-10-06 18:10:20 - industry_expansion_1 completed in 59.65s
+2025-10-06 18:10:20 - Parallel AI generation completed in 177.59s
+2025-10-06 18:10:20 - [req_1759754243] AI content generation completed in 177.59s
+2025-10-06 18:10:51 - [req_1759754243] PPT processing completed in 1759754273.43s
+2025-10-06 18:10:51 - [req_1759754243] Total request completed in 207.73s
+2025-10-06 18:35:14 - company_info completed in 34.71s
+2025-10-06 18:36:20 - company_info completed in 42.55s
+2025-10-06 18:45:01 - company_info completed in 48.35s
+2025-10-06 18:45:39 - research_journals completed in 8.63s
+2025-10-06 18:45:43 - executive_summary completed in 12.22s
+2025-10-06 18:45:51 - industry_associations completed in 20.52s
+2025-10-06 18:46:07 - market_enablers completed in 36.91s
+2025-10-06 18:46:11 - definitions completed in 32.31s
+2025-10-06 18:46:26 - company_info completed in 55.82s
+2025-10-06 18:47:02 - financial_overview completed in 91.54s
+2025-10-06 18:47:06 - industry_expansion completed in 95.89s
+2025-10-06 18:47:07 - investment_challenges completed in 96.57s
+2025-10-06 18:48:15 - industry_expansion_1 completed in 67.77s
+2025-10-06 18:48:15 - Parallel AI generation completed in 164.34s
+2025-10-06 18:48:15 - [req_1759756531] AI content generation completed in 164.34s
+2025-10-06 18:48:16 - [req_1759756531] PPT processing completed in 0.94s
+2025-10-06 18:48:16 - [req_1759756531] Total request completed in 165.29s
+2025-10-06 23:42:34 - industry_associations completed in 2.51s
+2025-10-06 23:42:34 - executive_summary completed in 3.25s
+2025-10-06 23:42:35 - research_journals completed in 3.43s
+2025-10-06 23:42:40 - company_info completed in 8.46s
+2025-10-06 23:42:47 - definitions completed in 13.32s
+2025-10-06 23:43:05 - financial_overview completed in 33.93s
+2025-10-06 23:44:42 - company_info completed in 4.93s
+2025-10-06 23:44:47 - industry_associations completed in 9.84s
+2025-10-06 23:44:48 - research_journals completed in 10.83s
+2025-10-06 23:44:49 - executive_summary completed in 12.13s
+2025-10-06 23:45:13 - company_info completed in 6.28s
+2025-10-06 23:45:15 - executive_summary completed in 8.74s
+2025-10-06 23:45:15 - research_journals completed in 8.93s
+2025-10-06 23:45:18 - industry_associations completed in 11.27s
+2025-10-06 23:45:29 - market_enablers completed in 22.45s
+2025-10-06 23:45:44 - financial_overview completed in 37.49s
+2025-10-06 23:45:53 - definitions completed in 39.71s
+2025-10-06 23:45:58 - investment_challenges completed in 51.25s
+2025-10-06 23:46:21 - industry_expansion completed in 73.99s
+2025-10-06 23:48:02 - industry_expansion_1 completed in 101.10s
+2025-10-06 23:48:02 - Parallel AI generation completed in 175.10s
+2025-10-06 23:48:02 - [req_1759774507] AI content generation completed in 175.10s
+2025-10-06 23:48:03 - [req_1759774507] PPT processing completed in 0.93s
+2025-10-06 23:48:03 - [req_1759774507] Total request completed in 176.04s
+2025-10-06 23:52:38 - research_journals completed in 7.96s
+2025-10-06 23:52:39 - industry_associations completed in 8.89s
+2025-10-06 23:52:40 - company_info completed in 9.96s
+2025-10-06 23:52:42 - executive_summary completed in 11.92s
+2025-10-06 23:53:08 - financial_overview completed in 38.31s
+2025-10-06 23:53:21 - market_enablers completed in 51.48s
+2025-10-06 23:53:34 - industry_expansion completed in 63.88s
+2025-10-06 23:53:39 - investment_challenges completed in 69.32s
+2025-10-06 23:53:48 - definitions completed in 70.04s
+2025-10-06 23:55:08 - industry_expansion_1 completed in 80.23s
+2025-10-06 23:55:08 - Parallel AI generation completed in 158.23s
+2025-10-06 23:55:08 - [req_1759774950] AI content generation completed in 158.24s
+2025-10-06 23:55:09 - [req_1759774950] PPT processing completed in 0.92s
+2025-10-06 23:55:09 - [req_1759774950] Total request completed in 159.16s
+2025-10-06 23:59:43 - research_journals completed in 1.79s
+2025-10-06 23:59:43 - industry_associations completed in 1.92s
+2025-10-06 23:59:43 - executive_summary completed in 2.27s
+2025-10-06 23:59:46 - company_info completed in 5.12s
+2025-10-06 23:59:52 - investment_challenges completed in 11.06s
+2025-10-06 23:59:53 - financial_overview completed in 12.13s
+2025-10-06 23:59:59 - definitions completed in 16.54s
+2025-10-07 00:01:48 - company_info completed in 5.73s
+2025-10-07 00:01:50 - research_journals completed in 7.82s
+2025-10-07 00:01:52 - executive_summary completed in 9.83s
+2025-10-07 00:02:31 - company_info completed in 5.78s
+2025-10-07 00:02:34 - executive_summary completed in 8.36s
+2025-10-07 00:02:34 - research_journals completed in 8.78s
+2025-10-07 00:02:37 - industry_associations completed in 11.54s
+2025-10-07 00:02:46 - market_enablers completed in 21.31s
+2025-10-07 00:03:01 - definitions completed in 29.87s
+2025-10-07 00:03:08 - financial_overview completed in 42.68s
+2025-10-07 00:03:18 - industry_expansion completed in 53.18s
+2025-10-07 00:04:31 - investment_challenges completed in 125.90s
+2025-10-07 00:05:48 - industry_expansion_1 completed in 76.86s
+2025-10-07 00:05:48 - Parallel AI generation completed in 202.77s
+2025-10-07 00:05:48 - [req_1759775545] AI content generation completed in 202.77s
+2025-10-07 00:05:49 - [req_1759775545] PPT processing completed in 0.99s
+2025-10-07 00:05:49 - [req_1759775545] Total request completed in 203.77s
+2025-10-07 00:09:32 - company_info completed in 6.48s
+2025-10-07 00:09:34 - research_journals completed in 8.07s
+2025-10-07 00:09:34 - executive_summary completed in 8.38s
+2025-10-07 00:09:35 - industry_associations completed in 8.94s
+2025-10-07 00:09:50 - market_enablers completed in 24.52s
+2025-10-07 00:10:06 - definitions completed in 34.09s
+2025-10-07 00:10:07 - financial_overview completed in 41.34s
+2025-10-07 00:10:18 - industry_expansion completed in 52.20s
+2025-10-07 00:10:37 - investment_challenges completed in 70.71s
+2025-10-07 00:11:46 - industry_expansion_1 completed in 69.57s
+2025-10-07 00:11:46 - Parallel AI generation completed in 140.29s
+2025-10-07 00:11:46 - [req_1759775966] AI content generation completed in 140.29s
+2025-10-07 00:11:47 - [req_1759775966] PPT processing completed in 0.90s
+2025-10-07 00:11:47 - [req_1759775966] Total request completed in 141.19s
+2025-10-07 00:15:20 - company_info completed in 4.31s
+2025-10-07 00:15:25 - research_journals completed in 9.77s
+2025-10-07 00:15:26 - industry_associations completed in 10.31s
+2025-10-07 00:15:31 - executive_summary completed in 16.13s
+2025-10-07 00:15:51 - definitions completed in 31.00s
+2025-10-07 00:15:59 - market_enablers completed in 43.87s
+2025-10-07 00:16:00 - financial_overview completed in 44.37s
+2025-10-07 00:16:45 - investment_challenges completed in 89.44s
+2025-10-07 00:16:48 - industry_expansion completed in 92.35s
+2025-10-07 00:17:53 - industry_expansion_1 completed in 65.59s
+2025-10-07 00:17:53 - Parallel AI generation completed in 157.94s
+2025-10-07 00:17:53 - [req_1759776315] AI content generation completed in 157.94s
+2025-10-07 00:17:54 - [req_1759776315] PPT processing completed in 0.87s
+2025-10-07 00:17:54 - [req_1759776315] Total request completed in 158.82s
+2025-10-07 00:22:34 - research_journals completed in 8.57s
+2025-10-07 00:22:38 - executive_summary completed in 13.16s
+2025-10-07 00:22:41 - company_info completed in 16.18s
+2025-10-07 00:22:44 - industry_associations completed in 19.05s
+2025-10-07 00:22:48 - market_enablers completed in 22.95s
+2025-10-07 00:23:20 - definitions completed in 45.94s
+2025-10-07 00:23:26 - financial_overview completed in 61.14s
+2025-10-07 00:23:30 - industry_expansion completed in 65.20s
+2025-10-07 00:23:38 - investment_challenges completed in 72.98s
+2025-10-07 00:24:57 - industry_expansion_1 completed in 78.35s
+2025-10-07 00:24:57 - Parallel AI generation completed in 151.34s
+2025-10-07 00:24:57 - [req_1759776745] AI content generation completed in 151.34s
+2025-10-07 00:24:58 - [req_1759776745] PPT processing completed in 1.15s
+2025-10-07 00:24:58 - [req_1759776745] Total request completed in 152.49s
+2025-10-07 08:37:14 - company_info completed in 5.06s
+2025-10-07 08:37:19 - research_journals completed in 10.05s
+2025-10-07 08:37:21 - industry_associations completed in 12.24s
+2025-10-07 08:37:25 - executive_summary completed in 16.22s
+2025-10-07 08:37:46 - definitions completed in 32.27s
+2025-10-07 08:38:00 - market_enablers completed in 50.56s
+2025-10-07 08:38:02 - financial_overview completed in 52.74s
+2025-10-07 08:38:28 - investment_challenges completed in 79.39s
+2025-10-07 08:38:34 - industry_expansion completed in 84.70s
+2025-10-07 08:41:31 - industry_expansion_1 completed in 176.78s
+2025-10-07 08:41:31 - Parallel AI generation completed in 261.49s
+2025-10-07 08:41:31 - [req_1759806429] AI content generation completed in 261.49s
+2025-10-07 08:41:32 - [req_1759806429] PPT processing completed in 0.97s
+2025-10-07 08:41:32 - [req_1759806429] Total request completed in 262.47s
+2025-10-07 08:43:18 - research_journals completed in 6.49s
+2025-10-07 08:43:19 - company_info completed in 7.78s
+2025-10-07 08:43:21 - industry_associations completed in 9.69s
+2025-10-07 08:43:35 - executive_summary completed in 23.79s
+2025-10-07 08:43:56 - definitions completed in 37.98s
+2025-10-07 08:44:07 - market_enablers completed in 55.00s
+2025-10-07 08:44:18 - financial_overview completed in 66.21s
+2025-10-07 08:44:24 - industry_expansion completed in 71.94s
+2025-10-07 08:44:26 - investment_challenges completed in 74.65s
+2025-10-07 08:45:58 - industry_expansion_1 completed in 92.12s
+2025-10-07 08:45:58 - Parallel AI generation completed in 166.77s
+2025-10-07 08:45:58 - [req_1759806792] AI content generation completed in 166.78s
+2025-10-07 08:45:59 - [req_1759806792] PPT processing completed in 0.92s
+2025-10-07 08:45:59 - [req_1759806792] Total request completed in 167.70s
+2025-10-07 08:57:30 - company_info completed in 6.40s
+2025-10-07 08:57:33 - research_journals completed in 9.42s
+2025-10-07 08:57:36 - industry_associations completed in 12.71s
+2025-10-07 08:57:40 - executive_summary completed in 16.31s
+2025-10-07 08:57:53 - market_enablers completed in 29.49s
+2025-10-07 08:58:05 - definitions completed in 35.47s
+2025-10-07 08:58:14 - financial_overview completed in 50.31s
+2025-10-07 08:58:59 - industry_expansion completed in 95.66s
+2025-10-07 08:59:11 - investment_challenges completed in 107.60s
+2025-10-07 09:01:12 - industry_expansion_1 completed in 120.90s
+2025-10-07 09:01:12 - Parallel AI generation completed in 228.50s
+2025-10-07 09:01:12 - [req_1759807643] AI content generation completed in 228.50s
+2025-10-07 09:01:13 - [req_1759807643] PPT processing completed in 0.89s
+2025-10-07 09:01:13 - [req_1759807643] Total request completed in 229.39s
+2025-10-07 09:04:43 - company_info completed in 5.56s
+2025-10-07 09:04:44 - research_journals completed in 6.91s
+2025-10-07 09:04:48 - industry_associations completed in 10.25s
+2025-10-07 09:04:51 - executive_summary completed in 13.09s
+2025-10-07 09:05:02 - market_enablers completed in 24.60s
+2025-10-07 09:05:12 - financial_overview completed in 34.49s
+2025-10-07 09:05:17 - definitions completed in 33.99s
+2025-10-07 09:05:50 - investment_challenges completed in 72.82s
+2025-10-07 09:05:53 - industry_expansion completed in 75.52s
+2025-10-07 09:07:01 - industry_expansion_1 completed in 67.72s
+2025-10-07 09:07:01 - Parallel AI generation completed in 143.24s
+2025-10-07 09:07:01 - [req_1759808077] AI content generation completed in 143.24s
+2025-10-07 09:07:02 - [req_1759808077] PPT processing completed in 1.29s
+2025-10-07 09:07:02 - [req_1759808077] Total request completed in 144.54s
+2025-10-07 09:15:42 - industry_associations completed in 1.81s
+2025-10-07 09:15:42 - research_journals completed in 2.00s
+2025-10-07 09:15:43 - executive_summary completed in 2.67s
+2025-10-07 09:15:44 - company_info completed in 3.85s
+2025-10-07 09:15:52 - financial_overview completed in 11.16s
+2025-10-07 09:15:54 - definitions completed in 11.98s
+2025-10-07 09:16:43 - company_info completed in 3.75s
+2025-10-07 09:16:47 - research_journals completed in 7.98s
+2025-10-07 09:16:48 - executive_summary completed in 9.30s
+2025-10-07 09:16:51 - industry_associations completed in 12.45s
+2025-10-07 09:16:57 - market_enablers completed in 17.72s
+2025-10-07 09:17:18 - industry_expansion completed in 38.74s
+2025-10-07 09:17:24 - definitions completed in 41.11s
+2025-10-07 09:17:26 - financial_overview completed in 47.60s
+2025-10-07 09:17:54 - investment_challenges completed in 75.26s
+2025-10-07 09:19:01 - industry_expansion_1 completed in 66.78s
+2025-10-07 09:19:01 - Parallel AI generation completed in 142.05s
+2025-10-07 09:19:01 - [req_1759808799] AI content generation completed in 142.05s
+2025-10-07 09:20:27 - company_info completed in 3.87s
+2025-10-07 09:20:32 - research_journals completed in 8.42s
+2025-10-07 09:20:36 - executive_summary completed in 12.73s
+2025-10-07 09:20:42 - industry_associations completed in 19.05s
+2025-10-07 09:20:50 - market_enablers completed in 26.58s
+2025-10-07 09:21:21 - financial_overview completed in 58.27s
+2025-10-07 09:21:22 - industry_expansion completed in 58.31s
+2025-10-07 09:21:27 - definitions completed in 59.72s
+2025-10-07 09:21:39 - investment_challenges completed in 75.68s
+2025-10-07 09:22:46 - industry_expansion_1 completed in 66.97s
+2025-10-07 09:22:46 - Parallel AI generation completed in 142.66s
+2025-10-07 09:22:46 - [req_1759809023] AI content generation completed in 142.66s
+2025-10-07 09:22:47 - [req_1759809023] PPT processing completed in 1.22s
+2025-10-07 09:22:47 - [req_1759809023] Total request completed in 143.89s
+2025-10-07 09:27:21 - company_info completed in 6.94s
+2025-10-07 09:27:27 - executive_summary completed in 12.75s
+2025-10-07 09:27:34 - industry_associations completed in 19.58s
+2025-10-07 09:27:36 - research_journals completed in 21.22s
+2025-10-07 09:27:43 - definitions completed in 21.93s
+2025-10-07 09:27:56 - financial_overview completed in 41.51s
+2025-10-07 09:28:10 - market_enablers completed in 55.31s
+2025-10-07 09:28:37 - industry_expansion completed in 82.28s
+2025-10-07 09:28:44 - investment_challenges completed in 89.91s
+2025-10-07 09:30:11 - industry_expansion_1 completed in 86.51s
+2025-10-07 09:30:11 - Parallel AI generation completed in 176.42s
+2025-10-07 09:30:11 - [req_1759809434] AI content generation completed in 176.42s
+2025-10-07 09:30:12 - [req_1759809434] PPT processing completed in 0.90s
+2025-10-07 09:30:12 - [req_1759809434] Total request completed in 177.32s
+2025-10-07 10:07:27 - company_info completed in 3.48s
+2025-10-07 10:07:31 - industry_associations completed in 6.92s
+2025-10-07 10:07:31 - research_journals completed in 7.28s
+2025-10-07 10:07:35 - executive_summary completed in 11.13s
+2025-10-07 10:07:52 - market_enablers completed in 28.25s
+2025-10-07 10:08:09 - definitions completed in 41.50s
+2025-10-07 10:08:13 - financial_overview completed in 49.05s
+2025-10-07 10:08:50 - investment_challenges completed in 86.69s
+2025-10-07 10:08:51 - industry_expansion completed in 87.60s
+2025-10-07 10:10:37 - industry_expansion_1 completed in 105.36s
+2025-10-07 10:10:37 - Parallel AI generation completed in 192.96s
+2025-10-07 10:10:37 - [req_1759811844] AI content generation completed in 192.96s
+2025-10-07 10:10:37 - [req_1759811844] PPT processing completed in 0.90s
+2025-10-07 10:10:37 - [req_1759811844] Total request completed in 193.87s
+2025-10-07 10:24:55 - research_journals completed in 12.01s
+2025-10-07 10:24:58 - industry_associations completed in 15.04s
+2025-10-07 10:24:59 - executive_summary completed in 16.15s
+2025-10-07 10:25:09 - market_enablers completed in 25.55s
+2025-10-07 10:25:42 - investment_challenges completed in 58.91s
+2025-10-07 10:26:15 - industry_expansion completed in 91.52s
+2025-10-07 10:26:20 - company_info completed in 96.60s
+2025-10-07 10:26:26 - financial_overview completed in 102.98s
+2025-10-07 10:27:43 - industry_expansion_1 completed in 77.15s
+2025-10-07 10:27:43 - Parallel AI generation completed in 180.14s
+2025-10-07 10:27:43 - [req_1759812883] AI content generation completed in 180.14s
+2025-10-07 10:27:44 - [req_1759812883] PPT processing completed in 0.88s
+2025-10-07 10:27:44 - [req_1759812883] Total request completed in 181.03s
+2025-10-07 10:46:47 - research_journals completed in 7.83s
+2025-10-07 10:46:48 - industry_associations completed in 9.11s
+2025-10-07 10:46:55 - market_enablers completed in 15.89s
+2025-10-07 10:47:01 - executive_summary completed in 22.39s
+2025-10-07 10:47:41 - industry_expansion completed in 62.09s
+2025-10-07 10:47:59 - investment_challenges completed in 80.12s
+2025-10-07 10:48:25 - financial_overview completed in 106.38s
+2025-10-07 10:48:41 - company_info completed in 122.76s
+2025-10-07 10:50:04 - industry_expansion_1 completed in 82.13s
+2025-10-07 10:50:04 - Parallel AI generation completed in 204.90s
+2025-10-07 10:50:04 - [req_1759814199] AI content generation completed in 204.90s
+2025-10-07 10:50:05 - [req_1759814199] PPT processing completed in 0.88s
+2025-10-07 10:50:05 - [req_1759814199] Total request completed in 205.79s
+2025-10-09 10:16:32 - industry_associations completed in 8.38s
+2025-10-09 10:16:34 - research_journals completed in 10.60s
+2025-10-09 10:16:51 - executive_summary completed in 26.83s
+2025-10-09 10:16:58 - market_enablers completed in 33.97s
+2025-10-09 10:17:23 - industry_expansion completed in 59.72s
+2025-10-09 10:17:43 - investment_challenges completed in 79.72s
+2025-10-09 10:18:11 - financial_overview completed in 107.73s
+2025-10-09 10:18:12 - company_info completed in 108.67s
+2025-10-09 10:19:17 - industry_expansion_1 completed in 64.15s
+2025-10-09 10:19:17 - Parallel AI generation completed in 172.82s
+2025-10-09 10:19:17 - [req_1759985184] AI content generation completed in 172.82s
+2025-10-09 10:19:18 - [req_1759985184] PPT processing completed in 0.96s
+2025-10-09 10:19:18 - [req_1759985184] Total request completed in 173.79s
+2025-10-09 10:36:52 - research_journals completed in 9.21s
+2025-10-09 10:36:55 - industry_associations completed in 12.60s
+2025-10-09 10:37:08 - executive_summary completed in 25.61s
+2025-10-09 10:37:18 - market_enablers completed in 35.93s
+2025-10-09 10:37:55 - investment_challenges completed in 72.94s
+2025-10-09 10:38:15 - company_info completed in 91.98s
+2025-10-09 10:38:19 - industry_expansion completed in 96.20s
+2025-10-09 10:39:05 - financial_overview completed in 142.15s
+2025-10-09 10:40:36 - industry_expansion_1 completed in 91.15s
+2025-10-09 10:40:36 - Parallel AI generation completed in 233.31s
+2025-10-09 10:40:36 - [req_1759986403] AI content generation completed in 233.31s
+2025-10-09 10:45:22 - research_journals completed in 8.77s
+2025-10-09 10:45:25 - executive_summary completed in 10.91s
+2025-10-09 10:45:26 - industry_associations completed in 12.28s
+2025-10-09 10:45:40 - market_enablers completed in 26.26s
+2025-10-09 10:46:09 - research_journals completed in 8.58s
+2025-10-09 10:46:09 - industry_associations completed in 8.76s
+2025-10-09 10:46:18 - executive_summary completed in 17.04s
+2025-10-09 10:46:49 - market_enablers completed in 48.48s
+2025-10-09 10:47:03 - industry_expansion completed in 62.41s
+2025-10-09 10:47:05 - company_info completed in 64.59s
+2025-10-09 10:47:37 - financial_overview completed in 96.67s
+2025-10-09 10:47:54 - investment_challenges completed in 113.41s
+2025-10-09 10:48:58 - industry_expansion_1 completed in 63.95s
+2025-10-09 10:48:58 - Parallel AI generation completed in 177.37s
+2025-10-09 10:48:58 - [req_1759986961] AI content generation completed in 177.37s
+2025-10-09 10:49:10 - Definition generation completed in 12.41s
+2025-10-09 10:49:11 - [req_1759986961] PPT processing completed in 13.34s
+2025-10-09 10:49:11 - [req_1759986961] Total request completed in 190.71s
+2025-10-09 10:58:11 - research_journals completed in 6.29s
+2025-10-09 10:58:14 - executive_summary completed in 9.62s
+2025-10-09 10:58:18 - industry_associations completed in 12.95s
+2025-10-09 10:58:49 - market_enablers completed in 44.38s
+2025-10-09 10:59:24 - investment_challenges completed in 79.67s
+2025-10-09 10:59:31 - industry_expansion completed in 86.61s
+2025-10-09 10:59:52 - company_info completed in 106.84s
+2025-10-09 11:00:08 - financial_overview completed in 123.34s
+2025-10-09 11:01:18 - industry_expansion_1 completed in 69.41s
+2025-10-09 11:01:18 - Parallel AI generation completed in 192.76s
+2025-10-09 11:01:18 - [req_1759987685] AI content generation completed in 192.77s
+2025-10-09 11:01:31 - Definition generation completed in 13.44s
+2025-10-09 11:01:32 - [req_1759987685] PPT processing completed in 14.78s
+2025-10-09 11:01:32 - [req_1759987685] Total request completed in 207.55s
+2025-10-09 11:22:47 - research_journals completed in 9.47s
+2025-10-09 11:22:50 - industry_associations completed in 12.41s
+2025-10-09 11:23:13 - market_enablers completed in 34.89s
+2025-10-09 11:23:28 - investment_challenges completed in 50.71s
+2025-10-09 11:23:34 - executive_summary completed in 56.56s
+2025-10-09 11:23:38 - industry_expansion completed in 60.47s
+2025-10-09 11:24:19 - company_info completed in 100.91s
+2025-10-09 11:24:34 - financial_overview completed in 116.04s
+2025-10-09 11:26:57 - industry_expansion_1 completed in 143.59s
+2025-10-09 11:26:57 - Parallel AI generation completed in 259.65s
+2025-10-09 11:26:57 - [req_1759989158] AI content generation completed in 259.65s
+2025-10-09 11:27:17 - Definition generation completed in 19.33s
+2025-10-09 11:27:18 - [req_1759989158] PPT processing completed in 20.29s
+2025-10-09 11:27:18 - [req_1759989158] Total request completed in 279.94s
+2025-10-09 13:57:39 - research_journals completed in 8.62s
+2025-10-09 13:57:45 - industry_associations completed in 14.63s
+2025-10-09 13:57:53 - executive_summary completed in 22.80s
+2025-10-09 13:57:53 - market_enablers completed in 22.94s
+2025-10-09 13:58:35 - company_info completed in 65.11s
+2025-10-09 13:58:41 - industry_expansion completed in 70.60s
+2025-10-09 13:58:51 - investment_challenges completed in 81.18s
+2025-10-09 13:59:25 - financial_overview completed in 114.43s
+2025-10-09 14:01:16 - industry_expansion_1 completed in 111.08s
+2025-10-09 14:01:16 - Parallel AI generation completed in 225.53s
+2025-10-09 14:01:16 - [req_1759998450] AI content generation completed in 225.53s
+2025-10-09 14:01:32 - Definition generation completed in 16.25s
+2025-10-09 14:01:35 - [req_1759998450] PPT processing completed in 19.54s
+2025-10-09 14:01:35 - [req_1759998450] Total request completed in 245.08s
+2025-10-09 14:25:16 - success_factors completed in 4.32s
+2025-10-09 14:25:19 - research_journals completed in 7.32s
+2025-10-09 14:25:27 - industry_associations completed in 14.62s
+2025-10-09 14:25:28 - executive_summary completed in 16.16s
+2025-10-09 14:25:48 - market_enablers completed in 36.41s
+2025-10-09 14:26:25 - industry_expansion completed in 73.18s
+2025-10-09 14:26:29 - investment_challenges completed in 77.36s
+2025-10-09 14:26:35 - company_info completed in 83.34s
+2025-10-09 14:27:36 - financial_overview completed in 143.63s
+2025-10-09 14:28:03 - success_factors completed in 4.14s
+2025-10-09 14:28:05 - research_journals completed in 6.80s
+2025-10-09 14:28:06 - industry_associations completed in 8.12s
+2025-10-09 14:28:12 - executive_summary completed in 13.56s
+2025-10-09 14:28:39 - market_enablers completed in 40.80s
+2025-10-09 14:29:22 - investment_challenges completed in 83.45s
+2025-10-09 14:29:37 - industry_expansion completed in 98.62s
+2025-10-09 14:30:11 - company_info completed in 132.40s
+2025-10-09 14:30:35 - financial_overview completed in 157.11s
+2025-10-09 14:31:41 - industry_expansion_1 completed in 65.50s
+2025-10-09 14:31:41 - Parallel AI generation completed in 222.62s
+2025-10-09 14:31:41 - [req_1760000278] AI content generation completed in 222.62s
+2025-10-09 14:31:59 - Definition generation completed in 17.55s
+2025-10-09 14:32:00 - [req_1760000278] PPT processing completed in 18.53s
+2025-10-09 14:32:00 - [req_1760000278] Total request completed in 241.15s
+2025-10-09 14:44:10 - research_journals completed in 8.99s
+2025-10-09 14:44:14 - industry_associations completed in 13.04s
+2025-10-09 14:44:16 - executive_summary completed in 14.70s
+2025-10-09 14:44:27 - market_enablers completed in 25.43s
+2025-10-09 14:45:12 - industry_expansion completed in 70.60s
+2025-10-09 14:45:23 - investment_challenges completed in 81.84s
+2025-10-09 14:45:46 - company_info completed in 104.36s
+2025-10-09 14:46:05 - financial_overview completed in 123.86s
+2025-10-09 14:47:31 - industry_expansion_1 completed in 86.38s
+2025-10-09 14:47:31 - Parallel AI generation completed in 210.25s
+2025-10-09 14:47:31 - [req_1760001241] AI content generation completed in 210.25s
+2025-10-09 14:47:47 - Definition generation completed in 15.75s
+2025-10-09 14:47:48 - [req_1760001241] PPT processing completed in 16.71s
+2025-10-09 14:47:48 - [req_1760001241] Total request completed in 226.97s
+2025-10-09 15:05:49 - research_journals completed in 1.94s
+2025-10-09 15:05:49 - industry_associations completed in 2.10s
+2025-10-09 15:05:49 - executive_summary completed in 2.48s
+2025-10-09 15:05:55 - company_info completed in 7.86s
+2025-10-09 15:06:05 - financial_overview completed in 18.71s
+2025-10-09 15:06:27 - industry_associations completed in 1.78s
+2025-10-09 15:06:27 - research_journals completed in 1.98s
+2025-10-09 15:06:28 - executive_summary completed in 2.52s
+2025-10-09 15:06:33 - company_info completed in 7.82s
+2025-10-09 15:06:42 - success_factors completed in 16.87s
+2025-10-09 15:06:45 - financial_overview completed in 19.54s
+2025-10-09 15:07:43 - company_info completed in 7.66s
+2025-10-09 15:07:45 - research_journals completed in 10.25s
+2025-10-09 15:07:48 - industry_associations completed in 13.25s
+2025-10-09 15:07:49 - executive_summary completed in 13.41s
+2025-10-09 15:08:23 - research_journals completed in 8.27s
+2025-10-09 15:08:23 - company_info completed in 8.83s
+2025-10-09 15:08:25 - executive_summary completed in 11.13s
+2025-10-09 15:08:30 - industry_associations completed in 15.33s
+2025-10-09 15:08:38 - market_enablers completed in 24.16s
+2025-10-09 15:08:40 - success_factors completed in 25.90s
+2025-10-09 15:09:33 - industry_expansion completed in 78.33s
+2025-10-09 15:09:49 - financial_overview completed in 94.38s
+2025-10-09 15:09:58 - investment_challenges completed in 104.17s
+2025-10-09 15:11:22 - industry_expansion_1 completed in 83.49s
+2025-10-09 15:11:22 - Parallel AI generation completed in 187.66s
+2025-10-09 15:11:22 - [req_1760002694] AI content generation completed in 187.66s
+2025-10-09 15:12:01 - Definition generation completed in 38.43s
+2025-10-09 15:19:50 - company_info completed in 7.88s
+2025-10-09 15:19:50 - research_journals completed in 8.54s
+2025-10-09 15:19:54 - industry_associations completed in 12.16s
+2025-10-09 15:20:00 - success_factors completed in 17.99s
+2025-10-09 15:20:01 - market_enablers completed in 18.84s
+2025-10-09 15:20:11 - executive_summary completed in 28.82s
+2025-10-09 15:20:39 - research_journals completed in 10.47s
+2025-10-09 15:20:40 - company_info completed in 11.61s
+2025-10-09 15:20:46 - executive_summary completed in 17.32s
+2025-10-09 15:20:47 - industry_associations completed in 18.78s
+2025-10-09 15:20:49 - success_factors completed in 20.75s
+2025-10-09 15:21:12 - market_enablers completed in 43.41s
+2025-10-09 15:21:30 - financial_overview completed in 61.75s
+2025-10-09 15:22:10 - investment_challenges completed in 101.48s
+2025-10-09 15:22:42 - industry_expansion completed in 133.64s
+2025-10-09 15:24:01 - industry_expansion_1 completed in 79.24s
+2025-10-09 15:24:01 - Parallel AI generation completed in 212.89s
+2025-10-09 15:24:01 - [req_1760003428] AI content generation completed in 212.89s
+2025-10-09 15:24:45 - Definition generation completed in 43.13s
+2025-10-09 15:24:46 - [req_1760003428] PPT processing completed in 44.29s
+2025-10-09 15:24:46 - [req_1760003428] Total request completed in 257.19s
+2025-10-09 16:48:34 - research_journals completed in 8.02s
+2025-10-09 16:48:36 - company_info completed in 9.95s
+2025-10-09 16:48:41 - industry_associations completed in 15.07s
+2025-10-09 16:48:48 - executive_summary completed in 22.71s
+2025-10-09 16:48:50 - market_enablers completed in 24.31s
+2025-10-09 16:48:51 - success_factors completed in 25.01s
+2025-10-09 16:50:06 - investment_challenges completed in 100.27s
+2025-10-09 16:50:13 - industry_expansion completed in 107.63s
+2025-10-09 16:58:25 - company_info completed in 6.23s
+2025-10-09 16:58:29 - research_journals completed in 9.99s
+2025-10-09 16:58:36 - industry_associations completed in 17.04s
+2025-10-09 16:58:44 - success_factors completed in 24.94s
+2025-10-09 16:58:49 - executive_summary completed in 29.52s
+2025-10-09 16:58:54 - market_enablers completed in 34.46s
+2025-10-09 16:59:11 - financial_overview completed in 51.49s
+2025-10-09 17:02:09 - company_info completed in 8.78s
+2025-10-09 17:02:10 - industry_associations completed in 9.79s
+2025-10-09 17:02:12 - research_journals completed in 11.60s
+2025-10-09 17:02:18 - executive_summary completed in 18.00s
+2025-10-09 17:02:25 - market_enablers completed in 24.82s
+2025-10-09 17:02:25 - success_factors completed in 24.93s
+2025-10-09 17:03:15 - financial_overview completed in 74.82s
+2025-10-09 17:03:32 - industry_expansion completed in 92.33s
+2025-10-09 17:03:52 - investment_challenges completed in 112.18s
+2025-10-09 17:05:05 - industry_expansion_1 completed in 72.34s
+2025-10-09 17:05:05 - Parallel AI generation completed in 184.53s
+2025-10-09 17:05:05 - [req_1760009520] AI content generation completed in 184.53s
+2025-10-09 17:05:34 - Definition generation completed in 29.24s
+2025-10-09 17:05:35 - [req_1760009520] PPT processing completed in 30.23s
+2025-10-09 17:05:35 - [req_1760009520] Total request completed in 214.78s
+2025-10-09 17:50:36 - company_info completed in 9.90s
+2025-10-09 17:50:38 - research_journals completed in 11.17s
+2025-10-09 17:50:45 - industry_associations completed in 18.15s
+2025-10-09 17:50:54 - success_factors completed in 27.02s
+2025-10-09 17:50:57 - executive_summary completed in 30.38s
+2025-10-09 17:51:07 - market_enablers completed in 40.03s
+2025-10-09 17:51:41 - industry_expansion completed in 74.30s
+2025-10-09 17:51:42 - investment_challenges completed in 75.47s
+2025-10-09 17:52:32 - company_info completed in 7.77s
+2025-10-09 17:52:34 - industry_associations completed in 9.63s
+2025-10-09 17:52:34 - research_journals completed in 9.92s
+2025-10-09 17:52:40 - executive_summary completed in 15.57s
+2025-10-09 17:52:54 - success_factors completed in 30.18s
+2025-10-09 17:53:12 - market_enablers completed in 47.38s
+2025-10-09 17:53:16 - financial_overview completed in 52.06s
+2025-10-09 17:53:37 - industry_expansion completed in 72.98s
+2025-10-09 17:53:47 - investment_challenges completed in 82.36s
+2025-10-09 17:55:20 - industry_expansion_1 completed in 93.03s
+2025-10-09 17:55:20 - Parallel AI generation completed in 175.40s
+2025-10-09 17:55:20 - [req_1760012544] AI content generation completed in 175.40s
+2025-10-09 17:55:55 - Definition generation completed in 34.89s
+2025-10-09 17:55:56 - [req_1760012544] PPT processing completed in 35.85s
+2025-10-09 17:55:56 - [req_1760012544] Total request completed in 211.25s
+2025-10-09 18:00:10 - company_info completed in 5.93s
+2025-10-09 18:00:11 - research_journals completed in 7.62s
+2025-10-09 18:00:14 - industry_associations completed in 10.42s
+2025-10-09 18:00:28 - executive_summary completed in 24.45s
+2025-10-09 18:00:50 - company_info completed in 6.03s
+2025-10-09 18:00:52 - research_journals completed in 7.67s
+2025-10-09 18:00:56 - industry_associations completed in 12.04s
+2025-10-09 18:01:09 - executive_summary completed in 24.50s
+2025-10-09 18:01:11 - success_factors completed in 26.50s
+2025-10-09 18:01:15 - market_enablers completed in 30.89s
+2025-10-09 18:02:00 - investment_challenges completed in 76.07s
+2025-10-09 18:02:19 - industry_expansion completed in 94.61s
+2025-10-09 18:03:15 - company_info completed in 6.02s
+2025-10-09 18:03:18 - research_journals completed in 8.82s
+2025-10-09 18:03:22 - executive_summary completed in 12.70s
+2025-10-09 18:03:23 - industry_associations completed in 13.72s
+2025-10-09 18:03:34 - success_factors completed in 25.20s
+2025-10-09 18:03:55 - market_enablers completed in 45.33s
+2025-10-09 18:04:06 - investment_challenges completed in 56.65s
+2025-10-09 18:04:22 - financial_overview completed in 73.01s
+2025-10-09 18:04:26 - industry_expansion completed in 77.05s
+2025-10-09 18:06:07 - industry_expansion_1 completed in 100.52s
+2025-10-09 18:06:07 - Parallel AI generation completed in 177.57s
+2025-10-09 18:06:07 - [req_1760013189] AI content generation completed in 177.57s
+2025-10-09 18:06:46 - Definition generation completed in 38.77s
+2025-10-09 18:06:47 - [req_1760013189] PPT processing completed in 39.77s
+2025-10-09 18:06:47 - [req_1760013189] Total request completed in 217.35s
+2025-10-09 18:12:50 - success_factors completed in 2.63s
+2025-10-09 18:12:54 - research_journals completed in 7.07s
+2025-10-09 18:12:57 - company_info completed in 9.85s
+2025-10-09 18:12:58 - industry_associations completed in 10.81s
+2025-10-09 18:13:03 - executive_summary completed in 15.40s
+2025-10-09 18:13:18 - market_enablers completed in 31.08s
+2025-10-09 18:14:12 - industry_expansion completed in 84.77s
+2025-10-09 18:14:33 - investment_challenges completed in 105.54s
+2025-10-09 18:15:55 - success_factors completed in 3.05s
+2025-10-09 18:15:58 - company_info completed in 6.01s
+2025-10-09 18:16:02 - research_journals completed in 10.03s
+2025-10-09 18:16:02 - industry_associations completed in 10.21s
+2025-10-09 18:16:12 - executive_summary completed in 20.76s
+2025-10-09 18:16:21 - market_enablers completed in 29.07s
+2025-10-09 18:17:02 - financial_overview completed in 70.14s
+2025-10-09 18:17:13 - industry_expansion completed in 80.98s
+2025-10-09 18:18:12 - investment_challenges completed in 140.39s
+2025-10-09 18:20:12 - industry_expansion_1 completed in 120.46s
+2025-10-09 18:20:12 - Parallel AI generation completed in 260.85s
+2025-10-09 18:20:12 - [req_1760013952] AI content generation completed in 260.85s
+2025-10-09 18:20:39 - Definition generation completed in 26.76s
+2025-10-09 18:20:40 - [req_1760013952] PPT processing completed in 27.71s
+2025-10-09 18:20:40 - [req_1760013952] Total request completed in 288.57s
+2025-10-09 18:33:03 - success_factors completed in 4.79s
+2025-10-09 18:33:08 - research_journals completed in 9.07s
+2025-10-09 18:33:12 - company_info completed in 13.27s
+2025-10-09 18:33:21 - executive_summary completed in 22.68s
+2025-10-09 18:33:21 - industry_associations completed in 22.71s
+2025-10-09 18:33:26 - market_enablers completed in 27.50s
+2025-10-09 18:34:08 - financial_overview completed in 69.24s
+2025-10-09 18:34:55 - industry_expansion completed in 116.48s
+2025-10-09 18:35:17 - investment_challenges completed in 138.75s
+2025-10-09 18:37:12 - industry_expansion_1 completed in 114.40s
+2025-10-09 18:37:12 - Parallel AI generation completed in 253.16s
+2025-10-09 18:37:12 - [req_1760014979] AI content generation completed in 253.16s
+2025-10-09 18:37:49 - Definition generation completed in 37.26s
+2025-10-09 18:37:50 - [req_1760014979] PPT processing completed in 38.28s
+2025-10-09 18:37:50 - [req_1760014979] Total request completed in 291.45s
+2025-10-10 10:20:43 - success_factors completed in 3.40s
+2025-10-10 10:20:46 - company_info completed in 7.14s
+2025-10-10 10:20:50 - research_journals completed in 11.16s
+2025-10-10 10:20:51 - industry_associations completed in 11.39s
+2025-10-10 10:21:00 - executive_summary completed in 20.72s
+2025-10-10 10:21:12 - market_enablers completed in 33.21s
+2025-10-10 10:21:24 - financial_overview completed in 44.95s
+2025-10-10 10:21:31 - investment_challenges completed in 51.57s
+2025-10-10 10:21:55 - industry_expansion completed in 75.49s
+2025-10-10 10:23:19 - industry_expansion_1 completed in 84.58s
+2025-10-10 10:23:19 - Parallel AI generation completed in 160.08s
+2025-10-10 10:23:19 - [req_1760071839] AI content generation completed in 160.08s
+2025-10-10 10:23:42 - Definition generation completed in 22.51s
+2025-10-10 10:23:43 - [req_1760071839] PPT processing completed in 23.49s
+2025-10-10 10:23:43 - [req_1760071839] Total request completed in 183.58s
+2025-10-10 10:25:38 - company_info completed in 5.76s
+2025-10-10 10:25:40 - industry_associations completed in 8.42s
+2025-10-10 10:25:42 - research_journals completed in 10.17s
+2025-10-10 10:25:52 - success_factors completed in 20.05s
+2025-10-10 10:26:03 - market_enablers completed in 31.44s
+2025-10-10 10:26:08 - executive_summary completed in 36.16s
+2025-10-10 10:26:41 - investment_challenges completed in 68.50s
+2025-10-10 10:26:59 - financial_overview completed in 86.82s
+2025-10-10 10:27:26 - industry_expansion completed in 113.71s
+2025-10-10 10:28:53 - industry_expansion_1 completed in 87.47s
+2025-10-10 10:28:53 - Parallel AI generation completed in 201.18s
+2025-10-10 10:28:53 - [req_1760072132] AI content generation completed in 201.18s
+2025-10-10 10:29:08 - Definition generation completed in 14.56s
+2025-10-10 10:29:09 - [req_1760072132] PPT processing completed in 15.45s
+2025-10-10 10:29:09 - [req_1760072132] Total request completed in 216.64s
+2025-10-10 10:30:12 - company_info completed in 6.29s
+2025-10-10 10:30:13 - research_journals completed in 7.51s
+2025-10-10 10:30:22 - industry_associations completed in 17.00s
+2025-10-10 10:30:30 - success_factors completed in 24.76s
+2025-10-10 10:30:41 - executive_summary completed in 35.28s
+2025-10-10 10:30:48 - financial_overview completed in 43.03s
+2025-10-10 10:30:49 - market_enablers completed in 43.86s
+2025-10-10 10:30:51 - investment_challenges completed in 45.92s
+2025-10-10 10:31:19 - industry_expansion completed in 73.63s
+2025-10-10 10:32:22 - industry_expansion_1 completed in 62.78s
+2025-10-10 10:32:22 - Parallel AI generation completed in 136.41s
+2025-10-10 10:32:22 - [req_1760072405] AI content generation completed in 136.42s
+2025-10-10 10:32:49 - Definition generation completed in 26.70s
+2025-10-10 10:32:49 - [req_1760072405] PPT processing completed in 27.61s
+2025-10-10 10:32:49 - [req_1760072405] Total request completed in 164.04s
+2025-10-10 10:33:39 - research_journals completed in 8.28s
+2025-10-10 10:33:45 - executive_summary completed in 14.41s
+2025-10-10 10:33:45 - industry_associations completed in 14.88s
+2025-10-10 10:38:57 - research_journals completed in 9.27s
+2025-10-10 10:38:57 - industry_associations completed in 9.30s
+2025-10-10 10:39:12 - market_enablers completed in 24.60s
+2025-10-10 10:39:13 - executive_summary completed in 24.94s
+2025-10-10 10:39:40 - industry_expansion completed in 52.21s
+2025-10-10 10:40:03 - investment_challenges completed in 75.20s
+2025-10-10 10:40:04 - financial_overview completed in 76.51s
+2025-10-10 10:40:16 - company_info completed in 88.56s
+2025-10-10 10:41:23 - industry_expansion_1 completed in 66.48s
+2025-10-10 10:41:23 - Parallel AI generation completed in 155.05s
+2025-10-10 10:41:23 - [req_1760072928] AI content generation completed in 155.05s
+2025-10-10 10:41:40 - Definition generation completed in 17.34s
+2025-10-10 10:41:41 - [req_1760072928] PPT processing completed in 18.26s
+2025-10-10 10:41:41 - [req_1760072928] Total request completed in 173.32s
+2025-10-10 12:02:34 - research_journals completed in 9.16s
+2025-10-10 12:02:37 - industry_associations completed in 12.29s
+2025-10-10 12:02:40 - executive_summary completed in 15.01s
+2025-10-10 12:03:07 - market_enablers completed in 41.96s
+2025-10-10 12:03:13 - company_info completed in 48.25s
+2025-10-10 12:03:58 - investment_challenges completed in 93.02s
+2025-10-10 12:04:20 - financial_overview completed in 115.52s
+2025-10-10 12:04:22 - industry_expansion completed in 117.55s
+2025-10-10 12:05:48 - industry_expansion_1 completed in 85.22s
+2025-10-10 12:05:48 - Parallel AI generation completed in 202.79s
+2025-10-10 12:05:48 - [req_1760077945] AI content generation completed in 202.79s
+2025-10-10 12:06:24 - Definition generation completed in 36.08s
+2025-10-10 12:11:08 - research_journals completed in 11.02s
+2025-10-10 12:11:55 - research_journals completed in 11.54s
+2025-10-10 12:11:58 - executive_summary completed in 14.09s
+2025-10-10 12:11:59 - industry_associations completed in 15.26s
+2025-10-10 12:12:15 - company_info completed in 31.32s
+2025-10-10 12:12:17 - market_enablers completed in 32.79s
+2025-10-10 12:12:43 - investment_challenges completed in 58.93s
+2025-10-10 12:13:02 - industry_expansion completed in 78.34s
+2025-10-10 12:14:12 - financial_overview completed in 147.79s
+2025-10-10 12:15:01 - research_journals completed in 10.70s
+2025-10-10 12:15:02 - industry_associations completed in 11.20s
+2025-10-10 12:15:06 - executive_summary completed in 15.67s
+2025-10-10 12:15:23 - market_enablers completed in 31.98s
+2025-10-10 12:15:33 - company_info completed in 42.16s
+2025-10-10 12:16:14 - investment_challenges completed in 83.43s
+2025-10-10 12:16:23 - industry_expansion completed in 92.02s
+2025-10-10 12:17:22 - financial_overview completed in 151.72s
+2025-10-10 12:18:47 - industry_expansion_1 completed in 85.01s
+2025-10-10 12:18:47 - Parallel AI generation completed in 236.74s
+2025-10-10 12:18:47 - [req_1760078691] AI content generation completed in 236.74s
+2025-10-10 12:19:15 - Definition generation completed in 27.76s
+2025-10-10 12:19:32 - [req_1760078691] PPT processing completed in 45.03s
+2025-10-10 12:19:32 - [req_1760078691] Total request completed in 281.78s
+2025-10-10 12:23:52 - industry_associations completed in 10.61s
+2025-10-10 12:23:53 - research_journals completed in 11.40s
+2025-10-10 12:24:04 - executive_summary completed in 22.69s
+2025-10-10 12:24:17 - market_enablers completed in 34.87s
+2025-10-10 12:24:25 - company_info completed in 43.01s
+2025-10-10 12:25:16 - investment_challenges completed in 94.29s
+2025-10-10 12:25:41 - financial_overview completed in 119.05s
+2025-10-10 12:25:50 - industry_expansion completed in 128.53s
+2025-10-10 12:27:10 - industry_expansion_1 completed in 79.94s
+2025-10-10 12:27:10 - Parallel AI generation completed in 208.47s
+2025-10-10 12:27:10 - [req_1760079222] AI content generation completed in 208.47s
+2025-10-10 12:27:46 - Definition generation completed in 35.81s
+2025-10-10 12:28:02 - [req_1760079222] PPT processing completed in 51.60s
+2025-10-10 12:28:02 - [req_1760079222] Total request completed in 260.08s
+2025-10-10 12:36:43 - industry_associations completed in 11.40s
+2025-10-10 12:36:45 - research_journals completed in 13.42s
+2025-10-10 12:36:54 - executive_summary completed in 22.20s
+2025-10-10 12:37:08 - company_info completed in 36.83s
+2025-10-10 12:37:16 - market_enablers completed in 44.13s
+2025-10-10 12:37:44 - industry_expansion completed in 72.29s
+2025-10-10 12:38:41 - financial_overview completed in 129.47s
+2025-10-10 12:38:44 - investment_challenges completed in 132.42s
+2025-10-10 12:40:05 - industry_expansion_1 completed in 81.07s
+2025-10-10 12:40:05 - Parallel AI generation completed in 213.51s
+2025-10-10 12:40:05 - [req_1760079991] AI content generation completed in 213.51s
+2025-10-10 12:40:32 - Definition generation completed in 27.33s
+2025-10-10 12:40:50 - [req_1760079991] PPT processing completed in 44.99s
+2025-10-10 12:40:50 - [req_1760079991] Total request completed in 258.50s
+2025-10-10 14:37:29 - industry_associations completed in 19.01s
+2025-10-10 14:37:29 - executive_summary completed in 19.38s
+2025-10-10 14:37:33 - research_journals completed in 22.93s
+2025-10-10 14:38:02 - company_info completed in 51.97s
+2025-10-10 14:38:06 - market_enablers completed in 55.90s
+2025-10-10 14:38:38 - investment_challenges completed in 88.45s
+2025-10-10 14:38:53 - industry_expansion completed in 103.03s
+2025-10-10 14:39:37 - financial_overview completed in 146.67s
+2025-10-10 14:40:45 - industry_expansion_1 completed in 68.26s
+2025-10-10 14:40:45 - Parallel AI generation completed in 214.94s
+2025-10-10 14:40:45 - [req_1760087230] AI content generation completed in 214.94s
+2025-10-10 14:41:28 - Definition generation completed in 43.04s
+2025-10-10 14:42:06 - [req_1760087230] PPT processing completed in 80.76s
+2025-10-10 14:42:06 - [req_1760087230] Total request completed in 295.70s
+2025-10-10 16:21:08 - research_journals completed in 12.47s
+2025-10-10 16:21:10 - executive_summary completed in 14.30s
+2025-10-10 16:21:25 - market_enablers completed in 29.53s
+2025-10-10 16:21:32 - company_info completed in 37.03s
+2025-10-10 16:21:38 - industry_associations completed in 42.86s
+2025-10-10 16:22:15 - industry_expansion completed in 79.79s
+2025-10-10 16:22:50 - investment_challenges completed in 115.02s
+2025-10-10 16:22:59 - financial_overview completed in 123.33s
+2025-10-10 16:24:06 - industry_expansion_1 completed in 67.89s
+2025-10-10 16:24:06 - Parallel AI generation completed in 191.23s
+2025-10-10 16:24:06 - [req_1760093455] AI content generation completed in 191.24s
+2025-10-10 16:24:37 - Definition generation completed in 30.65s
+2025-10-10 16:25:10 - [req_1760093455] PPT processing completed in 63.86s
+2025-10-10 16:25:10 - [req_1760093455] Total request completed in 255.11s
+2025-10-10 16:49:42 - research_journals completed in 9.44s
+2025-10-10 16:49:44 - industry_associations completed in 11.98s
+2025-10-10 16:49:48 - executive_summary completed in 15.42s
+2025-10-10 16:50:13 - market_enablers completed in 40.49s
+2025-10-10 16:50:24 - company_info completed in 51.36s
+2025-10-10 16:50:41 - industry_expansion completed in 69.03s
+2025-10-10 16:51:26 - investment_challenges completed in 113.40s
+2025-10-10 16:52:53 - financial_overview completed in 200.98s
+2025-10-10 16:53:40 - industry_expansion_1 completed in 47.09s
+2025-10-10 16:53:40 - Parallel AI generation completed in 248.08s
+2025-10-10 16:53:40 - [req_1760095172] AI content generation completed in 248.08s
+2025-10-10 16:54:20 - Definition generation completed in 39.77s
+2025-10-10 16:54:52 - [req_1760095172] PPT processing completed in 71.39s
+2025-10-10 16:54:52 - [req_1760095172] Total request completed in 319.49s
+2025-10-10 17:36:02 - research_journals completed in 6.34s
+2025-10-10 17:36:10 - executive_summary completed in 13.72s
+2025-10-10 17:36:11 - industry_associations completed in 15.07s
+2025-10-10 17:36:21 - market_enablers completed in 25.05s
+2025-10-10 17:36:54 - company_info completed in 57.74s
+2025-10-10 17:37:15 - investment_challenges completed in 78.38s
+2025-10-10 17:37:39 - industry_expansion completed in 102.70s
+2025-10-10 17:38:55 - financial_overview completed in 179.20s
+2025-10-10 17:40:31 - industry_expansion_1 completed in 95.61s
+2025-10-10 17:40:31 - Parallel AI generation completed in 274.82s
+2025-10-10 17:40:31 - [req_1760097956] AI content generation completed in 274.82s
+2025-10-10 17:41:09 - Definition generation completed in 38.24s
+2025-10-10 17:42:06 - [req_1760097956] PPT processing completed in 95.31s
+2025-10-10 17:42:06 - [req_1760097956] Total request completed in 370.13s
+2025-10-10 18:29:11 - research_journals completed in 6.98s
+2025-10-10 18:29:13 - industry_associations completed in 9.09s
+2025-10-10 18:29:18 - executive_summary completed in 13.99s
+2025-10-10 18:29:35 - market_enablers completed in 31.34s
+2025-10-10 18:29:52 - company_info completed in 48.32s
+2025-10-10 18:29:58 - industry_expansion completed in 54.02s
+2025-10-10 18:29:58 - investment_challenges completed in 54.36s
+2025-10-10 18:31:21 - research_journals completed in 11.23s
+2025-10-10 18:31:22 - industry_associations completed in 12.53s
+2025-10-10 18:31:31 - executive_summary completed in 21.05s
+2025-10-10 18:31:38 - market_enablers completed in 28.06s
+2025-10-10 18:32:06 - company_info completed in 56.19s
+2025-10-10 18:32:39 - industry_expansion completed in 89.41s
+2025-10-10 18:33:31 - investment_challenges completed in 141.26s
+2025-10-10 18:33:45 - financial_overview completed in 155.40s
+2025-10-10 18:34:59 - industry_expansion_1 completed in 74.24s
+2025-10-10 18:34:59 - Parallel AI generation completed in 229.68s
+2025-10-10 18:34:59 - [req_1760101270] AI content generation completed in 229.68s
+2025-10-10 18:35:31 - Definition generation completed in 31.31s
+2025-10-10 18:36:10 - [req_1760101270] PPT processing completed in 71.01s
+2025-10-10 18:36:10 - [req_1760101270] Total request completed in 300.70s
+2025-10-10 18:37:04 - research_journals completed in 6.26s
+2025-10-10 18:37:07 - executive_summary completed in 8.28s
+2025-10-10 18:37:19 - industry_associations completed in 20.43s
+2025-10-10 18:37:33 - market_enablers completed in 35.26s
+2025-10-10 18:38:11 - company_info completed in 72.91s
+2025-10-10 18:38:34 - investment_challenges completed in 95.95s
+2025-10-10 18:39:27 - industry_expansion completed in 148.75s
+2025-10-10 18:39:32 - financial_overview completed in 154.23s
+2025-10-10 18:40:39 - industry_expansion_1 completed in 66.27s
+2025-10-10 18:40:39 - Parallel AI generation completed in 220.51s
+2025-10-10 18:40:39 - [req_1760101618] AI content generation completed in 220.51s
+2025-10-10 18:41:15 - Definition generation completed in 36.37s
+2025-10-10 18:41:53 - [req_1760101618] PPT processing completed in 74.68s
+2025-10-10 18:41:53 - [req_1760101618] Total request completed in 295.19s
+2025-10-10 18:43:39 - research_journals completed in 10.19s
+2025-10-10 18:43:41 - executive_summary completed in 11.69s
+2025-10-10 18:43:44 - market_enablers completed in 14.61s
+2025-10-10 18:43:45 - industry_associations completed in 16.21s
+2025-10-10 18:44:16 - company_info completed in 46.70s
+2025-10-10 18:44:39 - investment_challenges completed in 70.16s
+2025-10-10 18:44:47 - industry_expansion completed in 78.15s
+2025-10-10 18:46:01 - financial_overview completed in 152.18s
+2025-10-10 18:47:12 - industry_expansion_1 completed in 70.49s
+2025-10-10 18:47:12 - Parallel AI generation completed in 222.69s
+2025-10-10 18:47:12 - [req_1760102009] AI content generation completed in 222.69s
+2025-10-10 18:47:48 - Definition generation completed in 36.04s
+2025-10-10 18:48:27 - [req_1760102009] PPT processing completed in 75.54s
+2025-10-10 18:48:27 - [req_1760102009] Total request completed in 298.24s
+2025-10-13 09:20:14 - research_journals completed in 11.08s
+2025-10-13 09:20:15 - industry_associations completed in 11.98s
+2025-10-13 09:20:25 - executive_summary completed in 21.69s
+2025-10-13 09:20:29 - market_enablers completed in 26.12s
+2025-10-13 09:21:00 - company_info completed in 56.70s
+2025-10-13 09:21:07 - investment_challenges completed in 63.92s
+2025-10-13 09:21:18 - industry_expansion completed in 75.50s
+2025-10-13 09:23:02 - financial_overview completed in 178.78s
+2025-10-13 09:24:02 - industry_expansion_1 completed in 60.17s
+2025-10-13 09:24:02 - Parallel AI generation completed in 238.97s
+2025-10-13 09:24:02 - [req_1760327403] AI content generation completed in 238.97s
+2025-10-13 09:24:22 - Definition generation completed in 20.29s
+2025-10-13 09:24:58 - [req_1760327403] PPT processing completed in 56.57s
+2025-10-13 09:24:58 - [req_1760327403] Total request completed in 295.55s
+2025-10-13 09:25:54 - research_journals completed in 6.52s
+2025-10-13 09:26:00 - industry_associations completed in 12.71s
+2025-10-13 09:26:10 - executive_summary completed in 22.23s
+2025-10-13 09:26:14 - market_enablers completed in 26.52s
+2025-10-13 09:26:47 - investment_challenges completed in 59.38s
+2025-10-13 09:26:48 - company_info completed in 59.92s
+2025-10-13 09:27:07 - industry_expansion completed in 79.54s
+2025-10-13 09:27:28 - financial_overview completed in 99.94s
+2025-10-13 09:29:09 - industry_expansion_1 completed in 101.39s
+2025-10-13 09:29:09 - Parallel AI generation completed in 201.34s
+2025-10-13 09:29:09 - [req_1760327748] AI content generation completed in 201.34s
+2025-10-13 09:29:30 - Definition generation completed in 21.00s
+2025-10-13 09:30:04 - [req_1760327748] PPT processing completed in 54.48s
+2025-10-13 09:30:04 - [req_1760327748] Total request completed in 255.82s
+2025-10-13 10:20:16 - research_journals completed in 6.22s
+2025-10-13 10:20:19 - executive_summary completed in 9.37s
+2025-10-13 10:20:19 - industry_associations completed in 10.04s
+2025-10-13 10:20:30 - market_enablers completed in 20.66s
+2025-10-13 10:20:55 - company_info completed in 45.13s
+2025-10-13 10:21:17 - industry_expansion completed in 67.12s
+2025-10-13 10:21:26 - investment_challenges completed in 76.26s
+2025-10-13 10:22:18 - financial_overview completed in 128.48s
+2025-10-13 10:23:44 - industry_expansion_1 completed in 85.69s
+2025-10-13 10:23:44 - Parallel AI generation completed in 214.18s
+2025-10-13 10:23:44 - [req_1760331009] AI content generation completed in 214.18s
+2025-10-13 10:24:31 - Definition generation completed in 47.03s
+2025-10-13 10:25:25 - [req_1760331009] PPT processing completed in 101.29s
+2025-10-13 10:25:25 - [req_1760331009] Total request completed in 315.48s
+2025-10-13 10:32:30 - research_journals completed in 5.92s
+2025-10-13 10:32:37 - industry_associations completed in 12.99s
+2025-10-13 10:32:56 - executive_summary completed in 31.72s
+2025-10-13 10:33:10 - company_info completed in 45.76s
+2025-10-13 10:33:11 - market_enablers completed in 47.19s
+2025-10-13 10:33:33 - investment_challenges completed in 69.66s
+2025-10-13 10:34:43 - financial_overview completed in 138.93s
+2025-10-13 10:35:06 - industry_expansion completed in 162.01s
+2025-10-13 10:35:56 - industry_expansion_1 completed in 49.69s
+2025-10-13 10:35:56 - Parallel AI generation completed in 211.71s
+2025-10-13 10:35:56 - [req_1760331744] AI content generation completed in 211.71s
+2025-10-13 10:36:29 - Definition generation completed in 33.17s
+2025-10-13 10:37:18 - [req_1760331744] PPT processing completed in 82.32s
+2025-10-13 10:37:18 - [req_1760331744] Total request completed in 294.04s
+2025-10-13 10:45:02 - research_journals completed in 7.27s
+2025-10-13 10:45:05 - industry_associations completed in 10.79s
+2025-10-13 10:45:18 - market_enablers completed in 23.46s
+2025-10-13 10:45:37 - executive_summary completed in 42.49s
+2025-10-13 10:45:47 - investment_challenges completed in 52.61s
+2025-10-13 10:46:25 - industry_expansion completed in 91.13s
+2025-10-13 10:46:27 - company_info completed in 92.98s
+2025-10-13 10:47:56 - financial_overview completed in 182.14s
+2025-10-13 10:49:10 - industry_expansion_1 completed in 73.22s
+2025-10-13 10:49:10 - Parallel AI generation completed in 255.38s
+2025-10-13 10:49:10 - [req_1760332494] AI content generation completed in 255.38s
+2025-10-13 10:49:22 - Definition generation completed in 12.42s
+2025-10-13 10:49:56 - [req_1760332494] PPT processing completed in 46.36s
+2025-10-13 10:49:56 - [req_1760332494] Total request completed in 301.75s
+2025-10-13 11:16:20 - research_journals completed in 7.58s
+2025-10-13 11:16:24 - industry_associations completed in 11.52s
+2025-10-13 11:16:32 - executive_summary completed in 19.22s
+2025-10-13 11:16:37 - market_enablers completed in 25.04s
+2025-10-13 11:17:26 - company_info completed in 73.23s
+2025-10-13 11:17:37 - industry_expansion completed in 84.49s
+2025-10-13 11:18:11 - investment_challenges completed in 118.62s
+2025-10-13 11:19:17 - financial_overview completed in 185.13s
+2025-10-13 11:20:25 - industry_expansion_1 completed in 67.08s
+2025-10-13 11:20:25 - Parallel AI generation completed in 252.22s
+2025-10-13 11:20:25 - [req_1760334372] AI content generation completed in 252.22s
+2025-10-13 11:20:53 - Definition generation completed in 28.52s
+2025-10-13 11:21:36 - [req_1760334372] PPT processing completed in 71.26s
+2025-10-13 11:21:36 - [req_1760334372] Total request completed in 323.49s
+2025-10-13 11:28:39 - research_journals completed in 6.87s
+2025-10-13 11:28:45 - industry_associations completed in 13.61s
+2025-10-13 11:28:48 - market_enablers completed in 15.88s
+2025-10-13 11:28:51 - executive_summary completed in 18.82s
+2025-10-13 11:29:32 - company_info completed in 60.60s
+2025-10-13 11:30:05 - industry_expansion completed in 93.32s
+2025-10-13 11:30:29 - financial_overview completed in 117.19s
+2025-10-13 11:30:36 - investment_challenges completed in 124.55s
+2025-10-13 11:32:20 - industry_expansion_1 completed in 103.87s
+2025-10-13 11:32:20 - Parallel AI generation completed in 228.44s
+2025-10-13 11:32:20 - [req_1760335112] AI content generation completed in 228.44s
+2025-10-13 11:32:57 - Definition generation completed in 36.50s
+2025-10-13 11:33:47 - [req_1760335112] PPT processing completed in 86.84s
+2025-10-13 11:33:47 - [req_1760335112] Total request completed in 315.29s
+2025-10-13 11:35:29 - research_journals completed in 6.06s
+2025-10-13 11:35:43 - executive_summary completed in 19.93s
+2025-10-13 11:35:45 - industry_associations completed in 21.84s
+2025-10-13 11:35:55 - market_enablers completed in 31.55s
+2025-10-13 11:36:39 - investment_challenges completed in 75.35s
+2025-10-13 11:36:50 - industry_expansion completed in 87.15s
+2025-10-13 11:36:51 - company_info completed in 87.97s
+2025-10-13 11:37:42 - financial_overview completed in 139.24s
+2025-10-13 11:38:53 - industry_expansion_1 completed in 70.70s
+2025-10-13 11:38:53 - Parallel AI generation completed in 209.95s
+2025-10-13 11:38:53 - [req_1760335523] AI content generation completed in 209.95s
+2025-10-13 11:39:13 - Definition generation completed in 20.20s
+2025-10-13 11:39:52 - [req_1760335523] PPT processing completed in 58.83s
+2025-10-13 11:39:52 - [req_1760335523] Total request completed in 268.78s
+2025-10-13 12:07:03 - research_journals completed in 7.09s
+2025-10-13 12:07:04 - industry_associations completed in 8.39s
+2025-10-13 12:07:18 - market_impacting_factors completed in 22.13s
+2025-10-13 12:07:18 - success_factors completed in 22.23s
+2025-10-13 12:07:19 - market_enablers completed in 23.17s
+2025-10-13 12:07:25 - executive_summary completed in 29.59s
+2025-10-13 12:08:12 - investment_challenges completed in 75.97s
+2025-10-13 12:08:52 - industry_expansion completed in 116.13s
+2025-10-13 12:09:34 - company_info completed in 157.91s
+2025-10-13 12:10:18 - financial_overview completed in 202.73s
+2025-10-13 12:11:10 - industry_expansion_1 completed in 51.83s
+2025-10-13 12:11:10 - Parallel AI generation completed in 254.56s
+2025-10-13 12:11:10 - [req_1760337416] AI content generation completed in 254.56s
+2025-10-13 12:11:55 - Definition generation completed in 44.87s
+2025-10-13 12:11:56 - [req_1760337416] PPT processing completed in 45.96s
+2025-10-13 12:11:56 - [req_1760337416] Total request completed in 300.53s
+2025-10-13 12:49:21 - research_journals completed in 8.92s
+2025-10-13 12:49:25 - industry_associations completed in 13.16s
+2025-10-13 12:49:27 - success_factors completed in 15.20s
+2025-10-13 12:49:33 - market_impacting_factors completed in 20.85s
+2025-10-13 12:49:35 - executive_summary completed in 22.23s
+2025-10-13 12:49:49 - market_enablers completed in 36.48s
+2025-10-13 12:50:30 - company_info completed in 78.20s
+2025-10-13 12:51:02 - investment_challenges completed in 110.05s
+2025-10-13 12:51:42 - industry_expansion completed in 150.21s
+2025-10-13 12:51:49 - financial_overview completed in 156.32s
+2025-10-13 12:52:42 - industry_expansion_1 completed in 53.86s
+2025-10-13 12:52:42 - OPTIMIZED parallel AI generation completed in 210.20s
+2025-10-13 12:52:42 - [req_1760339952] AI content generation completed in 210.20s
+2025-10-13 12:53:11 - Definition generation completed in 28.54s
+2025-10-13 12:53:12 - [req_1760339952] PPT processing completed in 29.88s
+2025-10-13 12:53:12 - [req_1760339952] Total request completed in 240.08s
+2025-10-13 14:54:00 - industry_associations completed in 9.62s
+2025-10-13 14:54:01 - research_journals completed in 10.81s
+2025-10-13 14:54:04 - executive_summary completed in 13.60s
+2025-10-13 14:54:20 - market_enablers completed in 29.67s
+2025-10-13 14:55:10 - investment_challenges completed in 80.05s
+2025-10-13 14:55:31 - company_info completed in 100.75s
+2025-10-13 14:55:40 - industry_expansion completed in 109.67s
+2025-10-13 14:56:06 - financial_overview completed in 135.68s
+2025-10-13 14:57:22 - industry_expansion_1 completed in 76.07s
+2025-10-13 14:57:22 - Parallel AI generation completed in 211.76s
+2025-10-13 14:57:22 - [req_1760347430] AI content generation completed in 211.76s
+2025-10-13 14:57:23 - [req_1760347430] PPT processing completed in 1.10s
+2025-10-13 14:57:23 - [req_1760347430] Total request completed in 212.87s
+2025-10-13 14:57:27 - File download completed in 0.03s: Sample_Global Toy Market_SQ123w_Skyquest_2025_V1.pptx
+2025-10-13 15:23:54 - research_journals completed in 7.48s
+2025-10-13 15:24:02 - industry_associations completed in 16.00s
+2025-10-13 15:24:06 - success_factors completed in 19.48s
+2025-10-13 15:24:07 - executive_summary completed in 21.06s
+2025-10-13 15:24:17 - market_impacting_factors completed in 30.46s
+2025-10-13 15:24:17 - market_enablers completed in 30.72s
+2025-10-13 15:24:50 - company_info completed in 63.43s
+2025-10-13 15:25:27 - investment_challenges completed in 101.17s
+2025-10-13 15:25:40 - industry_expansion completed in 114.22s
+2025-10-13 15:27:00 - financial_overview completed in 194.19s
+2025-10-13 15:28:19 - industry_expansion_1 completed in 78.42s
+2025-10-13 15:28:19 - OPTIMIZED parallel AI generation completed in 272.61s
+2025-10-13 15:28:19 - [req_1760349226] AI content generation completed in 272.61s
+2025-10-13 15:28:35 - Definition generation completed in 16.32s
+2025-10-13 15:28:36 - [req_1760349226] PPT processing completed in 17.34s
+2025-10-13 15:28:36 - [req_1760349226] Total request completed in 289.96s
+2025-10-13 15:28:42 - File download completed in 0.02s: Sample_Global Robotaxi Market_SQ123wsw_Skyquest_2025_V1.pptx

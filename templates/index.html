@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Report Generator | Strategic Insights Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #1e3a8a;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e40af;
+            --secondary-color: #64748b;
+            --accent-color: #059669;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --border: #e5e7eb;
+            --border-focus: #3b82f6;
+            --success: #059669;
+            --warning: #d97706;
+            --error: #dc2626;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.15);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+        
+        .header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-container {
+            background: var(--surface);
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        
+        .form-section {
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: var(--primary-light);
+            color: white;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-left: 3.5rem;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group.half-width {
+            grid-column: span 1;
+        }
+        
+        label {
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .required-indicator {
+            color: var(--error);
+            margin-left: 0.25rem;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            background-color: var(--surface);
+        }
+        
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--border-focus);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        select {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            appearance: none;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+        }
+        
+        .companies-textarea {
+            font-family: inherit;
+            min-height: 140px;
+        }
+        
+        .info-panel {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-panel-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .info-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #0284c7;
+            margin-right: 0.5rem;
+        }
+        
+        .info-title {
+            font-weight: 600;
+            color: #0c4a6e;
+            font-size: 0.875rem;
+        }
+        
+        .info-content {
+            color: #0369a1;
+            font-size: 0.8125rem;
+            line-height: 1.5;
+        }
+        
+        .info-list {
+            list-style: none;
+            margin: 0.5rem 0 0 1rem;
+        }
+        
+        .info-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .info-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            width: 0.25rem;
+            height: 0.25rem;
+            background: #0284c7;
+            border-radius: 50%;
+        }
+        
+        .example-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            white-space: pre-line;
+        }
+        
+        .companies-example {
+            font-family: inherit;
+        }
+        
+        .warning-panel {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fcd34d;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-panel .info-icon {
+            color: #d97706;
+        }
+        
+        .warning-panel .info-title {
+            color: #92400e;
+        }
+        
+        .warning-panel .info-content {
+            color: #a16207;
+        }
+        
+        .auto-generated-panel {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 1px solid #86efac;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .auto-generated-panel .info-icon {
+            color: var(--success);
+        }
+        
+        .auto-generated-panel .info-title {
+            color: #14532d;
+        }
+        
+        .auto-generated-panel .info-content {
+            color: #166534;
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.8125rem;
+            margin-top: 0.5rem;
+            display: none;
+            font-weight: 500;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .input-error {
+            border-color: var(--error) !important;
+            background-color: #fef2f2;
+        }
+        
+        .submit-section {
+            padding: 2rem;
+            background: #f8fafc;
+            text-align: center;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            min-width: 200px;
+            justify-content: center;
+        }
+        
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: var(--secondary-color);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .submit-btn i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-overlay.show {
+            display: flex;
+        }
+        
+        .modal {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 3rem;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .modal-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .modal-icon.loading {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        }
+        
+        .modal-icon.success {
+            background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+        }
+        
+        .modal-icon.error {
+            background: linear-gradient(135deg, var(--error) 0%, #b91c1c 100%);
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .modal-text {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .loading-spinner {
+            width: 3rem;
+            height: 3rem;
+            border: 3px solid #e5e7eb;
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .stopwatch {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+            margin: 1rem 0;
+            letter-spacing: 0.05em;
+        }
+        
+        .modal-btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-width: 100px;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+        }
+        
+        .modal-btn.success {
+            background: linear-gradient(135deg, var(--success) 0%, #047857 100%);
+        }
+        
+        .modal-btn.success:hover {
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        .download-link {
+            color: #059669;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .download-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .download-link:hover {
+            background: #059669;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .status-message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: none;
+        }
+        
+        .status-message.success {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            color: #14532d;
+        }
+        
+        .status-message.error {
+            background: #fef2f2;
+            border: 1px solid #fca5a5;
+            color: #991b1b;
+        }
+        
+        .status-message.show {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .form-section {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.25rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.half-width {
+                grid-column: span 1;
+            }
+            
+            .modal {
+                padding: 2rem;
+                max-width: 350px;
+            }
+            
+            .stopwatch {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Market Research Sample Generator</h1>
+            <p>Professional PowerPoint Samples for strategic decision making</p>
+        </div>
+        
+        <div class="form-container">
+            <div class="auto-generated-panel">
+                <div class="info-panel-header">
+                    <i class="fas fa-cogs info-icon"></i>
+                    <span class="info-title">Automated Content Generation</span>
+                </div>
+                <div class="info-content">
+                    Research journals and industry associations are automatically sourced and integrated based on your market specifications. The system ensures comprehensive coverage with relevant academic and industry sources.
+                </div>
+            </div>
+            
+            <form id="pptForm">
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h2 class="section-title">Market Overview</h2>
+                    </div>
+                    <div class="section-description">
+                        Define the primary market segment for comprehensive analysis
+                    </div>
+                    
+               
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="headline">
+                                Market Name ( if Global include it )
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="headline" 
+                                name="headline" 
+                                placeholder="e.g., Global Artificial Intelligence Market" 
+                                required
+                            >
+                            <div class="error-message" id="headline-error">Market headline is required</div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="sqcode">
+                                SQ Code
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="sqcode" 
+                                name="sqcode" 
+                                placeholder="e.g., SQMIG20G2009" 
+                                required
+                            >
+                            <div class="error-message" id="sqcode-error">SQ code is required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h2 class="section-title">Financial Metrics</h2>
+                    </div>
+                    <div class="section-description">
+                        Specify market valuation and growth projections
+                    </div>
+                    
+                    <div class="info-panel">
+                        <div class="info-panel-header">
+                            <i class="fas fa-info-circle info-icon"></i>
+                            <span class="info-title">Fixed Parameters</span>
+                        </div>
+                        <div class="info-content">
+                            <ul class="info-list">
+                                <li>Historical Analysis: 2019-2023</li>
+                                <li>Base Year: 2024</li>
+                                <li>Forecast Period: 2025-2032</li>
+                                <li>Currency: USD</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="value_in">
+                                Value Unit
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <select id="value_in" name="value_in" required>
+                                <option value="">Select unit</option>
+                                <option value="Million">Million USD</option>
+                                <option value="Billion">Billion USD</option>
+                                <option value="Trillion">Trillion USD</option>
+                            </select>
+                            <div class="error-message" id="value_in-error">Please select a value unit</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rev_current">
+                                Market Size 2024
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <input 
+                                type="number" 
+                                id="rev_current" 
+                                name="rev_current" 
+                                placeholder="150.34" 
+                                step="0.01" 
+                                min="0"
+                                required
+                            >
+                            <div class="error-message" id="rev_current-error">Current market size is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rev_future">
+                                Projected Size 2032
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <input 
+                                type="number" 
+                                id="rev_future" 
+                                name="rev_future" 
+                                placeholder="450.86" 
+                                step="0.01" 
+                                min="0"
+                                required
+                            >
+                            <div class="error-message" id="rev_future-error">Future market size is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cagr">
+                                CAGR (2025-2032) %
+                                <span class="required-indicator">*</span>
+                            </label>
+                            <input 
+                                type="number" 
+                                id="cagr" 
+                                name="cagr" 
+                                placeholder="18.57" 
+                                step="0.01" 
+                                min="0" 
+                                max="100"
+                                required
+                            >
+                            <div class="error-message" id="cagr-error">CAGR is required</div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="kmi_items">Additional Key Market Insights</label>
+                            <textarea 
+                                id="kmi_items" 
+                                name="kmi_items" 
+                                placeholder="Enter additional market insights, one per line:&#10;Digital transformation acceleration&#10;Regulatory framework evolution&#10;Investment patterns shift"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h2 class="section-title">Competitive Landscape</h2>
+                    </div>
+                    <div class="section-description">
+                        Identify key market players for competitive analysis
+                    </div>
+                    
+                    <div class="warning-panel">
+                        <div class="info-panel-header">
+                            <i class="fas fa-exclamation-triangle info-icon"></i>
+                            <span class="info-title">Company Analysis</span>
+                        </div>
+                        <div class="info-content">
+                            List the companies to include in competitive profiling and market positioning analysis. Each company will be evaluated across multiple strategic dimensions.
+                        </div>
+                        <div class="example-box companies-example">Apple Inc.
+Microsoft Corporation
+Alphabet Inc.
+Amazon.com Inc.
+Tesla Inc.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="companies">
+                            Companies for Analysis
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <textarea 
+                            id="companies" 
+                            name="companies" 
+                            class="companies-textarea"
+                            placeholder="Enter company names, one per line..."
+                            required
+                        ></textarea>
+                        <div class="error-message" id="companies-error">At least one company is required</div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h2 class="section-title">Market Segmentation</h2>
+                    </div>
+                    <div class="section-description">
+                        Structure the market hierarchy for detailed analysis
+                    </div>
+                    
+                    <div class="info-panel">
+                        <div class="info-panel-header">
+                            <i class="fas fa-list-ol info-icon"></i>
+                            <span class="info-title">Hierarchy Structure</span>
+                        </div>
+                        <div class="info-content">
+                            Create a hierarchical market structure with up to 6 levels of depth. Use proper numerical formatting for each segment level.
+                            <ul class="info-list">
+                                <li>Primary segments: 1., 2., 3.</li>
+                                <li>Sub-segments: 1.1., 1.2., 2.1.</li>
+                                <li>Deeper levels: 1.1.1., 1.2.1.1.</li>
+                                <li>Maintain sequential numbering</li>
+                            </ul>
+                        </div>
+                        <div class="example-box">1. Technology
+1.1. Machine Learning
+1.1.1. Deep Learning
+1.1.2. Neural Networks
+1.2. Natural Language Processing
+2.  Application
+2.1. Healthcare
+2.2. Financial Services
+2.3. Manufacturing</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="segment_input">
+                            Market Segment Structure
+                            <span class="required-indicator">*</span>
+                        </label>
+                        <textarea 
+                            id="segment_input" 
+                            name="segment_input" 
+                            placeholder="Define your market segmentation hierarchy..."
+                            style="min-height: 200px;"
+                            required
+                        ></textarea>
+                        <div class="error-message" id="segment_input-error">Market segmentation is required</div>
+                        <div class="error-message" id="segment_validation-error"></div>
+                    </div>
+                </div>
+
+                <!-- Hidden fields for backend compatibility -->
+                <input type="hidden" name="headline_2" id="headline_2">
+                <input type="hidden" name="historical_year" value="2019-2023">
+                <input type="hidden" name="base_year" value="2024">
+                <input type="hidden" name="forecast_year" value="2032">
+                <input type="hidden" name="forecast_period" value="2025-2032">
+                <input type="hidden" name="cur" value="USD">
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-file-powerpoint"></i>
+                        Generate Report
+                    </button>
+                    
+                    <div class="status-message success">
+                        <strong>Report Generated Successfully</strong><br>
+                        Your comprehensive market analysis report is ready for download.
+                        <br>
+                        <a href="#" id="downloadLink" class="download-link">
+                            <i class="fas fa-download"></i>
+                            Download Report
+                        </a>
+                    </div>
+                    
+                    <div class="status-message error">
+                        <strong>Generation Failed</strong><br>
+                        <span id="errorText">An error occurred during report generation. Please verify your inputs and try again.</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <!-- Loading State -->
+            <div id="loadingModal">
+                <div class="modal-icon loading">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="loading-spinner"></div>
+                <h3 class="modal-title">Generating Report</h3>
+                <p class="modal-text">Processing your market analysis... Please wait while we compile your comprehensive report.</p>
+                <div class="stopwatch" id="stopwatch">00:00</div>
+            </div>
+            
+            <!-- Success State -->
+            <div id="successModal" style="display: none;">
+                <div class="modal-icon success">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3 class="modal-title">Report Generated Successfully!</h3>
+                <p class="modal-text">Your comprehensive market analysis report has been generated and is ready for download.</p>
+                <div class="stopwatch" id="finalTime">00:00</div>
+                <a href="#" id="modalDownloadLink" class="download-link">
+                    <i class="fas fa-download"></i>
+                    Download Report
+                </a>
+                <br><br>
+                <button class="modal-btn success" onclick="closeModal()">OK</button>
+            </div>
+            
+            <!-- Error State -->
+            <div id="errorModal" style="display: none;">
+                <div class="modal-icon error">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h3 class="modal-title">Generation Failed</h3>
+                <p class="modal-text" id="modalErrorText">An error occurred during report generation. Please verify your inputs and try again.</p>
+                <div class="stopwatch" id="errorTime">00:00</div>
+                <button class="modal-btn" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let startTime;
+        let timerInterval;
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function startStopwatch() {
+            startTime = Date.now();
+            timerInterval = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                document.getElementById('stopwatch').textContent = formatTime(elapsed);
+            }, 1000);
+        }
+        
+        function stopStopwatch() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                const elapsed = Math.floor((Date.now() - startTime) / 1000);
+                return formatTime(elapsed);
+            }
+            return '00:00';
+        }
+        
+        function showModal() {
+            document.getElementById('modalOverlay').classList.add('show');
+            document.getElementById('loadingModal').style.display = 'block';
+            document.getElementById('successModal').style.display = 'none';
+            document.getElementById('errorModal').style.display = 'none';
+            startStopwatch();
+        }
+        
+        function showSuccess(downloadUrl) {
+            const finalTime = stopStopwatch();
+            document.getElementById('loadingModal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'block';
+            document.getElementById('finalTime').textContent = finalTime;
+            document.getElementById('modalDownloadLink').href = downloadUrl;
+        }
+        
+        function showError(errorMessage) {
+            const finalTime = stopStopwatch();
+            document.getElementById('loadingModal').style.display = 'none';
+            document.getElementById('errorModal').style.display = 'block';
+            document.getElementById('modalErrorText').textContent = errorMessage;
+            document.getElementById('errorTime').textContent = finalTime;
+        }
+        
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('show');
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+        }
+        
+        function validateSegmentHierarchy(segmentText) {
+            const lines = segmentText.trim().split('\n');
+            const errors = [];
+            const lastNumbers = {};
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!line) continue;
+
+                const match = line.match(/^(\d+(?:\.\d+)*)\.\s+(.+)$/);
+                if (!match) {
+                    errors.push(`Line ${i + 1}: Invalid format. Use "1. Name" or "1.1. Name"`);
+                    continue;
+                }
+
+                const numberParts = match[1].split('.').map(n => parseInt(n));
+                const depth = numberParts.length;
+
+                if (depth > 6) {
+                    errors.push(`Line ${i + 1}: Maximum hierarchy depth is 6 levels`);
+                    continue;
+                }
+
+                const parentKey = numberParts.slice(0, -1).join('.') || '';
+                const currentNum = numberParts[numberParts.length - 1];
+                
+                const expectedNum = (lastNumbers[parentKey] || 0) + 1;
+                if (currentNum !== expectedNum) {
+                    if (parentKey) {
+                        errors.push(`Line ${i + 1}: Expected ${parentKey}.${expectedNum}, found ${match[1]}`);
+                    } else {
+                        errors.push(`Line ${i + 1}: Expected ${expectedNum}, found ${currentNum}`);
+                    }
+                }
+                
+                lastNumbers[parentKey] = currentNum;
+                
+                for (const key in lastNumbers) {
+                    if (key.startsWith(match[1] + '.')) {
+                        delete lastNumbers[key];
+                    }
+                }
+            }
+
+            return errors;
+        }
+
+        function validateCompanies(companiesText) {
+            const companies = companiesText.trim().split('\n').filter(company => company.trim());
+            if (companies.length === 0) {
+                return ["At least one company must be specified"];
+            }
+            return [];
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(err => {
+                err.classList.remove('show');
+            });
+            document.querySelectorAll('.input-error').forEach(input => {
+                input.classList.remove('input-error');
+            });
+            document.querySelectorAll('.status-message').forEach(msg => {
+                msg.classList.remove('show');
+            });
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(fieldId + '-error');
+            
+            if (field) field.classList.add('input-error');
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+        }
+
+        // Sync headline fields
+        document.getElementById('headline').addEventListener('input', function() {
+            document.getElementById('headline_2').value = this.value;
+        });
+
+        // Real-time validation
+        document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+            field.addEventListener('blur', function() {
+                const errorElement = document.getElementById(this.id + '-error');
+                if (!this.value.trim()) {
+                    this.classList.add('input-error');
+                    if (errorElement) {
+                        errorElement.classList.add('show');
+                    }
+                } else {
+                    this.classList.remove('input-error');
+                    if (errorElement) {
+                        errorElement.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // Real-time companies validation
+        document.getElementById('companies').addEventListener('input', function() {
+            const errors = validateCompanies(this.value);
+            const errorElement = document.getElementById('companies-error');
+            
+            if (errors.length > 0 && this.value.trim()) {
+                this.classList.add('input-error');
+                errorElement.textContent = errors.join('; ');
+                errorElement.classList.add('show');
+            } else {
+                this.classList.remove('input-error');
+                errorElement.classList.remove('show');
+            }
+        });
+
+        // Real-time segment validation
+        document.getElementById('segment_input').addEventListener('input', function() {
+            const errors = validateSegmentHierarchy(this.value);
+            const errorElement = document.getElementById('segment_validation-error');
+            
+            if (errors.length > 0 && this.value.trim()) {
+                this.classList.add('input-error');
+                errorElement.textContent = 'Structure errors: ' + errors.join('; ');
+                errorElement.classList.add('show');
+            } else {
+                this.classList.remove('input-error');
+                errorElement.classList.remove('show');
+            }
+        });
+
+        // Form submission
+        document.getElementById('pptForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            let isValid = true;
+            
+            // Validate required fields
+            this.querySelectorAll('[required]').forEach(field => {
+                if (!field.value.trim()) {
+                    showError(field.id, field.id === 'headline' ? 'Market headline is required' :
+                                        field.id === 'value_in' ? 'Please select a value unit' :
+                                        field.id === 'rev_current' ? 'Current market size is required' :
+                                        field.id === 'rev_future' ? 'Future market size is required' :
+                                        field.id === 'cagr' ? 'CAGR is required' :
+                                        field.id === 'companies' ? 'At least one company is required' :
+                                        field.id === 'segment_input' ? 'Market segmentation is required' :
+                                        'This field is required');
+                    isValid = false;
+                }
+            });
+            
+            // Validate companies
+            const companiesInput = document.getElementById('companies').value;
+            const companiesErrors = validateCompanies(companiesInput);
+            if (companiesErrors.length > 0) {
+                showError('companies', companiesErrors.join('; '));
+                isValid = false;
+            }
+            
+            // Validate segment hierarchy
+            const segmentInput = document.getElementById('segment_input').value;
+            const segmentErrors = validateSegmentHierarchy(segmentInput);
+            if (segmentErrors.length > 0) {
+                const errorElement = document.getElementById('segment_validation-error');
+                errorElement.textContent = 'Structure errors: ' + segmentErrors.join('; ');
+                errorElement.classList.add('show');
+                document.getElementById('segment_input').classList.add('input-error');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            // Ensure headline_2 is synced
+            document.getElementById('headline_2').value = document.getElementById('headline').value;
+            
+            // Show modal with loading state
+            showModal();
+            
+            const formData = new FormData(this);
+            
+            try {
+                const response = await fetch('/gii/generate-ppt', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    showSuccess(`/gii/download-gii/${encodeURIComponent(result.filename)}`);
+
+                } else {
+                    const error = await response.json();
+                    throw new Error(error.message || 'Report generation failed');
+                }
+            } catch (error) {
+                showError(error.message);
+            }
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('modalOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

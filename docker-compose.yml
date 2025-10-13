@@ -1,0 +1,26 @@
+
+services:
+  gii-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gii-generator
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./templates:/app/templates:ro
+      - ./generated_ppts:/app/generated_ppts
+      - ./testppt.pptx:/app/testppt.pptx:ro
+      - ./logs:/app/logs
+    ports:
+      - "5020:5000"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONIOENCODING=utf-8
+    command: >
+      gunicorn --bind 0.0.0.0:5000 app:app
+      --workers 2 --threads 2 --timeout 120
+      --access-logfile - --error-logfile - --log-level info
+      --capture-output
+    

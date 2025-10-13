@@ -1,0 +1,7 @@
+Flask
+python-pptx
+openai
+google-generativeai
+python-dotenv
+gunicorn
+Werkzeug
