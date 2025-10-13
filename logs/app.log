@@ -18615,3 +18615,21 @@ By Region: North America, Europe, Asia-Pacific, Latin America, Middle East & Afr
 2025-10-13 15:28:36 - ppt_generator - INFO - [req_1760349226] Saving presentation to: generated_ppts\Sample_Global Robotaxi Market_SQ123wsw_Skyquest_2025_V1.pptx
 2025-10-13 15:28:36 - ppt_generator - INFO - [req_1760349226] PPT generation completed successfully: Sample_Global Robotaxi Market_SQ123wsw_Skyquest_2025_V1.pptx
 2025-10-13 15:28:42 - ppt_generator - INFO - Download request for file: Sample_Global Robotaxi Market_SQ123wsw_Skyquest_2025_V1.pptx
+2025-10-13 15:50:02 - ppt_generator - INFO - Application starting up
+2025-10-13 15:50:02 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-13 15:50:02 - ppt_generator - INFO - Template folder: templates
+2025-10-13 15:50:02 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-13 15:50:02 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-13 15:50:03 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-13 15:50:03 - ppt_generator - INFO - Initializing AI Service
+2025-10-13 15:50:03 - ppt_generator - INFO - Gemini configured successfully
+2025-10-13 15:50:03 - ppt_generator - INFO - Starting Flask application
+2025-10-13 15:50:05 - ppt_generator - INFO - Application starting up
+2025-10-13 15:50:05 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-13 15:50:05 - ppt_generator - INFO - Template folder: templates
+2025-10-13 15:50:05 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-13 15:50:05 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-13 15:50:05 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-13 15:50:05 - ppt_generator - INFO - Initializing AI Service
+2025-10-13 15:50:05 - ppt_generator - INFO - Gemini configured successfully
+2025-10-13 15:50:05 - ppt_generator - INFO - Starting Flask application
