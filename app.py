@@ -2281,6 +2281,7 @@ def clean_filename(filename):
 
 
 @app.route("/")
+@app.route("/gii/")
 def index():
     logger.info("Index page accessed")
     return render_template("index.html")
