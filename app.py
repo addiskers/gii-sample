@@ -290,24 +290,47 @@ def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
     """Build a single batch prompt for all definitions - OPTIMIZED"""
     headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "")
     definitions_needed = []
+    
     for level_0_name, level_1_dict in nested_dict.items():
+        all_segments_in_category = list(level_1_dict.keys())
+        
         for level_1_name, level_2_dict in level_1_dict.items():
             level_2_names = list(level_2_dict.keys()) if level_2_dict else []
             sub_areas = (
                 ", ".join(level_2_names) if level_2_names else "general concepts"
             )
-            definitions_needed.append({"name": level_1_name, "sub_areas": sub_areas})
+            
+            is_others = level_1_name.lower() in ["others", "other"]
+            
+            if is_others:
+                sibling_segments = [s for s in all_segments_in_category if s.lower() not in ["others", "other"]]
+                definitions_needed.append({
+                    "name": level_1_name,
+                    "sub_areas": sub_areas,
+                    "is_others": True,
+                    "parent_category": level_0_name,
+                    "sibling_segments": sibling_segments
+                })
+            else:
+                definitions_needed.append({
+                    "name": level_1_name,
+                    "sub_areas": sub_areas,
+                    "is_others": False
+                })
 
     prompt = f"""Generate brief definitions for {headline}.
 
-Overall  definition:
+Overall definition:
 {headline_clean}: [Write 1-2 concise sentences]
 
 Segment definitions (1-2 sentences each):
 """
 
     for item in definitions_needed:
-        prompt += f"\n{item['name']}: [Brief definition based on {item['sub_areas']}]"
+        if item.get("is_others", False):
+            prompt += f"\n{item['name']} (in {item['parent_category']} category): [Define what other {item['parent_category'].lower()} are included beyond {', '.join(item['sibling_segments'])}. Be specific about what additional categories are covered.]"
+        else:
+            prompt += f"\n{item['name']}: [Brief definition based on {item['sub_areas']}]"
 
     prompt += f"""
 
@@ -320,11 +343,11 @@ Return ONLY valid JSON (no extra text):
 Requirements:
 - Each definition: 1-2 sentences ONLY
 - Professional, concise language
+- For "Others" segments: Specifically explain what additional items/categories are included beyond the explicitly listed segments in that category
 - No extra newlines or spacing
 """
 
     return prompt
-
 
 def generate_all_definitions_batch(nested_dict: dict, headline: str) -> dict:
     """Generate all definitions in ONE API call - OPTIMIZED"""
@@ -359,7 +382,7 @@ def build_table_data(nested_dict: dict, definitions: dict, headline: str) -> lis
     """Build table sections from definitions"""
     table_sections = []
 
-    headline_clean = headline.replace("Global ", "").replace("global ", "")
+    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "")
     headline_def = definitions.get(headline_clean, "Market definition")
 
     table_sections.append(
@@ -919,12 +942,12 @@ class AIService:
 
         def execute_task(task_data):
             request_type, context, nested_d, hdline = task_data
-            if request_type:  # Regular AI task
+            if request_type:  
                 return self.generate_content(request_type, context)
-            else:  # Definition task
+            else: 
                 return generate_all_definitions_batch(nested_d, hdline)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:  # Increased workers
+        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor: 
             future_to_key = {
                 executor.submit(execute_task, task_data): key
                 for key, task_data in phase1_tasks.items()
@@ -1095,7 +1118,6 @@ Example: [Brief Example]"""
         
         ai_response = response.choices[0].message.content.strip()
         
-        # Parse the AI response
         lines = ai_response.split('\n')
         titles = []
         examples = []
@@ -1109,7 +1131,6 @@ Example: [Brief Example]"""
                 example = line.split(':', 1)[1].strip()
                 examples.append(f"(Ex: {example})")
         
-        # Ensure exactly 7 factors
         while len(titles) < 7:
             titles.append(f"Success Factor {len(titles) + 1}")
         while len(examples) < 7:
@@ -1118,7 +1139,6 @@ Example: [Brief Example]"""
         titles = titles[:7]
         examples = examples[:7]
         
-        # Create titles list string
         titles_list = ", ".join(titles)
         
         result = {
@@ -1144,7 +1164,7 @@ Please format your response as follows:
 - Then provide exactly 5 factors, each on a new line starting with "Factor X:"
 - Then provide a table with columns: Factor | North America | Europe | Asia Pacific | Latin America | Middle East & Africa
 - Each cell in the impact columns should contain only: Low, Medium, or High
-
+- Factor names should be concise (5-7 words)
 Example format:
 {market_name} Market Impacting Factors
 
@@ -1176,8 +1196,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         ai_response = response.choices[0].message.content
         headline, factors, impact_data = parse_market_factors_response(ai_response)
         
-        if not headline:
-            headline = f"{market_name} Market Impacting Factors"
+        headline = f"{market_name.upper()} : MARKET IMPACTING FACTORS"
         
         result = {
             "headline": headline,
@@ -1218,18 +1237,18 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         employee_count should be in "X,XXX" or "XX,XXX" format and should be correct data.
         Return ONLY valid JSON, no additional text. no urls/citations for references."""
 
-        response = client.chat.completions.create(
+        response = client.responses.create(
             model="gpt-5",
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a JSON generator. Always return valid JSON and nothing else.",
-                },
-                {"role": "user", "content": prompt},
-            ],
-            response_format={"type": "json_object"},
-        )
-        content = response.choices[0].message.content.strip()
+            tools=[{
+                "type": "web_search_preview",
+                "search_context_size": "high",
+            }],
+            input=[
+                {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
+                {"role": "user", "content": prompt}
+            ]
+        )          
+        content = response.output_text.strip()
 
         if content.startswith("```json"):
             content = content[7:]
@@ -1350,21 +1369,21 @@ Please talk about specific market impacting factors relevant to {market_name}.""
             Revenue values must be numeric (one digit after decimal, don't round off strictly - example: if it's 49.95 take 49.9 or if its 13.0 take 13.0 ) and represent billions USD.
             Use realistic estimates based on {company}'s actual business scale and recent financial reports.
             Do NOT use null, NA, Unknown, or any non-numeric values.
+            When converting it use realtime conversion rate if revenue is in other currency to USD.
             """
 
-            revenue_response = self.openai_client.chat.completions.create(
+            revenue_response = self.openai_client.responses.create(
                 model="gpt-5",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a JSON generator. Always return valid JSON and nothing else.",
-                    },
-                    {"role": "user", "content": revenue_prompt},
-                ],
-                response_format={"type": "json_object"},
-            )
-
-            revenue_content = revenue_response.choices[0].message.content.strip()
+                tools=[{
+                    "type": "web_search_preview",
+                    "search_context_size": "high",
+                }],
+                input=[
+                    {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
+                    {"role": "user", "content": revenue_prompt}
+                ]
+            )          
+            revenue_content = revenue_response.output_text.strip()
             if revenue_content.startswith("```json"):
                 revenue_content = revenue_content[7:]
             if revenue_content.endswith("```"):
@@ -1392,24 +1411,25 @@ Please talk about specific market impacting factors relevant to {market_name}.""
             }}
             
             Requirements:
-            1. Include ALL major revenue-generating segments for {company}
+            1. Include ALL major revenue-generating segments for {company} based on annual reports
             2. Percentages must add up to approximately 100%
             3. Use actual 2024 business performance data
+            4. IF segment not available, provide based on region then only 
             """
 
-            segment_response = self.openai_client.chat.completions.create(
+            segment_response = self.openai_client.responses.create(
                 model="gpt-5",
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a JSON generator. Always return valid JSON and nothing else.",
-                    },
-                    {"role": "user", "content": segment_prompt},
+                tools=[{
+                "type": "web_search_preview",
+                "search_context_size": "high",
+                }],
+                input=[
+                {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
+                {"role": "user", "content": segment_prompt}
                 ],
-                response_format={"type": "json_object"},
             )
 
-            segment_content = segment_response.choices[0].message.content.strip()
+            segment_content = segment_response.output_text.strip()
             if segment_content.startswith("```json"):
                 segment_content = segment_content[7:]
             if segment_content.endswith("```"):
@@ -1426,7 +1446,6 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                 segments_dict[segment_name] = segment_percentage
                 segment_names.append(segment_name)
 
-            # Normalize to 100%
             total = sum(segments_dict.values())
             if not (95 <= total <= 105):
                 segments_dict = {
@@ -1435,7 +1454,6 @@ Please talk about specific market impacting factors relevant to {market_name}.""
 
             logger.info(f"Found {len(segment_names)} business segments")
 
-            # Generate analysis content
             revenue_analysis = self._generate_revenue_analysis(company, revenue_data)
             segmental_analysis = self._generate_segmental_analysis(
                 company, revenue_data, segments_dict
