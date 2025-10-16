@@ -358,7 +358,6 @@
             font-size: 1rem;
         }
         
-        /* Modal Styles */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -808,7 +807,7 @@ Tesla Inc.</div>
 1.1.1. Deep Learning
 1.1.2. Neural Networks
 1.2. Natural Language Processing
-2.  Application
+2. Application
 2.1. Healthcare
 2.2. Financial Services
 2.3. Manufacturing</div>
@@ -831,7 +830,6 @@ Tesla Inc.</div>
                     </div>
                 </div>
 
-                <!-- Hidden fields for backend compatibility -->
                 <input type="hidden" name="headline_2" id="headline_2">
                 <input type="hidden" name="historical_year" value="2019-2023">
                 <input type="hidden" name="base_year" value="2024">
@@ -840,10 +838,17 @@ Tesla Inc.</div>
                 <input type="hidden" name="cur" value="USD">
 
                 <div class="submit-section">
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-file-powerpoint"></i>
-                        Generate Report
-                    </button>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-file-powerpoint"></i>
+                            Generate Report
+                        </button>
+                        
+                        <button type="button" class="submit-btn" id="generateDatapackBtn" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+                            <i class="fas fa-file-excel"></i>
+                            Generate Datapack
+                        </button>
+                    </div>
                     
                     <div class="status-message success">
                         <strong>Report Generated Successfully</strong><br>
@@ -864,10 +869,8 @@ Tesla Inc.</div>
         </div>
     </div>
 
-    <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal" id="modal">
-            <!-- Loading State -->
             <div id="loadingModal">
                 <div class="modal-icon loading">
                     <i class="fas fa-cogs"></i>
@@ -878,7 +881,6 @@ Tesla Inc.</div>
                 <div class="stopwatch" id="stopwatch">00:00</div>
             </div>
             
-            <!-- Success State -->
             <div id="successModal" style="display: none;">
                 <div class="modal-icon success">
                     <i class="fas fa-check"></i>
@@ -894,7 +896,6 @@ Tesla Inc.</div>
                 <button class="modal-btn success" onclick="closeModal()">OK</button>
             </div>
             
-            <!-- Error State -->
             <div id="errorModal" style="display: none;">
                 <div class="modal-icon error">
                     <i class="fas fa-times"></i>
@@ -910,6 +911,7 @@ Tesla Inc.</div>
     <script>
         let startTime;
         let timerInterval;
+        let isGenerating = false;
         
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
@@ -935,6 +937,7 @@ Tesla Inc.</div>
         }
         
         function showModal() {
+            isGenerating = true;
             document.getElementById('modalOverlay').classList.add('show');
             document.getElementById('loadingModal').style.display = 'block';
             document.getElementById('successModal').style.display = 'none';
@@ -943,14 +946,19 @@ Tesla Inc.</div>
         }
         
         function showSuccess(downloadUrl) {
+            isGenerating = false;
             const finalTime = stopStopwatch();
             document.getElementById('loadingModal').style.display = 'none';
             document.getElementById('successModal').style.display = 'block';
             document.getElementById('finalTime').textContent = finalTime;
-            document.getElementById('modalDownloadLink').href = downloadUrl;
+            
+            const downloadLink = document.getElementById('modalDownloadLink');
+            downloadLink.href = downloadUrl;
+            downloadLink.style.display = 'inline-flex';
         }
         
         function showError(errorMessage) {
+            isGenerating = false;
             const finalTime = stopStopwatch();
             document.getElementById('loadingModal').style.display = 'none';
             document.getElementById('errorModal').style.display = 'block';
@@ -959,6 +967,9 @@ Tesla Inc.</div>
         }
         
         function closeModal() {
+            if (isGenerating) {
+                return;
+            }
             document.getElementById('modalOverlay').classList.remove('show');
             if (timerInterval) {
                 clearInterval(timerInterval);
@@ -1032,7 +1043,7 @@ Tesla Inc.</div>
             });
         }
 
-        function showError(fieldId, message) {
+        function showFieldError(fieldId, message) {
             const field = document.getElementById(fieldId);
             const errorElement = document.getElementById(fieldId + '-error');
             
@@ -1043,12 +1054,10 @@ Tesla Inc.</div>
             }
         }
 
-        // Sync headline fields
         document.getElementById('headline').addEventListener('input', function() {
             document.getElementById('headline_2').value = this.value;
         });
 
-        // Real-time validation
         document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
             field.addEventListener('blur', function() {
                 const errorElement = document.getElementById(this.id + '-error');
@@ -1066,7 +1075,6 @@ Tesla Inc.</div>
             });
         });
 
-        // Real-time companies validation
         document.getElementById('companies').addEventListener('input', function() {
             const errors = validateCompanies(this.value);
             const errorElement = document.getElementById('companies-error');
@@ -1081,7 +1089,6 @@ Tesla Inc.</div>
             }
         });
 
-        // Real-time segment validation
         document.getElementById('segment_input').addEventListener('input', function() {
             const errors = validateSegmentHierarchy(this.value);
             const errorElement = document.getElementById('segment_validation-error');
@@ -1096,37 +1103,34 @@ Tesla Inc.</div>
             }
         });
 
-        // Form submission
         document.getElementById('pptForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             clearErrors();
             
             let isValid = true;
             
-            // Validate required fields
             this.querySelectorAll('[required]').forEach(field => {
                 if (!field.value.trim()) {
-                    showError(field.id, field.id === 'headline' ? 'Market headline is required' :
+                    showFieldError(field.id, field.id === 'headline' ? 'Market headline is required' :
                                         field.id === 'value_in' ? 'Please select a value unit' :
                                         field.id === 'rev_current' ? 'Current market size is required' :
                                         field.id === 'rev_future' ? 'Future market size is required' :
                                         field.id === 'cagr' ? 'CAGR is required' :
                                         field.id === 'companies' ? 'At least one company is required' :
                                         field.id === 'segment_input' ? 'Market segmentation is required' :
+                                        field.id === 'sqcode' ? 'SQ code is required' :
                                         'This field is required');
                     isValid = false;
                 }
             });
             
-            // Validate companies
             const companiesInput = document.getElementById('companies').value;
             const companiesErrors = validateCompanies(companiesInput);
             if (companiesErrors.length > 0) {
-                showError('companies', companiesErrors.join('; '));
+                showFieldError('companies', companiesErrors.join('; '));
                 isValid = false;
             }
             
-            // Validate segment hierarchy
             const segmentInput = document.getElementById('segment_input').value;
             const segmentErrors = validateSegmentHierarchy(segmentInput);
             if (segmentErrors.length > 0) {
@@ -1139,10 +1143,8 @@ Tesla Inc.</div>
             
             if (!isValid) return;
             
-            // Ensure headline_2 is synced
             document.getElementById('headline_2').value = document.getElementById('headline').value;
             
-            // Show modal with loading state
             showModal();
             
             const formData = new FormData(this);
@@ -1156,20 +1158,122 @@ Tesla Inc.</div>
                 if (response.ok) {
                     const result = await response.json();
                     showSuccess(`/gii/download-gii/${encodeURIComponent(result.filename)}`);
-
                 } else {
                     const error = await response.json();
                     throw new Error(error.message || 'Report generation failed');
                 }
             } catch (error) {
-                showError(error.message);
+                showError(error.message || 'An error occurred during report generation');
             }
         });
         
-        // Close modal when clicking outside
         document.getElementById('modalOverlay').addEventListener('click', function(e) {
-            if (e.target === this) {
+            if (e.target === this && !isGenerating) {
                 closeModal();
+            }
+        });
+
+        document.getElementById('generateDatapackBtn').addEventListener('click', async function() {
+            clearErrors();
+            
+            const headline = document.getElementById('headline').value.trim();
+            const segment_input = document.getElementById('segment_input').value.trim();
+            
+            let isValid = true;
+            
+            if (!headline) {
+                showFieldError('headline', 'Market headline is required');
+                isValid = false;
+            }
+            
+            if (!segment_input) {
+                showFieldError('segment_input', 'Market segmentation is required');
+                isValid = false;
+            }
+            
+            const segmentErrors = validateSegmentHierarchy(segment_input);
+            if (segmentErrors.length > 0) {
+                const errorElement = document.getElementById('segment_validation-error');
+                errorElement.textContent = 'Structure errors: ' + segmentErrors.join('; ');
+                errorElement.classList.add('show');
+                document.getElementById('segment_input').classList.add('input-error');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
+            isGenerating = true;
+            document.getElementById('modalOverlay').classList.add('show');
+            document.getElementById('loadingModal').style.display = 'block';
+            document.getElementById('successModal').style.display = 'none';
+            document.getElementById('errorModal').style.display = 'none';
+            
+            const originalTitle = document.querySelector('#loadingModal .modal-title').textContent;
+            const originalText = document.querySelector('#loadingModal .modal-text').textContent;
+            
+            document.querySelector('#loadingModal .modal-title').textContent = 'Generating Datapack';
+            document.querySelector('#loadingModal .modal-text').textContent = 'Creating Excel tables from your segment structure... This will take just a moment.';
+            
+            startStopwatch();
+            
+            const formData = new FormData();
+            formData.append('headline', headline);
+            formData.append('segment_input', segment_input);
+            formData.append('sqcode', document.getElementById('sqcode').value || 'DATAPACK');
+            
+            try {
+                const response = await fetch('/gii/generate-datapack', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    const contentDisposition = response.headers.get('Content-Disposition');
+                    let filename = 'datapack.xlsx';
+                    if (contentDisposition) {
+                        const matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(contentDisposition);
+                        if (matches != null && matches[1]) {
+                            filename = matches[1].replace(/['"]/g, '');
+                        }
+                    }
+                    
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.style.display = 'none';
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                    
+                    isGenerating = false;
+                    const finalTime = stopStopwatch();
+                    document.getElementById('loadingModal').style.display = 'none';
+                    document.getElementById('successModal').style.display = 'block';
+                    document.querySelector('#successModal .modal-title').textContent = 'Datapack Generated Successfully!';
+                    document.querySelector('#successModal .modal-text').textContent = 'Your Excel datapack has been downloaded.';
+                    document.getElementById('finalTime').textContent = finalTime;
+                    
+                    document.getElementById('modalDownloadLink').style.display = 'none';
+                    
+                } else {
+                    const error = await response.json();
+                    throw new Error(error.message || 'Datapack generation failed');
+                }
+            } catch (error) {
+                isGenerating = false;
+                const finalTime = stopStopwatch();
+                document.getElementById('loadingModal').style.display = 'none';
+                document.getElementById('errorModal').style.display = 'block';
+                document.getElementById('modalErrorText').textContent = error.message || 'An error occurred during datapack generation';
+                document.getElementById('errorTime').textContent = finalTime;
+            } finally {
+                setTimeout(() => {
+                    document.querySelector('#loadingModal .modal-title').textContent = originalTitle;
+                    document.querySelector('#loadingModal .modal-text').textContent = originalText;
+                }, 500);
             }
         });
     </script>

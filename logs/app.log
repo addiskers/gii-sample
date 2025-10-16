@@ -19068,3 +19068,1199 @@ By Region: North America, Europe, Asia-Pacific, Latin America, Middle East & Afr
 2025-10-14 17:53:14 - ppt_generator - INFO - [req_1760444091] Saving presentation to: generated_ppts\Sample_Global Patterned Glass Market_SQMIG20B2013_Skyquest_2025_V1.pptx
 2025-10-14 17:53:14 - ppt_generator - INFO - [req_1760444091] PPT generation completed successfully: Sample_Global Patterned Glass Market_SQMIG20B2013_Skyquest_2025_V1.pptx
 2025-10-14 17:53:18 - ppt_generator - INFO - Download request for file: Sample_Global Patterned Glass Market_SQMIG20B2013_Skyquest_2025_V1.pptx
+2025-10-15 11:43:07 - ppt_generator - INFO - Application starting up
+2025-10-15 11:43:07 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:43:07 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:43:07 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:43:07 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:43:07 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:43:07 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:43:07 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:43:07 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:43:10 - ppt_generator - INFO - Application starting up
+2025-10-15 11:43:10 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:43:10 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:43:10 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:43:10 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:43:10 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:43:10 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:43:10 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:43:11 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:43:16 - ppt_generator - INFO - Index page accessed
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Datapack generation request started
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Processing datapack for: Global Fuel Cards Market
+2025-10-15 11:44:05 - ppt_generator - WARNING - [datapack_1760508845] Template file not found, creating new workbook
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Generating tables for 6 regions
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Creating Global Market Size sheet (full_hierarchy=True)
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Creating North America sheet (full_hierarchy=False)
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Creating Europe sheet (full_hierarchy=False)
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Creating Asia-Pacific sheet (full_hierarchy=False)
+2025-10-15 11:44:05 - ppt_generator - INFO - [datapack_1760508845] Creating LATAM sheet (full_hierarchy=False)
+2025-10-15 11:44:06 - ppt_generator - INFO - [datapack_1760508845] Creating MEA sheet (full_hierarchy=False)
+2025-10-15 11:44:06 - ppt_generator - INFO - Cleaning filename: Global Fuel Cards Market
+2025-10-15 11:44:06 - ppt_generator - INFO - Cleaned filename: Global Fuel Cards Market
+2025-10-15 11:44:06 - ppt_generator - INFO - Cleaning filename: DATAPACK
+2025-10-15 11:44:06 - ppt_generator - INFO - Cleaned filename: DATAPACK
+2025-10-15 11:44:06 - ppt_generator - INFO - [datapack_1760508845] Datapack generated successfully: Datapack_Global Fuel Cards Market_DATAPACK_SkyQuest_2025.xlsx
+2025-10-15 11:44:53 - ppt_generator - INFO - Application starting up
+2025-10-15 11:44:53 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:44:53 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:44:53 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:44:53 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:44:54 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:44:54 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:44:54 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:44:54 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:44:58 - ppt_generator - INFO - Application starting up
+2025-10-15 11:44:58 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:44:58 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:44:58 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:44:58 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:44:59 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:44:59 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:44:59 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:44:59 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:45:14 - ppt_generator - INFO - [datapack_1760508914] Datapack generation request started
+2025-10-15 11:45:14 - ppt_generator - INFO - [datapack_1760508914] Processing datapack for: Global Fuel Cards Market
+2025-10-15 11:45:14 - ppt_generator - INFO - [datapack_1760508914] Loading template file: excel_template.xlsx
+2025-10-15 11:46:03 - ppt_generator - INFO - Application starting up
+2025-10-15 11:46:03 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:46:03 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:46:03 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:46:03 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:46:04 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:46:04 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:46:04 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:46:04 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:46:07 - ppt_generator - INFO - Application starting up
+2025-10-15 11:46:07 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 11:46:07 - ppt_generator - INFO - Template folder: templates
+2025-10-15 11:46:07 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 11:46:07 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 11:46:07 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 11:46:07 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 11:46:07 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 11:46:07 - ppt_generator - INFO - Starting Flask application
+2025-10-15 11:46:07 - ppt_generator - INFO - [datapack_1760508967] Datapack generation request started
+2025-10-15 11:46:07 - ppt_generator - INFO - [datapack_1760508967] Processing datapack for: Global Fuel Cards Market
+2025-10-15 11:46:07 - ppt_generator - INFO - [datapack_1760508967] Loading template file: excel_template.xlsx
+2025-10-15 12:03:36 - ppt_generator - INFO - Application starting up
+2025-10-15 12:03:36 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:03:36 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:03:36 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:03:36 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:03:36 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:03:36 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:03:36 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:03:36 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:03:39 - ppt_generator - INFO - Application starting up
+2025-10-15 12:03:39 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:03:39 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:03:39 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:03:39 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:03:40 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:03:40 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:03:40 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:03:40 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:03:42 - ppt_generator - INFO - [datapack_1760510022] Datapack generation request started
+2025-10-15 12:03:42 - ppt_generator - INFO - [datapack_1760510022] Processing datapack for: Global Fuel Cards Market
+2025-10-15 12:03:42 - ppt_generator - INFO - [datapack_1760510022] Loading template file: excel_template.xlsx
+2025-10-15 12:09:10 - ppt_generator - INFO - Application starting up
+2025-10-15 12:09:10 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:09:10 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:09:10 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:09:10 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:09:11 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:09:11 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:09:11 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:09:11 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:09:14 - ppt_generator - INFO - Application starting up
+2025-10-15 12:09:14 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:09:14 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:09:14 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:09:14 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:09:14 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:09:14 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:09:14 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:09:14 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:09:20 - ppt_generator - INFO - [datapack_1760510360] Datapack generation request started
+2025-10-15 12:09:20 - ppt_generator - INFO - [datapack_1760510360] Processing datapack for: Global Fuel Cards Market
+2025-10-15 12:09:20 - ppt_generator - INFO - [datapack_1760510360] Loading template file: excel_template.xlsx
+2025-10-15 12:09:42 - ppt_generator - INFO - [datapack_1760510382] Datapack generation request started
+2025-10-15 12:09:42 - ppt_generator - INFO - [datapack_1760510382] Processing datapack for: Global Fuel Cards Market
+2025-10-15 12:09:42 - ppt_generator - INFO - [datapack_1760510382] Loading template file: excel_template.xlsx
+2025-10-15 12:14:40 - ppt_generator - INFO - Application starting up
+2025-10-15 12:14:40 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:14:40 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:14:40 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:14:40 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:14:40 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:14:40 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:14:40 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:14:41 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:14:43 - ppt_generator - INFO - Application starting up
+2025-10-15 12:14:43 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:14:43 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:14:43 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:14:43 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:14:44 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:14:44 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:14:44 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:14:44 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Datapack generation request started
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Processing datapack for: Global Fuel Cards Market
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Creating tables workbook
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Creating Global Market Size tables
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Creating North America tables
+2025-10-15 12:14:46 - ppt_generator - INFO - [datapack_1760510686] Creating Europe tables
+2025-10-15 12:14:47 - ppt_generator - INFO - [datapack_1760510686] Creating Asia-Pacific tables
+2025-10-15 12:14:47 - ppt_generator - INFO - [datapack_1760510686] Creating LATAM tables
+2025-10-15 12:14:47 - ppt_generator - INFO - [datapack_1760510686] Creating MEA tables
+2025-10-15 12:14:48 - ppt_generator - INFO - [datapack_1760510686] Using xlwings to merge with template
+2025-10-15 12:14:50 - ppt_generator - INFO - [datapack_1760510686] Template merged successfully with xlwings
+2025-10-15 12:14:50 - ppt_generator - INFO - Cleaning filename: Global Fuel Cards Market
+2025-10-15 12:14:50 - ppt_generator - INFO - Cleaned filename: Global Fuel Cards Market
+2025-10-15 12:14:50 - ppt_generator - INFO - Cleaning filename: DATAPACK
+2025-10-15 12:14:50 - ppt_generator - INFO - Cleaned filename: DATAPACK
+2025-10-15 12:14:50 - ppt_generator - INFO - [datapack_1760510686] Datapack generated successfully: Datapack_Global Fuel Cards Market_DATAPACK_SkyQuest_2025.xlsx
+2025-10-15 12:17:35 - ppt_generator - INFO - Application starting up
+2025-10-15 12:17:35 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:17:35 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:17:35 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:17:35 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:17:36 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:17:36 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:17:36 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:17:36 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:17:39 - ppt_generator - INFO - Application starting up
+2025-10-15 12:17:39 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:17:39 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:17:39 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:17:39 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:17:39 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:17:39 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:17:39 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:17:39 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:17:41 - ppt_generator - INFO - [datapack_1760510861] Datapack generation request started
+2025-10-15 12:17:41 - ppt_generator - INFO - [datapack_1760510861] Processing datapack for: Global Fuel Cards Market
+2025-10-15 12:17:41 - ppt_generator - INFO - [datapack_1760510861] Creating tables with openpyxl...
+2025-10-15 12:17:42 - ppt_generator - INFO - [datapack_1760510861] Tables file created: generated_ppts\tables_temp_datapack_1760510861.xlsx
+2025-10-15 12:17:43 - ppt_generator - INFO - [datapack_1760510861] Merging with template using xlwings...
+2025-10-15 12:17:45 - ppt_generator - INFO - [datapack_1760510861] Template merge successful with xlwings
+2025-10-15 12:17:45 - ppt_generator - INFO - Cleaning filename: Global Fuel Cards Market
+2025-10-15 12:17:45 - ppt_generator - INFO - Cleaned filename: Global Fuel Cards Market
+2025-10-15 12:17:45 - ppt_generator - INFO - Cleaning filename: DATAPACK
+2025-10-15 12:17:45 - ppt_generator - INFO - Cleaned filename: DATAPACK
+2025-10-15 12:17:45 - ppt_generator - INFO - [datapack_1760510861] Datapack generated successfully: Datapack_Global Fuel Cards Market_DATAPACK_SkyQuest_2025.xlsx
+2025-10-15 12:24:05 - ppt_generator - INFO - Application starting up
+2025-10-15 12:24:05 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:24:05 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:24:05 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:24:05 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:24:05 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:24:05 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:24:05 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:24:05 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:24:20 - ppt_generator - INFO - Application starting up
+2025-10-15 12:24:20 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:24:20 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:24:20 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:24:20 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:24:20 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:24:20 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:24:20 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:24:20 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:24:54 - ppt_generator - INFO - Application starting up
+2025-10-15 12:24:54 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:24:54 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:24:54 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:24:54 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:24:54 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:24:54 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:24:54 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:24:55 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:25:10 - ppt_generator - INFO - Application starting up
+2025-10-15 12:25:10 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:25:10 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:25:10 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:25:10 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:25:10 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:25:10 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:25:10 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:25:11 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:25:39 - ppt_generator - INFO - Index page accessed
+2025-10-15 12:27:09 - ppt_generator - INFO - [req_1760511429] PPT generation request started
+2025-10-15 12:27:10 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-15 12:27:10 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-15 12:27:10 - ppt_generator - INFO - [req_1760511429] Form validation passed
+2025-10-15 12:27:10 - ppt_generator - INFO - [req_1760511429] Custom KMI items provided: 2
+2025-10-15 12:27:10 - ppt_generator - INFO - [req_1760511429] Processing 20 companies
+2025-10-15 12:27:10 - ppt_generator - INFO - Parsing segment input
+2025-10-15 12:27:10 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-15 12:27:10 - ppt_generator - INFO - [req_1760511429] Context generated successfully
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-15 12:27:10 - ppt_generator - INFO - TOC data generated with 81 items
+2025-10-15 12:27:10 - ppt_generator - INFO - [req_1760511429] Starting AI content generation
+2025-10-15 12:27:10 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-15 12:27:10 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating executive summary
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating market enablers
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating industry expansion
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: company_info
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating investment challenges
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating research journals
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating industry associations
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating company info for: Yamazaki Mazak
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating financial overview for: Yamazaki Mazak
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating success factors for: CNC Machine Tools Market
+2025-10-15 12:27:10 - ppt_generator - INFO - Generating market impacting factors for: CNC Machine Tools Market
+2025-10-15 12:27:15 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-15 12:27:15 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-15 12:27:15 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-15 12:27:15 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-15 12:27:15 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-15 12:27:15 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-15 12:27:20 - ppt_generator - INFO - Success factors generated successfully
+2025-10-15 12:27:20 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-15 12:27:20 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-15 12:27:22 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-15 12:27:22 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-15 12:27:22 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-15 12:27:22 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-15 12:27:22 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-15 12:27:22 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-15 12:27:29 - ppt_generator - INFO - Generated 13 definitions in one call
+2025-10-15 12:27:29 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-15 12:27:32 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-15 12:27:32 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-15 12:27:32 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-15 12:27:52 - ppt_generator - INFO - Investment challenges generated successfully
+2025-10-15 12:27:52 - ppt_generator - INFO - Content generation completed for: investment_challenges
+2025-10-15 12:27:52 - ppt_generator - INFO - Phase 1 task completed: investment_challenges
+2025-10-15 12:28:06 - ppt_generator - INFO - Industry expansion generated successfully
+2025-10-15 12:28:06 - ppt_generator - INFO - Content generation completed for: industry_expansion
+2025-10-15 12:28:06 - ppt_generator - INFO - Phase 1 task completed: industry_expansion
+2025-10-15 12:29:25 - ppt_generator - INFO - Company info generated successfully
+2025-10-15 12:29:25 - ppt_generator - INFO - Content generation completed for: company_info
+2025-10-15 12:29:25 - ppt_generator - INFO - Phase 1 task completed: company_info
+2025-10-15 12:30:45 - ppt_generator - INFO - Revenue data fetched: 2022=$3.4B, 2023=$3.6B, 2024=$3.5B
+2025-10-15 12:35:56 - ppt_generator - INFO - Application starting up
+2025-10-15 12:35:56 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:35:56 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:35:56 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:35:56 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:35:56 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:35:56 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:35:56 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:35:56 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:35:59 - ppt_generator - INFO - Application starting up
+2025-10-15 12:35:59 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:35:59 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:35:59 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:35:59 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:35:59 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:35:59 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:35:59 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:35:59 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] PPT generation request started
+2025-10-15 12:36:05 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-15 12:36:05 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] Form validation passed
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] Custom KMI items provided: 2
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] Processing 20 companies
+2025-10-15 12:36:05 - ppt_generator - INFO - Parsing segment input
+2025-10-15 12:36:05 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] Context generated successfully
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-15 12:36:05 - ppt_generator - INFO - TOC data generated with 81 items
+2025-10-15 12:36:05 - ppt_generator - INFO - [req_1760511965] Starting AI content generation
+2025-10-15 12:36:05 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-15 12:36:05 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating executive summary
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating market enablers
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating industry expansion
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: company_info
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating investment challenges
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating research journals
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating industry associations
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating company info for: Yamazaki Mazak
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating financial overview for: Yamazaki Mazak
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating success factors for: CNC Machine Tools Market
+2025-10-15 12:36:05 - ppt_generator - INFO - Generating market impacting factors for: CNC Machine Tools Market
+2025-10-15 12:36:12 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-15 12:36:12 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-15 12:36:12 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-15 12:36:15 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-15 12:36:15 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-15 12:36:15 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-15 12:36:18 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-15 12:36:18 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-15 12:36:18 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-15 12:36:19 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-15 12:36:19 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-15 12:36:19 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-15 12:36:23 - ppt_generator - INFO - Generated 13 definitions in one call
+2025-10-15 12:36:23 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-15 12:36:26 - ppt_generator - INFO - Success factors generated successfully
+2025-10-15 12:36:26 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-15 12:36:26 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-15 12:36:31 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-15 12:36:31 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-15 12:36:31 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-15 12:37:04 - ppt_generator - INFO - Investment challenges generated successfully
+2025-10-15 12:37:04 - ppt_generator - INFO - Content generation completed for: investment_challenges
+2025-10-15 12:37:04 - ppt_generator - INFO - Phase 1 task completed: investment_challenges
+2025-10-15 12:37:14 - ppt_generator - INFO - Industry expansion generated successfully
+2025-10-15 12:37:14 - ppt_generator - INFO - Content generation completed for: industry_expansion
+2025-10-15 12:37:14 - ppt_generator - INFO - Phase 1 task completed: industry_expansion
+2025-10-15 12:39:27 - ppt_generator - INFO - Company info generated successfully
+2025-10-15 12:39:27 - ppt_generator - INFO - Content generation completed for: company_info
+2025-10-15 12:39:27 - ppt_generator - INFO - Phase 1 task completed: company_info
+2025-10-15 12:40:23 - ppt_generator - INFO - Revenue data fetched: 2022=$3.8B, 2023=$4.1B, 2024=$4.0B
+2025-10-15 12:45:12 - ppt_generator - INFO - Found 0 business segments
+2025-10-15 12:45:45 - ppt_generator - INFO - Financial overview generated successfully
+2025-10-15 12:45:45 - ppt_generator - INFO - Content generation completed for: financial_overview
+2025-10-15 12:45:45 - ppt_generator - INFO - Phase 1 task completed: financial_overview
+2025-10-15 12:45:45 - ppt_generator - INFO - Phase 1 completed, starting Phase 2
+2025-10-15 12:45:45 - ppt_generator - INFO - Generating content for: industry_expansion_1
+2025-10-15 12:45:45 - ppt_generator - INFO - Generating industry expansion 1 (avoiding title: Advanced Automation and Connectivity Driving CNC Machine Evolution)
+2025-10-15 12:46:31 - ppt_generator - INFO - Industry expansion 1 generated successfully
+2025-10-15 12:46:31 - ppt_generator - INFO - Content generation completed for: industry_expansion_1
+2025-10-15 12:46:31 - ppt_generator - INFO - Parallel AI content generation completed successfully
+2025-10-15 12:46:31 - ppt_generator - INFO - [req_1760511965] AI content extracted successfully
+2025-10-15 12:46:31 - ppt_generator - INFO - [req_1760511965] Starting presentation modification
+2025-10-15 12:46:31 - ppt_generator - INFO - [req_1760511965] Loading base presentation
+2025-10-15 12:46:31 - ppt_generator - INFO - [req_1760511965] Inserting definition tables at slide 10
+2025-10-15 12:46:31 - ppt_generator - INFO - Inserting definition tables starting at slide 10
+2025-10-15 12:46:31 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-15 12:46:42 - ppt_generator - INFO - Generated 13 definitions in one call
+2025-10-15 12:46:42 - ppt_generator - INFO - Built 3 table sections
+2025-10-15 12:46:42 - ppt_generator - INFO - Created 2 definition slides (1 template + 1 additional)
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Definition slides created: 2
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Slide shift amount: 2
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Applying success factors to slide 27
+2025-10-15 12:46:42 - ppt_generator - INFO - Applying success factors to slide
+2025-10-15 12:46:42 - ppt_generator - INFO - ✓ Total success factors replacements made: 16
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Success factors applied successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Applying market impacting factors to slide
+2025-10-15 12:46:42 - ppt_generator - INFO - Applying market impacting factors to slide 26
+2025-10-15 12:46:42 - ppt_generator - INFO - Total factor replacements: 5
+2025-10-15 12:46:42 - ppt_generator - INFO - Adding 25 ball indicators to slide
+2025-10-15 12:46:42 - ppt_generator - INFO - Ball indicators added successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - Market factors slide 26 processed successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Adding taxonomy boxes
+2025-10-15 12:46:42 - ppt_generator - INFO - Adding taxonomy boxes to slide 1
+2025-10-15 12:46:42 - ppt_generator - INFO - Taxonomy boxes added successfully to slide 1
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Performing text replacements in tables
+2025-10-15 12:46:42 - ppt_generator - INFO - Starting text replacement in tables for slides: [14, 17, 20, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]
+2025-10-15 12:46:42 - ppt_generator - INFO - Text replacement in tables completed
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Creating Table of Contents
+2025-10-15 12:46:42 - ppt_generator - INFO - Adding TOC to slides: [4, 5, 6, 7, 8]
+2025-10-15 12:46:42 - ppt_generator - INFO - TOC added to slides successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Adding tables and charts
+2025-10-15 12:46:42 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:46:42 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:46:42 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:46:42 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:46:42 - ppt_generator - INFO - [req_1760511965] Adding financial charts to slide 40
+2025-10-15 12:46:42 - ppt_generator - INFO - Creating financial charts for Yamazaki Mazak
+2025-10-15 12:46:42 - ppt_generator - INFO - Revenue bar chart created
+2025-10-15 12:46:42 - ppt_generator - ERROR - [req_1760511965] PPT generation failed after 637.14s: chart data contains no categories
+2025-10-15 12:46:46 - ppt_generator - INFO - Application starting up
+2025-10-15 12:46:46 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 12:46:46 - ppt_generator - INFO - Template folder: templates
+2025-10-15 12:46:46 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 12:46:46 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 12:46:46 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 12:46:46 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 12:46:46 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 12:46:46 - ppt_generator - INFO - Starting Flask application
+2025-10-15 12:47:22 - ppt_generator - INFO - [datapack_1760512642] Datapack generation request started
+2025-10-15 12:47:22 - ppt_generator - INFO - [datapack_1760512642] Processing datapack for: CNC Machine Tools Market
+2025-10-15 12:47:22 - ppt_generator - INFO - [datapack_1760512642] Creating tables with openpyxl...
+2025-10-15 12:47:23 - ppt_generator - INFO - [datapack_1760512642] Tables file created: generated_ppts\tables_temp_datapack_1760512642.xlsx
+2025-10-15 12:47:24 - ppt_generator - INFO - [datapack_1760512642] Merging with template using xlwings...
+2025-10-15 12:47:25 - ppt_generator - INFO - [datapack_1760512642] Template merge successful with xlwings
+2025-10-15 12:47:25 - ppt_generator - INFO - Cleaning filename: CNC Machine Tools Market
+2025-10-15 12:47:25 - ppt_generator - INFO - Cleaned filename: CNC Machine Tools Market
+2025-10-15 12:47:25 - ppt_generator - INFO - Cleaning filename: SQMIG20G2062
+2025-10-15 12:47:25 - ppt_generator - INFO - Cleaned filename: SQMIG20G2062
+2025-10-15 12:47:25 - ppt_generator - INFO - [datapack_1760512642] Datapack generated successfully: Datapack_CNC Machine Tools Market_SQMIG20G2062_SkyQuest_2025.xlsx
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] PPT generation request started
+2025-10-15 12:49:37 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-15 12:49:37 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] Form validation passed
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] Custom KMI items provided: 2
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] Processing 20 companies
+2025-10-15 12:49:37 - ppt_generator - INFO - Parsing segment input
+2025-10-15 12:49:37 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] Context generated successfully
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-15 12:49:37 - ppt_generator - INFO - TOC data generated with 81 items
+2025-10-15 12:49:37 - ppt_generator - INFO - [req_1760512777] Starting AI content generation
+2025-10-15 12:49:37 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-15 12:49:37 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating executive summary
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating market enablers
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating industry expansion
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: company_info
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating investment challenges
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating research journals
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating industry associations
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating company info for: DMG MORI
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating financial overview for: DMG MORI
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating success factors for: CNC Machine Tools Market
+2025-10-15 12:49:37 - ppt_generator - INFO - Generating market impacting factors for: CNC Machine Tools Market
+2025-10-15 12:49:42 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-15 12:49:42 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-15 12:49:42 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-15 12:49:45 - ppt_generator - INFO - Success factors generated successfully
+2025-10-15 12:49:45 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-15 12:49:45 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-15 12:49:46 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-15 12:49:46 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-15 12:49:46 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-15 12:49:48 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-15 12:49:48 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-15 12:49:48 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-15 12:49:54 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-15 12:49:54 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-15 12:49:54 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-15 12:50:03 - ppt_generator - INFO - Generated 13 definitions in one call
+2025-10-15 12:50:03 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-15 12:50:08 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-15 12:50:08 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-15 12:50:08 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-15 12:50:13 - ppt_generator - INFO - Industry expansion generated successfully
+2025-10-15 12:50:13 - ppt_generator - INFO - Content generation completed for: industry_expansion
+2025-10-15 12:50:13 - ppt_generator - INFO - Phase 1 task completed: industry_expansion
+2025-10-15 12:50:33 - ppt_generator - INFO - Investment challenges generated successfully
+2025-10-15 12:50:33 - ppt_generator - INFO - Content generation completed for: investment_challenges
+2025-10-15 12:50:33 - ppt_generator - INFO - Phase 1 task completed: investment_challenges
+2025-10-15 12:51:50 - ppt_generator - INFO - Company info generated successfully
+2025-10-15 12:51:50 - ppt_generator - INFO - Content generation completed for: company_info
+2025-10-15 12:51:50 - ppt_generator - INFO - Phase 1 task completed: company_info
+2025-10-15 12:52:26 - ppt_generator - INFO - Revenue data fetched: 2022=$3.1B, 2023=$3.5B, 2024=$3.5B
+2025-10-15 12:55:56 - ppt_generator - INFO - Found 2 business segments
+2025-10-15 12:56:22 - ppt_generator - INFO - Financial overview generated successfully
+2025-10-15 12:56:22 - ppt_generator - INFO - Content generation completed for: financial_overview
+2025-10-15 12:56:22 - ppt_generator - INFO - Phase 1 task completed: financial_overview
+2025-10-15 12:56:22 - ppt_generator - INFO - Phase 1 completed, starting Phase 2
+2025-10-15 12:56:22 - ppt_generator - INFO - Generating content for: industry_expansion_1
+2025-10-15 12:56:22 - ppt_generator - INFO - Generating industry expansion 1 (avoiding title: Digitalization and Automation Momentum Driving CNC Machine Tools)
+2025-10-15 12:57:09 - ppt_generator - INFO - Industry expansion 1 generated successfully
+2025-10-15 12:57:09 - ppt_generator - INFO - Content generation completed for: industry_expansion_1
+2025-10-15 12:57:09 - ppt_generator - INFO - Parallel AI content generation completed successfully
+2025-10-15 12:57:09 - ppt_generator - INFO - [req_1760512777] AI content extracted successfully
+2025-10-15 12:57:09 - ppt_generator - INFO - [req_1760512777] Starting presentation modification
+2025-10-15 12:57:09 - ppt_generator - INFO - [req_1760512777] Loading base presentation
+2025-10-15 12:57:09 - ppt_generator - INFO - [req_1760512777] Inserting definition tables at slide 10
+2025-10-15 12:57:09 - ppt_generator - INFO - Inserting definition tables starting at slide 10
+2025-10-15 12:57:09 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-15 12:57:23 - ppt_generator - INFO - Generated 13 definitions in one call
+2025-10-15 12:57:23 - ppt_generator - INFO - Built 3 table sections
+2025-10-15 12:57:23 - ppt_generator - INFO - Created 2 definition slides (1 template + 1 additional)
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Definition slides created: 2
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Slide shift amount: 2
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Applying success factors to slide 27
+2025-10-15 12:57:23 - ppt_generator - INFO - Applying success factors to slide
+2025-10-15 12:57:23 - ppt_generator - INFO - ✓ Total success factors replacements made: 16
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Success factors applied successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Applying market impacting factors to slide
+2025-10-15 12:57:23 - ppt_generator - INFO - Applying market impacting factors to slide 26
+2025-10-15 12:57:23 - ppt_generator - INFO - Total factor replacements: 5
+2025-10-15 12:57:23 - ppt_generator - INFO - Adding 25 ball indicators to slide
+2025-10-15 12:57:23 - ppt_generator - INFO - Ball indicators added successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - Market factors slide 26 processed successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Adding taxonomy boxes
+2025-10-15 12:57:23 - ppt_generator - INFO - Adding taxonomy boxes to slide 1
+2025-10-15 12:57:23 - ppt_generator - INFO - Taxonomy boxes added successfully to slide 1
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Performing text replacements in tables
+2025-10-15 12:57:23 - ppt_generator - INFO - Starting text replacement in tables for slides: [14, 17, 20, 21, 22, 23, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]
+2025-10-15 12:57:23 - ppt_generator - INFO - Text replacement in tables completed
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Creating Table of Contents
+2025-10-15 12:57:23 - ppt_generator - INFO - Adding TOC to slides: [4, 5, 6, 7, 8]
+2025-10-15 12:57:23 - ppt_generator - INFO - TOC added to slides successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Adding tables and charts
+2025-10-15 12:57:23 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:57:23 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:57:23 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - Creating chart with 6 series and 14 data points
+2025-10-15 12:57:23 - ppt_generator - INFO - Chart created successfully
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Adding financial charts to slide 40
+2025-10-15 12:57:23 - ppt_generator - INFO - Creating financial charts for DMG MORI
+2025-10-15 12:57:23 - ppt_generator - INFO - Revenue bar chart created
+2025-10-15 12:57:23 - ppt_generator - INFO - Pie chart created with 2 segments
+2025-10-15 12:57:23 - ppt_generator - INFO - Cleaning filename: CNC Machine Tools Market
+2025-10-15 12:57:23 - ppt_generator - INFO - Cleaned filename: CNC Machine Tools Market
+2025-10-15 12:57:23 - ppt_generator - INFO - Cleaning filename: SQMIG20G2062
+2025-10-15 12:57:23 - ppt_generator - INFO - Cleaned filename: SQMIG20G2062
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] Saving presentation to: generated_ppts\Sample_CNC Machine Tools Market_SQMIG20G2062_Skyquest_2025_V1.pptx
+2025-10-15 12:57:23 - ppt_generator - INFO - [req_1760512777] PPT generation completed successfully: Sample_CNC Machine Tools Market_SQMIG20G2062_Skyquest_2025_V1.pptx
+2025-10-15 14:13:10 - ppt_generator - INFO - Application starting up
+2025-10-15 14:13:10 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 14:13:10 - ppt_generator - INFO - Template folder: templates
+2025-10-15 14:13:10 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 14:13:10 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 14:13:11 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 14:13:11 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 14:13:11 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 14:13:11 - ppt_generator - INFO - Starting Flask application
+2025-10-15 14:13:18 - ppt_generator - INFO - Application starting up
+2025-10-15 14:13:18 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 14:13:18 - ppt_generator - INFO - Template folder: templates
+2025-10-15 14:13:18 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 14:13:18 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 14:13:18 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 14:13:18 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 14:13:18 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 14:13:19 - ppt_generator - INFO - Starting Flask application
+2025-10-15 14:14:58 - ppt_generator - INFO - Application starting up
+2025-10-15 14:14:58 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 14:14:58 - ppt_generator - INFO - Template folder: templates
+2025-10-15 14:14:58 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 14:14:58 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 14:14:58 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 14:14:58 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 14:14:58 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 14:14:58 - ppt_generator - INFO - Starting Flask application
+2025-10-15 14:15:02 - ppt_generator - INFO - Application starting up
+2025-10-15 14:15:02 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-15 14:15:02 - ppt_generator - INFO - Template folder: templates
+2025-10-15 14:15:02 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-15 14:15:02 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-15 14:15:03 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-15 14:15:03 - ppt_generator - INFO - Initializing AI Service
+2025-10-15 14:15:03 - ppt_generator - INFO - Gemini configured successfully
+2025-10-15 14:15:03 - ppt_generator - INFO - Starting Flask application
+2025-10-16 14:17:10 - ppt_generator - INFO - Application starting up
+2025-10-16 14:17:10 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 14:17:10 - ppt_generator - INFO - Template folder: templates
+2025-10-16 14:17:10 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 14:17:10 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 14:17:11 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 14:17:11 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 14:17:11 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 14:17:11 - ppt_generator - INFO - Starting Flask application
+2025-10-16 14:17:14 - ppt_generator - INFO - Application starting up
+2025-10-16 14:17:14 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 14:17:14 - ppt_generator - INFO - Template folder: templates
+2025-10-16 14:17:14 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 14:17:14 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 14:17:14 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 14:17:14 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 14:17:14 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 14:17:15 - ppt_generator - INFO - Starting Flask application
+2025-10-16 14:17:25 - ppt_generator - INFO - Index page accessed
+2025-10-16 14:18:36 - ppt_generator - INFO - [datapack_1760604516] Datapack generation request started
+2025-10-16 14:18:36 - ppt_generator - INFO - [datapack_1760604516] Processing datapack for: Global Robotaxi Market
+2025-10-16 14:18:36 - ppt_generator - INFO - [datapack_1760604516] Creating tables with openpyxl...
+2025-10-16 14:18:39 - ppt_generator - INFO - [datapack_1760604516] Tables file created: generated_ppts\tables_temp_datapack_1760604516.xlsx
+2025-10-16 14:18:41 - ppt_generator - INFO - [datapack_1760604516] Merging with template using xlwings...
+2025-10-16 14:18:43 - ppt_generator - INFO - [datapack_1760604516] Template merge successful with xlwings
+2025-10-16 14:18:43 - ppt_generator - INFO - Cleaning filename: Global Robotaxi Market
+2025-10-16 14:18:43 - ppt_generator - INFO - Cleaned filename: Global Robotaxi Market
+2025-10-16 14:18:43 - ppt_generator - INFO - Cleaning filename: SQ123w
+2025-10-16 14:18:43 - ppt_generator - INFO - Cleaned filename: SQ123w
+2025-10-16 14:18:43 - ppt_generator - INFO - [datapack_1760604516] Datapack generated successfully: Datapack_Global Robotaxi Market_SQ123w_SkyQuest_2025.xlsx
+2025-10-16 14:20:57 - ppt_generator - INFO - [datapack_1760604657] Datapack generation request started
+2025-10-16 14:20:57 - ppt_generator - INFO - [datapack_1760604657] Processing datapack for: Global Robotaxi Market
+2025-10-16 14:20:57 - ppt_generator - INFO - [datapack_1760604657] Creating tables with openpyxl...
+2025-10-16 14:20:59 - ppt_generator - INFO - [datapack_1760604657] Tables file created: generated_ppts\tables_temp_datapack_1760604657.xlsx
+2025-10-16 14:20:59 - ppt_generator - INFO - [datapack_1760604657] Merging with template using xlwings...
+2025-10-16 14:21:01 - ppt_generator - INFO - [datapack_1760604657] Replaced 1 placeholder(s) in shapes
+2025-10-16 14:21:02 - ppt_generator - INFO - [datapack_1760604657] Template merge successful with xlwings
+2025-10-16 14:21:02 - ppt_generator - INFO - Cleaning filename: Global Robotaxi Market
+2025-10-16 14:21:02 - ppt_generator - INFO - Cleaned filename: Global Robotaxi Market
+2025-10-16 14:21:02 - ppt_generator - INFO - Cleaning filename: SQ123w
+2025-10-16 14:21:02 - ppt_generator - INFO - Cleaned filename: SQ123w
+2025-10-16 14:21:02 - ppt_generator - INFO - [datapack_1760604657] Datapack generated successfully: Datapack_Global Robotaxi Market_SQ123w_SkyQuest_2025.xlsx
+2025-10-16 14:22:13 - ppt_generator - INFO - Application starting up
+2025-10-16 14:22:13 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 14:22:13 - ppt_generator - INFO - Template folder: templates
+2025-10-16 14:22:13 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 14:22:13 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 14:22:13 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 14:22:13 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 14:22:13 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 14:22:13 - ppt_generator - INFO - Starting Flask application
+2025-10-16 14:22:28 - ppt_generator - INFO - Application starting up
+2025-10-16 14:22:28 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 14:22:28 - ppt_generator - INFO - Template folder: templates
+2025-10-16 14:22:28 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 14:22:28 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 14:22:29 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 14:22:29 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 14:22:29 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 14:22:29 - ppt_generator - INFO - Starting Flask application
+2025-10-16 15:41:54 - ppt_generator - INFO - Application starting up
+2025-10-16 15:41:54 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 15:41:54 - ppt_generator - INFO - Template folder: templates
+2025-10-16 15:41:54 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 15:41:54 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 15:41:54 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 15:41:54 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 15:41:54 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 15:41:54 - ppt_generator - INFO - Starting Flask application
+2025-10-16 15:42:50 - ppt_generator - INFO - Application starting up
+2025-10-16 15:42:50 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 15:42:50 - ppt_generator - INFO - Template folder: templates
+2025-10-16 15:42:50 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 15:42:50 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 15:42:50 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 15:42:50 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 15:42:50 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 15:42:50 - ppt_generator - INFO - Starting Flask application
+2025-10-16 16:01:09 - ppt_generator - INFO - Application starting up
+2025-10-16 16:01:09 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 16:01:09 - ppt_generator - INFO - Template folder: templates
+2025-10-16 16:01:09 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 16:01:09 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 16:01:10 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 16:01:10 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 16:01:10 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 16:01:10 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:32:02 - ppt_generator - INFO - Application starting up
+2025-10-16 17:32:02 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:32:02 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:32:02 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:32:02 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:32:02 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:32:02 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:32:02 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:32:02 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:32:06 - ppt_generator - INFO - Application starting up
+2025-10-16 17:32:06 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:32:06 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:32:06 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:32:06 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:32:06 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:32:06 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:32:06 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:32:06 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:32:06 - ppt_generator - INFO - [req_1760616126] PPT generation request started
+2025-10-16 17:32:06 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-16 17:32:06 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-16 17:32:06 - ppt_generator - INFO - [req_1760616126] Form validation passed
+2025-10-16 17:32:06 - ppt_generator - INFO - [req_1760616126] Processing 5 companies
+2025-10-16 17:32:06 - ppt_generator - INFO - Parsing segment input
+2025-10-16 17:32:06 - ppt_generator - INFO - Segment input parsed successfully: 5 main categories
+2025-10-16 17:32:06 - ppt_generator - INFO - [req_1760616126] Context generated successfully
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-16 17:32:06 - ppt_generator - INFO - TOC data generated with 101 items
+2025-10-16 17:32:06 - ppt_generator - INFO - [req_1760616126] Starting AI content generation
+2025-10-16 17:32:06 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-16 17:32:06 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating executive summary
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating market enablers
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating industry expansion
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: company_info
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating investment challenges
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating research journals
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating industry associations
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating company info for: Apple Inc.
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating financial overview for: Apple Inc.
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating success factors for: Global Robotaxi Market
+2025-10-16 17:32:06 - ppt_generator - INFO - Generating market impacting factors for: Global Robotaxi Market
+2025-10-16 17:32:14 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-16 17:32:14 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-16 17:32:14 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-16 17:32:16 - ppt_generator - INFO - Index page accessed
+2025-10-16 17:32:18 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-16 17:32:18 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-16 17:32:18 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-16 17:32:23 - ppt_generator - INFO - Success factors generated successfully
+2025-10-16 17:32:23 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-16 17:32:23 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-16 17:32:33 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-16 17:32:33 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-16 17:32:33 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-16 17:32:33 - ppt_generator - INFO - [req_1760616153] PPT generation request started
+2025-10-16 17:32:33 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-16 17:32:33 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-16 17:32:33 - ppt_generator - INFO - [req_1760616153] Form validation passed
+2025-10-16 17:32:33 - ppt_generator - INFO - [req_1760616153] Processing 5 companies
+2025-10-16 17:32:33 - ppt_generator - INFO - Parsing segment input
+2025-10-16 17:32:33 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-16 17:32:33 - ppt_generator - INFO - [req_1760616153] Context generated successfully
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-16 17:32:33 - ppt_generator - INFO - TOC data generated with 74 items
+2025-10-16 17:32:33 - ppt_generator - INFO - [req_1760616153] Starting AI content generation
+2025-10-16 17:32:33 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-16 17:32:33 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating executive summary
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating market enablers
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating industry expansion
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: company_info
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating investment challenges
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating research journals
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating industry associations
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating company info for: Apple Inc.
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating financial overview for: Apple Inc.
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating success factors for: Global Toy Market
+2025-10-16 17:32:33 - ppt_generator - INFO - Generating market impacting factors for: Global Toy Market
+2025-10-16 17:32:36 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-16 17:32:36 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-16 17:32:36 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-16 17:32:39 - ppt_generator - INFO - Generated 23 definitions in one call
+2025-10-16 17:32:39 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-16 17:32:45 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-16 17:32:45 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-16 17:32:45 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-16 17:32:49 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-16 17:32:49 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-16 17:32:49 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-16 17:32:50 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-16 17:32:50 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-16 17:32:50 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-16 17:32:55 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-16 17:32:55 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-16 17:32:55 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-16 17:33:33 - ppt_generator - INFO - Application starting up
+2025-10-16 17:33:33 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:33:33 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:33:33 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:33:33 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:33:33 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:33:33 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:33:33 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:33:33 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:33:37 - ppt_generator - INFO - Application starting up
+2025-10-16 17:33:37 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:33:37 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:33:37 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:33:37 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:33:37 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:33:37 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:33:37 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:33:38 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:33:38 - ppt_generator - INFO - [datapack_1760616218] Datapack generation request started
+2025-10-16 17:33:38 - ppt_generator - INFO - [datapack_1760616218] Processing datapack for: Global Toy Market
+2025-10-16 17:33:38 - ppt_generator - INFO - [datapack_1760616218] Creating tables with openpyxl...
+2025-10-16 17:33:38 - ppt_generator - INFO - [datapack_1760616218] Tables file created: generated_ppts\tables_temp_datapack_1760616218.xlsx
+2025-10-16 17:33:40 - ppt_generator - INFO - [datapack_1760616218] Merging with template using xlwings...
+2025-10-16 17:33:41 - ppt_generator - INFO - [datapack_1760616218] Replaced 1 placeholder(s) in shapes
+2025-10-16 17:33:42 - ppt_generator - INFO - [datapack_1760616218] Template merge successful with xlwings
+2025-10-16 17:33:42 - ppt_generator - INFO - Cleaning filename: Global Toy Market
+2025-10-16 17:33:42 - ppt_generator - INFO - Cleaned filename: Global Toy Market
+2025-10-16 17:33:42 - ppt_generator - INFO - Cleaning filename: SQ123w
+2025-10-16 17:33:42 - ppt_generator - INFO - Cleaned filename: SQ123w
+2025-10-16 17:33:42 - ppt_generator - INFO - [datapack_1760616218] Datapack generated successfully: Datapack_Global Toy Market_SQ123w_SkyQuest_2025.xlsx
+2025-10-16 17:34:24 - ppt_generator - INFO - Application starting up
+2025-10-16 17:34:24 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:34:24 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:34:24 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:34:24 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:34:24 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:34:24 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:34:24 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:34:25 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:34:27 - ppt_generator - INFO - Application starting up
+2025-10-16 17:34:27 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:34:27 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:34:27 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:34:27 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:34:28 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:34:28 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:34:28 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:34:28 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:34:36 - ppt_generator - INFO - [req_1760616276] PPT generation request started
+2025-10-16 17:34:36 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-16 17:34:36 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-16 17:34:36 - ppt_generator - INFO - [req_1760616276] Form validation passed
+2025-10-16 17:34:36 - ppt_generator - INFO - [req_1760616276] Processing 5 companies
+2025-10-16 17:34:36 - ppt_generator - INFO - Parsing segment input
+2025-10-16 17:34:36 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-16 17:34:36 - ppt_generator - INFO - [req_1760616276] Context generated successfully
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-16 17:34:36 - ppt_generator - INFO - TOC data generated with 74 items
+2025-10-16 17:34:36 - ppt_generator - INFO - [req_1760616276] Starting AI content generation
+2025-10-16 17:34:36 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-16 17:34:36 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating executive summary
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating market enablers
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: company_info
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating industry expansion
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating industry associations
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating research journals
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating investment challenges
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating company info for: Apple Inc.
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating financial overview for: Apple Inc.
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating success factors for: Global Toy Market
+2025-10-16 17:34:36 - ppt_generator - INFO - Generating market impacting factors for: Global Toy Market
+2025-10-16 17:34:47 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-16 17:34:47 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-16 17:34:47 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-16 17:34:47 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-16 17:34:47 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-16 17:34:47 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-16 17:34:56 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-16 17:34:56 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-16 17:34:56 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-16 17:34:59 - ppt_generator - INFO - Success factors generated successfully
+2025-10-16 17:34:59 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-16 17:34:59 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-16 17:35:02 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-16 17:35:02 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-16 17:35:02 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-16 17:35:10 - ppt_generator - INFO - Revenue data fetched: 2022=$394.3B, 2023=$383.2B, 2024=$391.0B
+2025-10-16 17:35:10 - ppt_generator - INFO - Found 5 business segments
+2025-10-16 17:35:21 - ppt_generator - INFO - Generated 6 definitions in one call
+2025-10-16 17:35:21 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-16 17:35:22 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-16 17:35:22 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-16 17:35:22 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-16 17:35:30 - ppt_generator - INFO - Investment challenges generated successfully
+2025-10-16 17:35:30 - ppt_generator - INFO - Content generation completed for: investment_challenges
+2025-10-16 17:35:30 - ppt_generator - INFO - Phase 1 task completed: investment_challenges
+2025-10-16 17:35:44 - ppt_generator - INFO - Financial overview generated successfully
+2025-10-16 17:35:44 - ppt_generator - INFO - Content generation completed for: financial_overview
+2025-10-16 17:35:44 - ppt_generator - INFO - Phase 1 task completed: financial_overview
+2025-10-16 17:35:52 - ppt_generator - INFO - Industry expansion generated successfully
+2025-10-16 17:35:52 - ppt_generator - INFO - Content generation completed for: industry_expansion
+2025-10-16 17:35:52 - ppt_generator - INFO - Phase 1 task completed: industry_expansion
+2025-10-16 17:35:55 - ppt_generator - INFO - Company info generated successfully
+2025-10-16 17:35:55 - ppt_generator - INFO - Content generation completed for: company_info
+2025-10-16 17:35:55 - ppt_generator - INFO - Phase 1 task completed: company_info
+2025-10-16 17:35:55 - ppt_generator - INFO - Phase 1 completed, starting Phase 2
+2025-10-16 17:35:55 - ppt_generator - INFO - Generating content for: industry_expansion_1
+2025-10-16 17:35:55 - ppt_generator - INFO - Generating industry expansion 1 (avoiding title: Digitalization and Licensing Fuel Global Toy Market Growth)
+2025-10-16 17:36:40 - ppt_generator - INFO - Industry expansion 1 generated successfully
+2025-10-16 17:36:40 - ppt_generator - INFO - Content generation completed for: industry_expansion_1
+2025-10-16 17:36:40 - ppt_generator - INFO - Parallel AI content generation completed successfully
+2025-10-16 17:36:40 - ppt_generator - INFO - [req_1760616276] AI content extracted successfully
+2025-10-16 17:36:40 - ppt_generator - INFO - [req_1760616276] Starting presentation modification
+2025-10-16 17:36:40 - ppt_generator - INFO - [req_1760616276] Loading base presentation
+2025-10-16 17:36:40 - ppt_generator - INFO - [req_1760616276] Inserting definition tables at slide 10
+2025-10-16 17:36:40 - ppt_generator - INFO - Inserting definition tables starting at slide 10
+2025-10-16 17:36:40 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:36:59 - ppt_generator - INFO - Generated 7 definitions in one call
+2025-10-16 17:36:59 - ppt_generator - INFO - Built 3 table sections
+2025-10-16 17:36:59 - ppt_generator - INFO - Created 1 definition slides (1 template + 0 additional)
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Definition slides created: 1
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Slide shift amount: 1
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Applying success factors to slide 26
+2025-10-16 17:36:59 - ppt_generator - INFO - Applying success factors to slide
+2025-10-16 17:36:59 - ppt_generator - INFO - ✓ Total success factors replacements made: 16
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Success factors applied successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Applying market impacting factors to slide
+2025-10-16 17:36:59 - ppt_generator - INFO - Applying market impacting factors to slide 25
+2025-10-16 17:36:59 - ppt_generator - INFO - Total factor replacements: 5
+2025-10-16 17:36:59 - ppt_generator - INFO - Adding 25 ball indicators to slide
+2025-10-16 17:36:59 - ppt_generator - INFO - Ball indicators added successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - Market factors slide 25 processed successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Adding taxonomy boxes
+2025-10-16 17:36:59 - ppt_generator - INFO - Adding taxonomy boxes to slide 1
+2025-10-16 17:36:59 - ppt_generator - INFO - Taxonomy boxes added successfully to slide 1
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Performing text replacements in tables
+2025-10-16 17:36:59 - ppt_generator - INFO - Starting text replacement in tables for slides: [13, 16, 19, 20, 21, 22, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+2025-10-16 17:36:59 - ppt_generator - INFO - Text replacement in tables completed
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Creating Table of Contents
+2025-10-16 17:36:59 - ppt_generator - INFO - Adding TOC to slides: [4, 5, 6, 7, 8]
+2025-10-16 17:36:59 - ppt_generator - INFO - TOC added to slides successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Adding tables and charts
+2025-10-16 17:36:59 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:36:59 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:36:59 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:36:59 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:36:59 - ppt_generator - INFO - [req_1760616276] Adding financial charts to slide 39
+2025-10-16 17:36:59 - ppt_generator - INFO - Creating financial charts for Apple Inc.
+2025-10-16 17:37:00 - ppt_generator - INFO - Revenue bar chart created
+2025-10-16 17:37:00 - ppt_generator - INFO - Pie chart created with 5 segments
+2025-10-16 17:37:00 - ppt_generator - INFO - Cleaning filename: Global Toy Market
+2025-10-16 17:37:00 - ppt_generator - INFO - Cleaned filename: Global Toy Market
+2025-10-16 17:37:00 - ppt_generator - INFO - Cleaning filename: SQ123w
+2025-10-16 17:37:00 - ppt_generator - INFO - Cleaned filename: SQ123w
+2025-10-16 17:37:00 - ppt_generator - INFO - [req_1760616276] Saving presentation to: generated_ppts\Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:37:00 - ppt_generator - INFO - [req_1760616276] PPT generation completed successfully: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:37:03 - ppt_generator - INFO - Download request for file: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:37:39 - ppt_generator - INFO - Application starting up
+2025-10-16 17:37:39 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:37:39 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:37:39 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:37:39 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:37:40 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:37:40 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:37:40 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:37:40 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:42:27 - ppt_generator - INFO - Application starting up
+2025-10-16 17:42:27 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:42:27 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:42:27 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:42:27 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:42:27 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:42:27 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:42:27 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:42:27 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:42:31 - ppt_generator - INFO - Application starting up
+2025-10-16 17:42:31 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:42:31 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:42:31 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:42:31 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:42:32 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:42:32 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:42:32 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:42:32 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:42:32 - ppt_generator - INFO - [req_1760616752] PPT generation request started
+2025-10-16 17:42:32 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-16 17:42:32 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-16 17:42:32 - ppt_generator - INFO - [req_1760616752] Form validation passed
+2025-10-16 17:42:32 - ppt_generator - INFO - [req_1760616752] Processing 5 companies
+2025-10-16 17:42:32 - ppt_generator - INFO - Parsing segment input
+2025-10-16 17:42:32 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-16 17:42:32 - ppt_generator - INFO - [req_1760616752] Context generated successfully
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-16 17:42:32 - ppt_generator - INFO - TOC data generated with 74 items
+2025-10-16 17:42:32 - ppt_generator - INFO - [req_1760616752] Starting AI content generation
+2025-10-16 17:42:32 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-16 17:42:32 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating executive summary
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating market enablers
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating industry expansion
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: company_info
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating investment challenges
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating research journals
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating industry associations
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating company info for: Apple Inc.
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating financial overview for: Apple Inc.
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating success factors for: Global Toy Market
+2025-10-16 17:42:32 - ppt_generator - INFO - Generating market impacting factors for: Global Toy Market
+2025-10-16 17:42:40 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-16 17:42:40 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-16 17:42:40 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-16 17:42:44 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-16 17:42:44 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-16 17:42:44 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-16 17:42:51 - ppt_generator - INFO - Generated 7 definitions in one call
+2025-10-16 17:42:51 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-16 17:42:52 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-16 17:42:52 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-16 17:42:52 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-16 17:43:01 - ppt_generator - INFO - Success factors generated successfully
+2025-10-16 17:43:01 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-16 17:43:01 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-16 17:43:10 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-16 17:43:10 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-16 17:43:10 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-16 17:43:10 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-16 17:43:10 - ppt_generator - INFO - Content generation completed for: market_enablers
+2025-10-16 17:43:10 - ppt_generator - INFO - Phase 1 task completed: market_enablers
+2025-10-16 17:43:17 - ppt_generator - INFO - Industry expansion generated successfully
+2025-10-16 17:43:17 - ppt_generator - INFO - Content generation completed for: industry_expansion
+2025-10-16 17:43:17 - ppt_generator - INFO - Phase 1 task completed: industry_expansion
+2025-10-16 17:43:23 - ppt_generator - INFO - Revenue data fetched: 2022=$394.3B, 2023=$383.2B, 2024=$391.0B
+2025-10-16 17:43:23 - ppt_generator - INFO - Found 5 business segments
+2025-10-16 17:43:44 - ppt_generator - INFO - Financial overview generated successfully
+2025-10-16 17:43:44 - ppt_generator - INFO - Content generation completed for: financial_overview
+2025-10-16 17:43:44 - ppt_generator - INFO - Phase 1 task completed: financial_overview
+2025-10-16 17:43:50 - ppt_generator - INFO - Company info generated successfully
+2025-10-16 17:43:50 - ppt_generator - INFO - Content generation completed for: company_info
+2025-10-16 17:43:50 - ppt_generator - INFO - Phase 1 task completed: company_info
+2025-10-16 17:44:33 - ppt_generator - INFO - Investment challenges generated successfully
+2025-10-16 17:44:33 - ppt_generator - INFO - Content generation completed for: investment_challenges
+2025-10-16 17:44:33 - ppt_generator - INFO - Phase 1 task completed: investment_challenges
+2025-10-16 17:44:33 - ppt_generator - INFO - Phase 1 completed, starting Phase 2
+2025-10-16 17:44:33 - ppt_generator - INFO - Generating content for: industry_expansion_1
+2025-10-16 17:44:33 - ppt_generator - INFO - Generating industry expansion 1 (avoiding title: Digitalization and IP-Driven Franchise Expansion in Toys)
+2025-10-16 17:46:21 - ppt_generator - INFO - Industry expansion 1 generated successfully
+2025-10-16 17:46:21 - ppt_generator - INFO - Content generation completed for: industry_expansion_1
+2025-10-16 17:46:21 - ppt_generator - INFO - Parallel AI content generation completed successfully
+2025-10-16 17:46:21 - ppt_generator - INFO - [req_1760616752] AI content extracted successfully
+2025-10-16 17:46:21 - ppt_generator - INFO - [req_1760616752] Starting presentation modification
+2025-10-16 17:46:21 - ppt_generator - INFO - [req_1760616752] Loading base presentation
+2025-10-16 17:46:21 - ppt_generator - INFO - [req_1760616752] Inserting definition tables at slide 10
+2025-10-16 17:46:21 - ppt_generator - INFO - Inserting definition tables starting at slide 10
+2025-10-16 17:46:21 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:46:36 - ppt_generator - INFO - Generated 7 definitions in one call
+2025-10-16 17:46:36 - ppt_generator - INFO - Built 3 table sections
+2025-10-16 17:46:36 - ppt_generator - INFO - Created 1 definition slides (1 template + 0 additional)
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Definition slides created: 1
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Slide shift amount: 1
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Applying success factors to slide 26
+2025-10-16 17:46:36 - ppt_generator - INFO - Applying success factors to slide
+2025-10-16 17:46:36 - ppt_generator - INFO - ✓ Total success factors replacements made: 16
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Success factors applied successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Applying market impacting factors to slide
+2025-10-16 17:46:36 - ppt_generator - INFO - Applying market impacting factors to slide 25
+2025-10-16 17:46:36 - ppt_generator - INFO - Total factor replacements: 5
+2025-10-16 17:46:36 - ppt_generator - INFO - Adding 25 ball indicators to slide
+2025-10-16 17:46:36 - ppt_generator - INFO - Ball indicators added successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - Market factors slide 25 processed successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Adding taxonomy boxes
+2025-10-16 17:46:36 - ppt_generator - INFO - Adding taxonomy boxes to slide 1
+2025-10-16 17:46:36 - ppt_generator - INFO - Taxonomy boxes added successfully to slide 1
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Performing text replacements in tables
+2025-10-16 17:46:36 - ppt_generator - INFO - Starting text replacement in tables for slides: [13, 16, 19, 20, 21, 22, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+2025-10-16 17:46:36 - ppt_generator - INFO - Text replacement in tables completed
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Creating Table of Contents
+2025-10-16 17:46:36 - ppt_generator - INFO - Adding TOC to slides: [4, 5, 6, 7, 8]
+2025-10-16 17:46:36 - ppt_generator - INFO - TOC added to slides successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Adding tables and charts
+2025-10-16 17:46:36 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:46:36 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:46:36 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - Creating chart with 2 series and 14 data points
+2025-10-16 17:46:36 - ppt_generator - INFO - Chart created successfully
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Adding financial charts to slide 39
+2025-10-16 17:46:36 - ppt_generator - INFO - Creating financial charts for Apple Inc.
+2025-10-16 17:46:36 - ppt_generator - INFO - Revenue bar chart created
+2025-10-16 17:46:36 - ppt_generator - INFO - Pie chart created with 5 segments
+2025-10-16 17:46:36 - ppt_generator - INFO - Cleaning filename: Global Toy Market
+2025-10-16 17:46:36 - ppt_generator - INFO - Cleaned filename: Global Toy Market
+2025-10-16 17:46:36 - ppt_generator - INFO - Cleaning filename: SQ123w
+2025-10-16 17:46:36 - ppt_generator - INFO - Cleaned filename: SQ123w
+2025-10-16 17:46:36 - ppt_generator - INFO - [req_1760616752] Saving presentation to: generated_ppts\Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:46:37 - ppt_generator - INFO - [req_1760616752] PPT generation completed successfully: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:47:15 - ppt_generator - INFO - Download request for file: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:47:42 - ppt_generator - INFO - Application starting up
+2025-10-16 17:47:42 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:47:42 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:47:42 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:47:42 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:47:42 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:47:42 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:47:42 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:47:43 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:47:59 - ppt_generator - INFO - Application starting up
+2025-10-16 17:47:59 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 17:47:59 - ppt_generator - INFO - Template folder: templates
+2025-10-16 17:47:59 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 17:47:59 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 17:48:00 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 17:48:00 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 17:48:00 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 17:48:00 - ppt_generator - INFO - Starting Flask application
+2025-10-16 17:48:09 - ppt_generator - INFO - [req_1760617089] PPT generation request started
+2025-10-16 17:48:09 - ppt_generator - INFO - Validating segment hierarchy
+2025-10-16 17:48:09 - ppt_generator - INFO - Segment hierarchy validation passed
+2025-10-16 17:48:09 - ppt_generator - INFO - [req_1760617089] Form validation passed
+2025-10-16 17:48:09 - ppt_generator - INFO - [req_1760617089] Processing 5 companies
+2025-10-16 17:48:09 - ppt_generator - INFO - Parsing segment input
+2025-10-16 17:48:09 - ppt_generator - INFO - Segment input parsed successfully: 2 main categories
+2025-10-16 17:48:09 - ppt_generator - INFO - [req_1760617089] Context generated successfully
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating Table of Contents data
+2025-10-16 17:48:09 - ppt_generator - INFO - TOC data generated with 74 items
+2025-10-16 17:48:09 - ppt_generator - INFO - [req_1760617089] Starting AI content generation
+2025-10-16 17:48:09 - ppt_generator - INFO - Starting OPTIMIZED parallel AI content generation
+2025-10-16 17:48:09 - ppt_generator - INFO - Phase 1: Executing 11 tasks in parallel
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: executive_summary
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating executive summary
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: market_enablers
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: industry_expansion
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: investment_challenges
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating market enablers
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: research_journals
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: industry_associations
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: company_info
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating industry expansion
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: financial_overview
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating investment challenges
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: success_factors
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating content for: market_impacting_factors
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating research journals
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating all definitions in a single API call...
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating industry associations
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating company info for: Apple Inc.
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating financial overview for: Apple Inc.
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating success factors for: Global Toy Market
+2025-10-16 17:48:09 - ppt_generator - INFO - Generating market impacting factors for: Global Toy Market
+2025-10-16 17:48:16 - ppt_generator - INFO - Research journals generated: 5 items
+2025-10-16 17:48:16 - ppt_generator - INFO - Content generation completed for: research_journals
+2025-10-16 17:48:16 - ppt_generator - INFO - Phase 1 task completed: research_journals
+2025-10-16 17:48:20 - ppt_generator - INFO - Executive summary generated successfully
+2025-10-16 17:48:20 - ppt_generator - INFO - Content generation completed for: executive_summary
+2025-10-16 17:48:20 - ppt_generator - INFO - Phase 1 task completed: executive_summary
+2025-10-16 17:48:20 - ppt_generator - INFO - Success factors generated successfully
+2025-10-16 17:48:20 - ppt_generator - INFO - Content generation completed for: success_factors
+2025-10-16 17:48:20 - ppt_generator - INFO - Phase 1 task completed: success_factors
+2025-10-16 17:48:31 - ppt_generator - INFO - Generated 7 definitions in one call
+2025-10-16 17:48:31 - ppt_generator - INFO - Phase 1 task completed: definitions
+2025-10-16 17:48:34 - ppt_generator - INFO - Industry associations generated: 5 items
+2025-10-16 17:48:34 - ppt_generator - INFO - Content generation completed for: industry_associations
+2025-10-16 17:48:34 - ppt_generator - INFO - Phase 1 task completed: industry_associations
+2025-10-16 17:48:37 - ppt_generator - INFO - Market impacting factors generated successfully
+2025-10-16 17:48:37 - ppt_generator - INFO - Content generation completed for: market_impacting_factors
+2025-10-16 17:48:37 - ppt_generator - INFO - Phase 1 task completed: market_impacting_factors
+2025-10-16 17:48:40 - ppt_generator - INFO - Revenue data fetched: 2022=$394.3B, 2023=$383.2B, 2024=$391.0B
+2025-10-16 17:48:40 - ppt_generator - INFO - Found 5 business segments
+2025-10-16 17:48:40 - ppt_generator - ERROR - Error generating financial overview: cannot schedule new futures after interpreter shutdown
+2025-10-16 17:48:40 - ppt_generator - ERROR - Error generating financial_overview after 31.00s: cannot schedule new futures after interpreter shutdown
+2025-10-16 17:48:40 - ppt_generator - ERROR - Phase 1 task financial_overview generated an exception: cannot schedule new futures after interpreter shutdown
+2025-10-16 17:48:41 - ppt_generator - INFO - Market enablers generated successfully
+2025-10-16 17:48:41 - ppt_generator - INFO - Content generation completed for: market_enablers

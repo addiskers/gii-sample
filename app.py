@@ -280,15 +280,12 @@ def apply_success_factors_to_slide(slide, success_factors_data):
     
     logger.info(f"✓ Total success factors replacements made: {replacements}")
 
-
-# ==================== END SUCCESS FACTORS FUNCTIONS ====================
-
 # ==================== DEFINITION TABLE FUNCTIONS ====================
 
 
 def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
     """Build a single batch prompt for all definitions - OPTIMIZED"""
-    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "")
+    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market", "").replace("market", "")
     definitions_needed = []
     
     for level_0_name, level_1_dict in nested_dict.items():
@@ -947,7 +944,7 @@ class AIService:
             else: 
                 return generate_all_definitions_batch(nested_d, hdline)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor: 
+        with concurrent.futures.ThreadPoolExecutor(max_workers=30) as executor: 
             future_to_key = {
                 executor.submit(execute_task, task_data): key
                 for key, task_data in phase1_tasks.items()
@@ -1013,6 +1010,7 @@ class AIService:
             f"Each paragraph should be 80  words strict, qualitative in tone give 4 paragraphs, "
             f"and include real-world examples and facts. "
             f"Do not include market size, numbers, or links."
+            f"Ensure the response is valid JSON - the paragraphs field must be a single array with 4 string elements."
         )
 
         response = self.openai_client.chat.completions.create(
@@ -1042,6 +1040,7 @@ class AIService:
             f"and include real-world examples and facts. "
             f"Do not include market size, numbers, or links. "
             f"Focus on a unique aspect not covered by other drivers."
+            f"Ensure the response is valid JSON - the paragraphs field must be a single array with 4 string elements."
         )
 
         response = self.openai_client.chat.completions.create(
@@ -1062,6 +1061,7 @@ class AIService:
             f"Each paragraph should be 80 words strict, qualitative in tone, give 4 paragraphs must"
             f"and include real-world examples and facts. "
             f"Do not include market size, numbers, or links."
+            f"Ensure the response is valid JSON - the paragraphs field must be a single array with 4 string elements."
         )
 
         response = self.openai_client.chat.completions.create(
@@ -1350,93 +1350,101 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         return associations[:5]
 
     def _generate_financial_overview(self, context: Dict[str, Any]) -> Dict[str, Any]:
-        """Generate complete financial overview with revenue data, segments, and analysis"""
+        """Generate complete financial overview with PARALLEL API calls"""
         logger.info(f"Generating financial overview for: {context['company_name']}")
         company = context["company_name"]
 
         try:
-            # CALL #1: Get revenue data for 2022-2024
-            revenue_prompt = f"""
-            Search the web and find {company}'s actual annual revenue figures for 2022, 2023, and 2024 in billions USD.
-            
-            Return ONLY valid JSON in this EXACT format (no text, no explanations):
-            {{
-                "2022": <number>,
-                "2023": <number>,
-                "2024": <number>
-            }}
-            
-            Revenue values must be numeric (one digit after decimal, don't round off strictly - example: if it's 49.95 take 49.9 or if its 13.0 take 13.0 ) and represent billions USD.
-            Use realistic estimates based on {company}'s actual business scale and recent financial reports.
-            Do NOT use null, NA, Unknown, or any non-numeric values.
-            When converting it use realtime conversion rate if revenue is in other currency to USD.
-            """
+            def get_revenue_data():
+                """Fetch revenue data 2022-2024"""
+                revenue_prompt = f"""
+                Search the web and find {company}'s actual annual revenue figures for 2022, 2023, and 2024 in billions USD.
+                
+                Return ONLY valid JSON in this EXACT format (no text, no explanations):
+                {{
+                    "2022": <number>,
+                    "2023": <number>,
+                    "2024": <number>
+                }}
+                
+                Revenue values must be numeric (one digit after decimal, don't round off strictly - example: if it's 49.95 take 49.9 or if its 13.0 take 13.0 ) and represent billions USD.
+                Use realistic estimates based on {company}'s actual business scale and recent financial reports.
+                Do NOT use null, NA, Unknown, or any non-numeric values.
+                """
 
-            revenue_response = self.openai_client.responses.create(
-                model="gpt-5",
-                tools=[{
-                    "type": "web_search_preview",
-                    "search_context_size": "high",
-                }],
-                input=[
-                    {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
-                    {"role": "user", "content": revenue_prompt}
-                ]
-            )          
-            revenue_content = revenue_response.output_text.strip()
-            if revenue_content.startswith("```json"):
-                revenue_content = revenue_content[7:]
-            if revenue_content.endswith("```"):
-                revenue_content = revenue_content[:-3]
-            revenue_content = revenue_content.strip()
+                revenue_response = self.openai_client.responses.create(
+                    model="gpt-5",
+                    tools=[{
+                        "type": "web_search_preview",
+                        "search_context_size": "medium",
+                    }],
+                    input=[
+                        {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
+                        {"role": "user", "content": revenue_prompt}
+                    ]
+                )
+                
+                revenue_content = revenue_response.output_text.strip()
+                if revenue_content.startswith("```json"):
+                    revenue_content = revenue_content[7:]
+                if revenue_content.endswith("```"):
+                    revenue_content = revenue_content[:-3]
+                revenue_content = revenue_content.strip()
 
-            revenue_data = json.loads(revenue_content)
-            revenue_data = {
-                int(year): float(value) for year, value in revenue_data.items()
-            }
+                revenue_data = json.loads(revenue_content)
+                return {int(year): float(value) for year, value in revenue_data.items()}
+
+            def get_segment_data():
+                """Fetch segment breakdown"""
+                segment_prompt = f"""
+                Search the web and find ALL main business segments/divisions for {company} along with their 2024 revenue percentage contribution.
+                
+                Return ONLY valid JSON in this EXACT format:
+                {{
+                    "segments": [
+                        {{"name": "Segment1", "percentage": <number>}},
+                        {{"name": "Segment2", "percentage": <number>}}
+                    ]
+                }}
+                
+                Requirements:
+                1. Include ALL major revenue-generating segments for {company} based on annual reports
+                2. Percentages must add up to approximately 100%
+                3. Use actual 2024 business performance data
+                4. IF segment not available, then take seg-1 100% only
+                """
+
+                segment_response = self.openai_client.responses.create(
+                    model="gpt-5",
+                    tools=[{
+                        "type": "web_search_preview",
+                        "search_context_size": "medium",
+                    }],
+                    input=[
+                        {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
+                        {"role": "user", "content": segment_prompt}
+                    ],
+                )
+
+                segment_content = segment_response.output_text.strip()
+                if segment_content.startswith("```json"):
+                    segment_content = segment_content[7:]
+                if segment_content.endswith("```"):
+                    segment_content = segment_content[:-3]
+                segment_content = segment_content.strip()
+
+                return json.loads(segment_content)
+
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                revenue_future = executor.submit(get_revenue_data)
+                segment_future = executor.submit(get_segment_data)
+                
+                revenue_data = revenue_future.result()
+                segment_data = segment_future.result()
 
             logger.info(
                 f"Revenue data fetched: 2022=${revenue_data[2022]}B, 2023=${revenue_data[2023]}B, 2024=${revenue_data[2024]}B"
             )
-
-            segment_prompt = f"""
-            Search the web and find ALL main business segments/divisions for {company} along with their 2024 revenue percentage contribution.
-            
-            Return ONLY valid JSON in this EXACT format:
-            {{
-                "segments": [
-                    {{"name": "Segment1", "percentage": <number>}},
-                    {{"name": "Segment2", "percentage": <number>}}
-                ]
-            }}
-            
-            Requirements:
-            1. Include ALL major revenue-generating segments for {company} based on annual reports
-            2. Percentages must add up to approximately 100%
-            3. Use actual 2024 business performance data
-            4. IF segment not available, provide based on region then only 
-            """
-
-            segment_response = self.openai_client.responses.create(
-                model="gpt-5",
-                tools=[{
-                "type": "web_search_preview",
-                "search_context_size": "high",
-                }],
-                input=[
-                {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
-                {"role": "user", "content": segment_prompt}
-                ],
-            )
-
-            segment_content = segment_response.output_text.strip()
-            if segment_content.startswith("```json"):
-                segment_content = segment_content[7:]
-            if segment_content.endswith("```"):
-                segment_content = segment_content[:-3]
-            segment_content = segment_content.strip()
-
-            segment_data = json.loads(segment_content)
 
             segments_dict = {}
             segment_names = []
@@ -1454,10 +1462,18 @@ Please talk about specific market impacting factors relevant to {market_name}.""
 
             logger.info(f"Found {len(segment_names)} business segments")
 
-            revenue_analysis = self._generate_revenue_analysis(company, revenue_data)
-            segmental_analysis = self._generate_segmental_analysis(
-                company, revenue_data, segments_dict
-            )
+            def get_revenue_analysis():
+                return self._generate_revenue_analysis(company, revenue_data)
+            
+            def get_segmental_analysis():
+                return self._generate_segmental_analysis(company, revenue_data, segments_dict)
+
+            with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+                revenue_analysis_future = executor.submit(get_revenue_analysis)
+                segmental_analysis_future = executor.submit(get_segmental_analysis)
+                
+                revenue_analysis = revenue_analysis_future.result()
+                segmental_analysis = segmental_analysis_future.result()
 
             result = {
                 "revenue": revenue_data,
@@ -2545,7 +2561,6 @@ def generate_ppt():
         SLIDE_SHIFT = num_definition_slides
         logger.info(f"[{request_id}] Slide shift amount: {SLIDE_SHIFT}")
 
-        # ============ APPLY SUCCESS FACTORS (25 + SLIDE_SHIFT) ============
         success_factors_slide_index = 25 + SLIDE_SHIFT
         logger.info(f"[{request_id}] Applying success factors to slide {success_factors_slide_index}")
         
@@ -2668,8 +2683,7 @@ def generate_ppt():
                 "default_kmi": default_kmi_bullets,
                 "user_kmi": user_kmi_bullets,
             },
-            # Slide 24 + SLIDE_SHIFT is Market Impacting Factors (processed separately)
-            # Slide 25 + SLIDE_SHIFT is Success Factors (processed above)
+           
             27 + SLIDE_SHIFT: {
                 "heading": headline_2,
                 "timeline": f"HISTORIC YEAR {historical_year} \nFORECAST TO {forecast_year}",
@@ -2783,7 +2797,7 @@ def generate_ppt():
             21 + SLIDE_SHIFT,
             23 + SLIDE_SHIFT,
             24 + SLIDE_SHIFT,
-            25 + SLIDE_SHIFT,  # Success Factors slide
+            25 + SLIDE_SHIFT, 
             27 + SLIDE_SHIFT,
             28 + SLIDE_SHIFT,
             29 + SLIDE_SHIFT,
@@ -2967,7 +2981,7 @@ def generate_ppt():
 
         clean_market_name = clean_filename(headline)
         clean_sqcode = clean_filename(sqcode)
-        filename = f"Sample_{clean_market_name}_{clean_sqcode}_Skyquest_2025_V1.pptx"
+        filename = f"Sample_{clean_market_name}_{clean_sqcode}_Skyquest_2025_GV1.pptx"
         filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
 
         logger.info(f"[{request_id}] Saving presentation to: {filepath}")
@@ -3071,6 +3085,409 @@ def download_file(filename):
         logger.error(f"Download failed after {elapsed:.2f}s: {e}")
         return jsonify({"error": "File download failed", "details": str(e)}), 500
 
+# ==================== EXCEL DATAPACK GENERATION (STANDALONE APPROACH) ====================
+
+from openpyxl import load_workbook, Workbook
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from io import BytesIO
+import re
+
+MAIN_HEADING_COLOR = '0070C0'
+SUB_HEADING_COLOR = '3D229E'
+LEVEL1_FILL = 'FFF2CC'
+FONT_WHITE = 'FFFFFF'
+FONT_BLACK = '000000'
+SUBSEGMENT_PALETTE = ['E2EFDA','D9E1F2','FFF2CC','FCE4D6','DDEBF7','D6DCE4','C6E0B4','B4C6E7',
+                      'FFE699','F8CBAD','BDD7EE','A9D08E','8EA9DB','FFD966','F4B084','9BC2E6']
+PLACEHOLDER_RE = re.compile(r"\{\{\s*[^\}]+\s*\}\}")
+DEFAULT_FONT = Font(name='Poppins')
+
+def parse_excel_segment_data(segment_list):
+    """Parse segment data for Excel generation"""
+    segments = {}
+    num_re = re.compile(r"^\s*(\d+(?:\.\d+)*)\.?\s*(.*)$")
+    
+    for i, item in enumerate(segment_list):
+        parts = item.rsplit(',', 1)
+        if len(parts) == 2 and parts[1].strip().isdigit():
+            m = num_re.match(parts[0].strip())
+            segments[i] = {
+                'numbering': m.group(1) if m else '',
+                'title': (m.group(2).strip() if m and m.group(2) else parts[0].strip()),
+                'level': int(parts[1]), 
+                'index': i
+            }
+        elif (m := num_re.match(item)):
+            segments[i] = {
+                'numbering': m.group(1),
+                'title': m.group(2).strip() or m.group(1),
+                'level': m.group(1).count('.'), 
+                'index': i
+            }
+        else:
+            segments[i] = {
+                'numbering': '', 
+                'title': item.strip(), 
+                'level': 0, 
+                'index': i
+            }
+    return segments
+
+def build_excel_segment_tree(segments):
+    """Build hierarchical tree structure from segments"""
+    tree = []
+    stack = []
+    
+    for idx in sorted(segments.keys()):
+        seg = segments[idx]
+        while stack and seg['level'] <= stack[-1]['level']:
+            stack.pop()
+        node = {**seg, 'children': []}
+        if stack:
+            stack[-1]['children'].append(node)
+        else:
+            tree.append(node)
+        stack.append(node)
+    return tree
+
+def assign_subsegment_colors(tree):
+    """Assign colors to subsegments"""
+    def _propagate(node, color):
+        node['color'] = color
+        for ch in node.get('children', []):
+            _propagate(ch, color)
+    
+    for top in tree:
+        color_idx = 0
+        for child in top.get('children', []):
+            if child.get('children'):
+                color = SUBSEGMENT_PALETTE[color_idx % len(SUBSEGMENT_PALETTE)]
+                color_idx += 1
+                _propagate(child, color)
+
+def write_excel_row(ws, row_idx, values, font=None, fill=None, alignment=None):
+    """Write a row to Excel worksheet"""
+    if font is None:
+        font = DEFAULT_FONT
+    for col_idx, val in enumerate(values, start=1):
+        cell = ws.cell(row=row_idx, column=col_idx)
+        cell.value = val
+        if font:
+            cell.font = font
+        if fill:
+            cell.fill = fill
+        if alignment:
+            cell.alignment = alignment
+
+def write_segment_table(ws, country_name, seg_node, years, start_row, headline, max_depth=6, default_fill=LEVEL1_FILL, add_spacer=False):
+    """Write segment table to worksheet"""
+    def _write_node(node, start_row, depth=0, max_depth=6):
+        merge_cols = 2 + len(years)
+        ws.merge_cells(start_row=start_row, start_column=1, end_row=start_row, end_column=merge_cols)
+        
+        header_cell = ws.cell(row=start_row, column=1)
+        header_cell.value = f"{country_name} {headline}, By {node['title']} (USD Billion)"
+        header_cell.font = Font(name='Poppins', bold=True, size=max(10, 13 - depth), color=FONT_WHITE)
+        header_cell.alignment = Alignment(horizontal='center', vertical='center')
+        header_cell.fill = PatternFill(start_color=MAIN_HEADING_COLOR, end_color=MAIN_HEADING_COLOR, fill_type='solid')
+        
+        if ws.column_dimensions['A'].width < 32:
+            ws.column_dimensions['A'].width = 32
+
+        headings = [node['title']] + years + ['CAGR (2025-2032)']
+        write_excel_row(
+            ws, start_row + 1, headings,
+            font=Font(name='Poppins', bold=True, color=FONT_WHITE),
+            fill=PatternFill(start_color=SUB_HEADING_COLOR, end_color=SUB_HEADING_COLOR, fill_type='solid'),
+            alignment=Alignment(horizontal='center', vertical='center')
+        )
+        ws.cell(row=start_row+1, column=1).alignment = Alignment(horizontal='left', vertical='center')
+        
+        row_idx = start_row + 2
+
+        for child in node.get('children', []):
+            values = [child['title']] + ['XX'] * len(years) + ['XX%']
+            write_excel_row(ws, row_idx, values, alignment=Alignment(horizontal='center', vertical='center'))
+            
+            fill_color = default_fill if default_fill == 'F2F0EF' else child.get('color', default_fill)
+            ws.cell(row=row_idx, column=1).fill = PatternFill(start_color=fill_color, end_color=fill_color, fill_type='solid')
+            ws.cell(row=row_idx, column=1).alignment = Alignment(horizontal='left', vertical='center')
+            row_idx += 1
+
+        total_fill = PatternFill(start_color='F2F0EF', end_color='F2F0EF', fill_type='solid')
+        write_excel_row(
+            ws, row_idx, ['Total'] + ['XX'] * len(years) + ['XX%'],
+            font=Font(name='Poppins', bold=True, color=FONT_BLACK),
+            fill=total_fill,
+            alignment=Alignment(horizontal='center', vertical='center')
+        )
+
+        thin = Side(border_style='thin', color=FONT_BLACK)
+        for r in ws.iter_rows(min_row=start_row+1, max_row=row_idx, min_col=1, max_col=merge_cols):
+            for cell in r:
+                cell.border = Border(top=thin, left=thin, right=thin, bottom=thin)
+        
+        row_idx += 1
+
+        if add_spacer:
+            ws.cell(row=row_idx, column=1).value = ' '
+            row_idx += 1
+
+        for child in node.get('children', []):
+            if child.get('children') and depth + 1 < max_depth:
+                row_idx = _write_node(child, row_idx, depth=depth+1, max_depth=max_depth)
+
+        return row_idx
+
+    return _write_node(seg_node, start_row, depth=0, max_depth=max_depth)
+
+def generate_tables_for_country(ws, segment_tree, years, start_row, country_name, headline, full_hierarchy=False):
+    """Generate tables for a specific country"""
+    row = start_row
+    for seg in segment_tree:
+        if seg['level'] == 0:
+            row = write_segment_table(
+                ws, country_name, seg, years, row, headline,
+                max_depth=6 if full_hierarchy else 1,
+                default_fill=LEVEL1_FILL if full_hierarchy else 'F2F0EF',
+                add_spacer=full_hierarchy
+            )
+            if not full_hierarchy:
+                row += 1
+    return row
+
+@app.route("/gii/generate-datapack", methods=["POST"])
+def generate_datapack():
+    """Generate Excel datapack - STANDALONE APPROACH"""
+    start_time = time.time()
+    request_id = f"datapack_{int(time.time())}"
+    logger.info(f"[{request_id}] Datapack generation request started")
+    
+    try:
+        form_data = request.form
+        
+        if not form_data.get('headline', '').strip():
+            logger.warning(f"[{request_id}] Missing headline")
+            return jsonify({"error": "Market headline is required"}), 400
+        
+        if not form_data.get('segment_input', '').strip():
+            logger.warning(f"[{request_id}] Missing segment input")
+            return jsonify({"error": "Segment data is required"}), 400
+        
+        headline = form_data['headline']
+        segment_input = form_data['segment_input']
+        sqcode = form_data.get('sqcode', 'DATAPACK').strip()
+        
+        logger.info(f"[{request_id}] Processing datapack for: {headline}")
+        
+        # Parse segment data
+        segment_lines = [line.strip() for line in segment_input.split('\n') if line.strip()]
+        segments = parse_excel_segment_data(segment_lines)
+        segment_tree = build_excel_segment_tree(segments)
+        assign_subsegment_colors(segment_tree)
+        
+        years = [str(y) for y in range(2019, 2033)]
+        
+        regions = ["Global Market Size", "North America", "Europe", "Asia-Pacific", "LATAM", "MEA"]
+        region_countries = {
+            "Global Market Size": ["Global"],
+            "North America": ["North America", "US", "Canada"],
+            "Europe": ["Europe", "Germany", "UK", "France", "Italy", "Spain", "Rest of Europe"],
+            "Asia-Pacific": ["Asia Pacific", "China", "India", "Japan", "South Korea", "Rest of Asia Pacific"],
+            "LATAM": ["LATAM", "Brazil", "Mexico", "Rest of LATAM"],
+            "MEA": ["MEA", "South Africa", "GCC Countries", "Rest of MEA"]
+        }
+        
+        summary_map = {
+            'Global Market Size': ['North America', 'Europe', 'Asia Pacific', 'Latin America', 'Middle East & Africa'],
+            'North America': ['US', 'Canada'],
+            'Europe': ['Germany', 'UK', 'France', 'Italy', 'Spain', 'Rest of Europe'],
+            'LATAM': ['Brazil', 'Mexico', 'Rest of LATAM'],
+            'MEA': ['South Africa', 'GCC Countries', 'Rest of MEA'],
+            'Asia-Pacific': ['China', 'India', 'Japan', 'South Korea', 'Rest of Asia Pacific']
+        }
+        
+        header_name_map = {
+            'Global Market Size': 'Global',
+            'North America': 'North America',
+            'Europe': 'Europe',
+            'Asia-Pacific': 'Asia-Pacific',
+            'LATAM': 'LATAM',
+            'MEA': 'MEA'
+        }
+        
+        logger.info(f"[{request_id}] Creating tables with openpyxl...")
+        
+        temp_tables_path = os.path.join(app.config["UPLOAD_FOLDER"], f"tables_temp_{request_id}.xlsx")
+        
+        wb_tables = Workbook()
+        wb_tables.remove(wb_tables.active)
+        
+        for region in regions:
+            ws = wb_tables.create_sheet(title=region[:31])
+            row = 2
+            full_hierarchy = (region == 'Global Market Size')
+            
+            summary_list = summary_map.get(region)
+            if summary_list:
+                seg_node = {'title': 'Country', 'children': [{'title': s} for s in summary_list]}
+                header_name = header_name_map.get(region, region)
+                row = write_segment_table(
+                    ws, header_name, seg_node, years, row, headline,
+                    max_depth=1,
+                    default_fill='F2F0EF',
+                    add_spacer=full_hierarchy
+                )
+                row += 1
+            
+            for country in region_countries.get(region, []):
+                row = generate_tables_for_country(
+                    ws, segment_tree, years, row, country, headline,
+                    full_hierarchy=full_hierarchy
+                )
+        
+        wb_tables.save(temp_tables_path)
+        wb_tables.close()
+        logger.info(f"[{request_id}] Tables file created: {temp_tables_path}")
+        
+        template_path = "excel_template.xlsx"
+        output_path = os.path.join(app.config["UPLOAD_FOLDER"], f"datapack_{request_id}.xlsx")
+        
+        try:
+            import xlwings as xw
+            
+            if not os.path.exists(template_path):
+                raise FileNotFoundError("Template not found")
+            
+            logger.info(f"[{request_id}] Merging with template using xlwings...")
+            
+            import shutil
+            shutil.copy(template_path, output_path)
+            
+            app_xw = xw.App(visible=False, add_book=False)
+            wb_out = app_xw.books.open(os.path.abspath(output_path))
+            wb_tmp = app_xw.books.open(os.path.abspath(temp_tables_path))
+            
+            def _replace_placeholders_in_shapes(sheet, headline_text):
+                """Replace placeholders in shapes using xlwings"""
+                replaced = []
+                def _visit(shps, path=""):
+                    try:
+                        for i in range(1, shps.Count + 1):
+                            shp = shps.Item(i)
+                            name = f"{path}/{getattr(shp, 'Name', str(i))}"
+                            try:
+                                if int(shp.Type) == 6:
+                                    _visit(shp.GroupItems, name)
+                                    continue
+                            except:
+                                pass
+                            
+                            try:
+                                if hasattr(shp, 'TextFrame2') and shp.TextFrame2.HasText:
+                                    tr = shp.TextFrame2.TextRange
+                                    if isinstance(tr.Text, str) and PLACEHOLDER_RE.search(tr.Text):
+                                        tr.Text = PLACEHOLDER_RE.sub(headline_text, tr.Text)
+                                        replaced.append((name, 'TextFrame2'))
+                                        continue
+                            except:
+                                pass
+                            
+                            try:
+                                if hasattr(shp, 'TextFrame') and shp.TextFrame.HasText:
+                                    chars = shp.TextFrame.Characters()
+                                    if isinstance(chars.Text, str) and PLACEHOLDER_RE.search(chars.Text):
+                                        chars.Text = PLACEHOLDER_RE.sub(headline_text, chars.Text)
+                                        replaced.append((name, 'TextFrame'))
+                                        continue
+                            except:
+                                pass
+                            
+                            try:
+                                if isinstance(shp.AlternativeText, str) and PLACEHOLDER_RE.search(shp.AlternativeText):
+                                    shp.AlternativeText = PLACEHOLDER_RE.sub(headline_text, shp.AlternativeText)
+                                    replaced.append((name, 'AlternativeText'))
+                            except:
+                                pass
+                    except:
+                        pass
+                _visit(sheet.api.Shapes)
+                return replaced
+            
+            found_any = []
+            for sht in wb_out.sheets:
+                try:
+                    for item in _replace_placeholders_in_shapes(sht, headline):
+                        found_any.append((sht.name, item))
+                except:
+                    pass
+            
+            if found_any:
+                logger.info(f"[{request_id}] Replaced {len(found_any)} placeholder(s) in shapes")
+            
+            for sht in wb_out.sheets:
+                try:
+                    val = sht.used_range.value
+                    if isinstance(val, str) and PLACEHOLDER_RE.search(val):
+                        sht.used_range.value = PLACEHOLDER_RE.sub(headline, val)
+                    elif isinstance(val, (list, tuple)):
+                        new_vals = [[PLACEHOLDER_RE.sub(headline, v) if isinstance(v, str) else v 
+                                    for v in (row if isinstance(row, (list, tuple)) else [row])] for row in val]
+                        if new_vals != val:
+                            sht.used_range.value = new_vals
+                except:
+                    pass
+            
+            for region in regions:
+                name31 = region[:31]
+                out_ws = next((s for s in wb_out.sheets if s.name == name31), None) or wb_out.sheets.add(name31, after=wb_out.sheets[-1])
+                wb_tmp.sheets[name31].used_range.api.Copy(Destination=out_ws.range('A2').api)
+            
+            wb_out.save()
+            wb_tmp.close()
+            wb_out.close()
+            app_xw.quit()
+            
+            if os.path.exists(temp_tables_path):
+                os.remove(temp_tables_path)
+            
+            logger.info(f"[{request_id}] Template merge successful with xlwings")
+            
+        except (ImportError, FileNotFoundError, Exception) as e:
+            logger.warning(f"[{request_id}] xlwings merge failed: {e}. Using tables-only file.")
+            output_path = temp_tables_path
+        
+        clean_market_name = clean_filename(headline)
+        clean_sqcode = clean_filename(sqcode)
+        filename = f"Datapack_{clean_market_name}_{clean_sqcode}_SkyQuest_2025.xlsx"
+        
+        elapsed = time.time() - start_time
+        timing_logger.info(f"[{request_id}] Datapack generation completed in {elapsed:.2f}s")
+        logger.info(f"[{request_id}] Datapack generated successfully: {filename}")
+        
+        response = send_file(
+            output_path,
+            mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            as_attachment=True,
+            download_name=filename
+        )
+        
+        @response.call_on_close
+        def cleanup():
+            try:
+                if os.path.exists(output_path):
+                    os.remove(output_path)
+                    logger.info(f"[{request_id}] Cleaned up temporary file")
+            except Exception as e:
+                logger.error(f"[{request_id}] Cleanup failed: {e}")
+        
+        return response
+        
+    except Exception as e:
+        elapsed = time.time() - start_time
+        logger.error(f"[{request_id}] Datapack generation failed after {elapsed:.2f}s: {str(e)}")
+        traceback.print_exc()
+        return jsonify({"error": "Failed to generate datapack", "message": str(e)}), 500
 
 if __name__ == "__main__":
     if not os.path.exists(".env"):

@@ -2040,3 +2040,98 @@ By Region: North America, Europe, Asia-Pacific, Latin America, Middle East & Afr
 2025-10-14 17:53:14 - [req_1760444091] PPT processing completed in 54.30s
 2025-10-14 17:53:14 - [req_1760444091] Total request completed in 503.40s
 2025-10-14 17:53:18 - File download completed in 0.09s: Sample_Global Patterned Glass Market_SQMIG20B2013_Skyquest_2025_V1.pptx
+2025-10-15 11:44:06 - [datapack_1760508845] Datapack generation completed in 1.39s
+2025-10-15 12:14:50 - [datapack_1760510686] Datapack generation completed in 3.72s
+2025-10-15 12:17:45 - [datapack_1760510861] Datapack generation completed in 3.94s
+2025-10-15 12:27:15 - research_journals completed in 5.72s
+2025-10-15 12:27:15 - industry_associations completed in 5.88s
+2025-10-15 12:27:20 - success_factors completed in 10.72s
+2025-10-15 12:27:22 - executive_summary completed in 12.19s
+2025-10-15 12:27:22 - market_impacting_factors completed in 12.50s
+2025-10-15 12:27:32 - market_enablers completed in 22.73s
+2025-10-15 12:27:52 - investment_challenges completed in 42.00s
+2025-10-15 12:28:06 - industry_expansion completed in 56.26s
+2025-10-15 12:29:25 - company_info completed in 135.56s
+2025-10-15 12:36:12 - research_journals completed in 6.61s
+2025-10-15 12:36:15 - executive_summary completed in 10.25s
+2025-10-15 12:36:18 - industry_associations completed in 12.77s
+2025-10-15 12:36:19 - market_impacting_factors completed in 13.50s
+2025-10-15 12:36:26 - success_factors completed in 21.34s
+2025-10-15 12:36:31 - market_enablers completed in 26.02s
+2025-10-15 12:37:04 - investment_challenges completed in 58.98s
+2025-10-15 12:37:14 - industry_expansion completed in 68.53s
+2025-10-15 12:39:27 - company_info completed in 201.93s
+2025-10-15 12:45:45 - financial_overview completed in 579.47s
+2025-10-15 12:46:31 - industry_expansion_1 completed in 46.64s
+2025-10-15 12:46:31 - OPTIMIZED parallel AI generation completed in 626.11s
+2025-10-15 12:46:31 - [req_1760511965] AI content generation completed in 626.11s
+2025-10-15 12:46:42 - Definition generation completed in 10.43s
+2025-10-15 12:47:25 - [datapack_1760512642] Datapack generation completed in 2.89s
+2025-10-15 12:49:42 - research_journals completed in 5.01s
+2025-10-15 12:49:45 - success_factors completed in 8.34s
+2025-10-15 12:49:46 - executive_summary completed in 8.89s
+2025-10-15 12:49:48 - industry_associations completed in 11.02s
+2025-10-15 12:49:54 - market_impacting_factors completed in 16.84s
+2025-10-15 12:50:08 - market_enablers completed in 31.33s
+2025-10-15 12:50:13 - industry_expansion completed in 36.61s
+2025-10-15 12:50:33 - investment_challenges completed in 56.49s
+2025-10-15 12:51:50 - company_info completed in 133.04s
+2025-10-15 12:56:22 - financial_overview completed in 404.92s
+2025-10-15 12:57:09 - industry_expansion_1 completed in 46.91s
+2025-10-15 12:57:09 - OPTIMIZED parallel AI generation completed in 451.84s
+2025-10-15 12:57:09 - [req_1760512777] AI content generation completed in 451.84s
+2025-10-15 12:57:23 - Definition generation completed in 13.84s
+2025-10-15 12:57:23 - [req_1760512777] PPT processing completed in 14.88s
+2025-10-15 12:57:23 - [req_1760512777] Total request completed in 466.73s
+2025-10-16 14:18:43 - [datapack_1760604516] Datapack generation completed in 7.03s
+2025-10-16 14:21:02 - [datapack_1760604657] Datapack generation completed in 5.52s
+2025-10-16 17:32:14 - research_journals completed in 7.53s
+2025-10-16 17:32:18 - industry_associations completed in 11.91s
+2025-10-16 17:32:23 - success_factors completed in 17.09s
+2025-10-16 17:32:33 - market_impacting_factors completed in 26.30s
+2025-10-16 17:32:36 - executive_summary completed in 29.62s
+2025-10-16 17:32:45 - research_journals completed in 11.25s
+2025-10-16 17:32:49 - industry_associations completed in 15.37s
+2025-10-16 17:32:50 - market_enablers completed in 43.66s
+2025-10-16 17:32:55 - executive_summary completed in 21.34s
+2025-10-16 17:33:42 - [datapack_1760616218] Datapack generation completed in 4.60s
+2025-10-16 17:34:47 - research_journals completed in 10.56s
+2025-10-16 17:34:47 - industry_associations completed in 10.92s
+2025-10-16 17:34:56 - executive_summary completed in 19.83s
+2025-10-16 17:34:59 - success_factors completed in 22.58s
+2025-10-16 17:35:02 - market_impacting_factors completed in 25.73s
+2025-10-16 17:35:22 - market_enablers completed in 46.24s
+2025-10-16 17:35:30 - investment_challenges completed in 54.22s
+2025-10-16 17:35:44 - financial_overview completed in 68.38s
+2025-10-16 17:35:52 - industry_expansion completed in 76.19s
+2025-10-16 17:35:55 - company_info completed in 79.15s
+2025-10-16 17:36:40 - industry_expansion_1 completed in 45.05s
+2025-10-16 17:36:40 - OPTIMIZED parallel AI generation completed in 124.21s
+2025-10-16 17:36:40 - [req_1760616276] AI content generation completed in 124.22s
+2025-10-16 17:36:59 - Definition generation completed in 18.54s
+2025-10-16 17:37:00 - [req_1760616276] PPT processing completed in 19.77s
+2025-10-16 17:37:00 - [req_1760616276] Total request completed in 144.00s
+2025-10-16 17:37:03 - File download completed in 0.02s: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:42:40 - research_journals completed in 7.82s
+2025-10-16 17:42:44 - industry_associations completed in 12.18s
+2025-10-16 17:42:52 - executive_summary completed in 20.10s
+2025-10-16 17:43:01 - success_factors completed in 28.92s
+2025-10-16 17:43:10 - market_impacting_factors completed in 37.72s
+2025-10-16 17:43:10 - market_enablers completed in 37.91s
+2025-10-16 17:43:17 - industry_expansion completed in 45.42s
+2025-10-16 17:43:44 - financial_overview completed in 71.63s
+2025-10-16 17:43:50 - company_info completed in 78.02s
+2025-10-16 17:44:33 - investment_challenges completed in 121.36s
+2025-10-16 17:46:21 - industry_expansion_1 completed in 107.58s
+2025-10-16 17:46:21 - OPTIMIZED parallel AI generation completed in 228.95s
+2025-10-16 17:46:21 - [req_1760616752] AI content generation completed in 228.95s
+2025-10-16 17:46:36 - Definition generation completed in 14.82s
+2025-10-16 17:46:37 - [req_1760616752] PPT processing completed in 15.92s
+2025-10-16 17:46:37 - [req_1760616752] Total request completed in 244.88s
+2025-10-16 17:47:15 - File download completed in 0.03s: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 17:48:16 - research_journals completed in 7.38s
+2025-10-16 17:48:20 - executive_summary completed in 10.87s
+2025-10-16 17:48:20 - success_factors completed in 10.96s
+2025-10-16 17:48:34 - industry_associations completed in 25.66s
+2025-10-16 17:48:37 - market_impacting_factors completed in 27.86s
+2025-10-16 17:48:41 - market_enablers completed in 32.25s
