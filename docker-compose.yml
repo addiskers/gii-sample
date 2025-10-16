@@ -1,4 +1,3 @@
-
 services:
   gii-generator:
     build:
@@ -11,7 +10,6 @@ services:
     volumes:
       - ./templates:/app/templates:ro
       - ./generated_ppts:/app/generated_ppts
-      - ./testpptgii.pptx:/app/testpptgii.pptx 
       - ./logs:/app/logs
     ports:
       - "5020:5000"
@@ -20,6 +18,6 @@ services:
       - PYTHONIOENCODING=utf-8
     command: >
       gunicorn --bind 0.0.0.0:5000 app:app
-      --workers 6 --threads 3 --timeout 300
+      --workers 4 --threads 4 --timeout 300
       --access-logfile - --error-logfile - --log-level info
       --capture-output
