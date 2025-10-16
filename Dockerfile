@@ -17,7 +17,7 @@ RUN python -m pip install --upgrade pip setuptools wheel \
     && pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
-COPY testppt.pptx /app/testpptgii.pptx
+
 RUN mkdir -p /app/generated_ppts /app/logs /app/templates
 
 ENV PYTHONUNBUFFERED=1
@@ -28,4 +28,4 @@ RUN touch /app/logs/app.log /app/logs/timing.log && \
 
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--workers", "2", "--threads", "2", "--timeout", "120", "--capture-output", "--enable-stdio-inheritance"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--workers", "6", "--threads", "3", "--timeout", "300", "--capture-output", "--enable-stdio-inheritance"]
