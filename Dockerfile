@@ -17,7 +17,7 @@ RUN python -m pip install --upgrade pip setuptools wheel \
     && pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
-
+COPY testppt.pptx /app/testpptgii.pptx
 RUN mkdir -p /app/generated_ppts /app/logs /app/templates
 
 ENV PYTHONUNBUFFERED=1
