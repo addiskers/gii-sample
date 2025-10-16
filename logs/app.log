@@ -20405,3 +20405,12 @@ By Region: North America, Europe, Asia-Pacific, Latin America, Middle East & Afr
 2025-10-16 17:51:58 - ppt_generator - INFO - [req_1760617141] Saving presentation to: generated_ppts\Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
 2025-10-16 17:51:58 - ppt_generator - INFO - [req_1760617141] PPT generation completed successfully: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
 2025-10-16 17:54:56 - ppt_generator - INFO - Download request for file: Sample_Global Toy Market_SQ123w_Skyquest_2025_GV1.pptx
+2025-10-16 18:09:19 - ppt_generator - INFO - Application starting up
+2025-10-16 18:09:19 - ppt_generator - INFO - Upload folder: generated_ppts
+2025-10-16 18:09:19 - ppt_generator - INFO - Template folder: templates
+2025-10-16 18:09:19 - ppt_generator - INFO - OpenAI API key loaded successfully
+2025-10-16 18:09:19 - ppt_generator - INFO - Gemini API key loaded successfully
+2025-10-16 18:09:19 - ppt_generator - INFO - Initializing AI Service globally
+2025-10-16 18:09:19 - ppt_generator - INFO - Initializing AI Service
+2025-10-16 18:09:19 - ppt_generator - INFO - Gemini configured successfully
+2025-10-16 18:09:19 - ppt_generator - INFO - Starting Flask application
