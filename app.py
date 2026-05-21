@@ -1214,7 +1214,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
 
     def _generate_company_info(self, context: Dict[str, Any]) -> Dict[str, str]:
         logger.info(f"Generating company info for: {context['company_name']}")
-        base_year = context.get("base_year", "2024")
+        base_year = context.get("base_year", "2025")
         prompt = f"""Generate information about {context["company_name"]} in the "{context["headline"]}" domain.
         Return the information in the following JSON format:
         {{
@@ -1357,7 +1357,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         """Generate complete financial overview with PARALLEL API calls"""
         logger.info(f"Generating financial overview for: {context['company_name']}")
         company = context["company_name"]
-        base_yr = int(context.get("base_year", 2024))
+        base_yr = int(context.get("base_year", 2025))
         unit = context.get("value_in", "Billion")
         yr1 = base_yr - 2
         yr2 = base_yr - 1
@@ -1941,7 +1941,7 @@ def validate_segment_hierarchy(segment_text):
     return errors
 
 
-def generate_actual_data(end_year=2032):
+def generate_actual_data(end_year=2033):
     base_data = {
         2019: [7.0, 5.0, 4.0, 3.5, 3.1, 2.5, 2.0],
         2020: [7.5, 5.4, 4.3, 3.7, 3.3, 2.7, 2.2],
@@ -2002,9 +2002,9 @@ def generate_toc_data(
     forecast_period: str,
     user_segment: str,
     kmi_items: List[str] = None,
-    historical_year: str = "2019-2023",
-    base_year: str = "2024",
-    forecast_year: str = "2032",
+    historical_year: str = "2019-2024",
+    base_year: str = "2025",
+    forecast_year: str = "2033",
 ) -> Dict[str, int]:
     logger.info("Generating Table of Contents data")
     full_range = f"{historical_year.split('-')[0]}-{forecast_year}"
@@ -2419,10 +2419,10 @@ def generate_ppt():
         headline = form_data["headline"]
         headline_2 = headline.upper()
         headline_3 = headline_2.replace("GLOBAL", "").strip()
-        historical_year = form_data.get("historical_year", "2019-2023")
-        base_year = form_data.get("base_year", "2024")
-        forecast_year = form_data.get("forecast_year", "2032")
-        forecast_period = form_data.get("forecast_period", "2025-2032")
+        historical_year = form_data.get("historical_year", "2019-2024")
+        base_year = form_data.get("base_year", "2025")
+        forecast_year = form_data.get("forecast_year", "2033")
+        forecast_period = form_data.get("forecast_period", "2026-2033")
         cur = "USD"
         value_in = form_data["value_in"]
         currency = f"{cur} {value_in}"
@@ -2902,7 +2902,7 @@ def generate_ppt():
                 top = Inches(4.05)
                 num_year_cols = len(years)
                 first_col_w = 0.9
-                cagr_col_w = 0.7
+                cagr_col_w = 1.1
                 max_table_w = 8.3
                 remaining_w = max_table_w - first_col_w - cagr_col_w
                 year_col_w = remaining_w / num_year_cols
@@ -3149,6 +3149,7 @@ def download_file(filename):
 
 from openpyxl import load_workbook, Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
 from io import BytesIO
 import re
 
@@ -3239,7 +3240,7 @@ def write_excel_row(ws, row_idx, values, font=None, fill=None, alignment=None):
         if alignment:
             cell.alignment = alignment
 
-def write_segment_table(ws, country_name, seg_node, years, start_row, headline, max_depth=6, default_fill=LEVEL1_FILL, add_spacer=False, cagr_label='CAGR (2025-2032)'):
+def write_segment_table(ws, country_name, seg_node, years, start_row, headline, max_depth=6, default_fill=LEVEL1_FILL, add_spacer=False, cagr_label='CAGR (2026-2033)'):
     """Write segment table to worksheet"""
     def _write_node(node, start_row, depth=0, max_depth=6):
         merge_cols = 2 + len(years)
@@ -3301,7 +3302,7 @@ def write_segment_table(ws, country_name, seg_node, years, start_row, headline, 
 
     return _write_node(seg_node, start_row, depth=0, max_depth=max_depth)
 
-def generate_tables_for_country(ws, segment_tree, years, start_row, country_name, headline, full_hierarchy=False, cagr_label='CAGR (2025-2032)'):
+def generate_tables_for_country(ws, segment_tree, years, start_row, country_name, headline, full_hierarchy=False, cagr_label='CAGR (2026-2033)'):
     """Generate tables for a specific country"""
     row = start_row
     for seg in segment_tree:
@@ -3338,9 +3339,9 @@ def generate_datapack():
         headline = form_data['headline']
         segment_input = form_data['segment_input']
         sqcode = form_data.get('sqcode', 'DATAPACK').strip()
-        historical_year = form_data.get('historical_year', '2019-2023')
-        base_year = form_data.get('base_year', '2024')
-        forecast_year = form_data.get('forecast_year', '2032')
+        historical_year = form_data.get('historical_year', '2019-2024')
+        base_year = form_data.get('base_year', '2025')
+        forecast_year = form_data.get('forecast_year', '2033')
 
         logger.info(f"[{request_id}] Processing datapack for: {headline}")
 
@@ -3414,7 +3415,13 @@ def generate_datapack():
                     full_hierarchy=full_hierarchy,
                     cagr_label=cagr_label
                 )
-        
+
+            # Set column widths after all tables written
+            ws.column_dimensions['A'].width = 32
+            for col_idx in range(2, 2 + len(years)):
+                ws.column_dimensions[get_column_letter(col_idx)].width = 10
+            ws.column_dimensions[get_column_letter(2 + len(years))].width = 24
+
         wb_tables.save(temp_tables_path)
         wb_tables.close()
         logger.info(f"[{request_id}] Tables file created: {temp_tables_path}")
