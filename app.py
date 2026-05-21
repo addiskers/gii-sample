@@ -1477,6 +1477,11 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                 revenue_data[yr2] = round(rev_values[1] / 1000, 2)
                 revenue_data[yr3] = round(rev_values[2] / 1000, 2)
                 unit = "Billion"
+            elif unit.lower() == "billion" and all(v < 1 for v in rev_values):
+                revenue_data[yr1] = round(rev_values[0] * 1000, 2)
+                revenue_data[yr2] = round(rev_values[1] * 1000, 2)
+                revenue_data[yr3] = round(rev_values[2] * 1000, 2)
+                unit = "Million"
 
             def get_revenue_analysis():
                 return self._generate_revenue_analysis(company, revenue_data, yr1, yr2, yr3, unit)
