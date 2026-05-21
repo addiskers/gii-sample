@@ -285,7 +285,7 @@ def apply_success_factors_to_slide(slide, success_factors_data):
 
 def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
     """Build a single batch prompt for all definitions - OPTIMIZED"""
-    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market", "").replace("market", "")
+    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "").strip()
     definitions_needed = []
     
     for level_0_name, level_1_dict in nested_dict.items():
@@ -315,19 +315,20 @@ def build_definition_batch_prompt(nested_dict: dict, headline: str) -> str:
                     "is_others": False
                 })
 
-    prompt = f"""Generate brief definitions for {headline}.
+    prompt = f"""Generate detailed definitions for {headline}.
 
 Overall definition:
-{headline_clean}: [Write 1-2 concise sentences]
+{headline_clean}: [Write a detailed 100-120 word definition covering market scope, key products/services, applications, and industry context]
 
-Segment definitions (1-2 sentences each):
+Segment definitions (100-120 words each):
 """
 
     for item in definitions_needed:
         if item.get("is_others", False):
-            prompt += f"\n{item['name']} (in {item['parent_category']} category): [Define what other {item['parent_category'].lower()} are included beyond {', '.join(item['sibling_segments'])}. Be specific about what additional categories are covered.]"
+            unique_key = f"Others_{item['parent_category']}"
+            prompt += f"\n{unique_key}: [Define what other {item['parent_category'].lower()} are included beyond {', '.join(item['sibling_segments'])}. Be specific about what additional categories are covered. 100-120 words.]"
         else:
-            prompt += f"\n{item['name']}: [Brief definition based on {item['sub_areas']}]"
+            prompt += f"\n{item['name']}: [Detailed definition covering scope, key aspects, and market context based on {item['sub_areas']}]"
 
     prompt += f"""
 
@@ -338,8 +339,8 @@ Return ONLY valid JSON (no extra text):
 }}
 
 Requirements:
-- Each definition: 1-2 sentences ONLY
-- Professional, concise language
+- Each definition: 100-120 words covering scope, products, applications, and market context
+- Professional, comprehensive language
 - For "Others" segments: Specifically explain what additional items/categories are included beyond the explicitly listed segments in that category
 - No extra newlines or spacing
 """
@@ -357,7 +358,7 @@ def generate_all_definitions_batch(nested_dict: dict, headline: str) -> dict:
         messages=[
             {
                 "role": "system",
-                "content": "You are a market research expert. Generate concise, professional definitions in JSON format. Keep each definition to 1-2 sentences maximum.",
+                "content": "You are a market research expert. Generate detailed, professional definitions in JSON format. Each definition should be 100-120 words covering scope, key products/services, applications, and market context.",
             },
             {"role": "user", "content": prompt},
         ],
@@ -369,7 +370,7 @@ def generate_all_definitions_batch(nested_dict: dict, headline: str) -> dict:
     cleaned_definitions = {}
     for key, value in definitions.items():
         cleaned_value = ' '.join(value.split())
-        cleaned_definitions[key] = cleaned_value
+        cleaned_definitions[key.strip()] = cleaned_value
     
     logger.info(f"Generated {len(cleaned_definitions)} definitions in one call")
     return cleaned_definitions
@@ -379,7 +380,7 @@ def build_table_data(nested_dict: dict, definitions: dict, headline: str) -> lis
     """Build table sections from definitions"""
     table_sections = []
 
-    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "")
+    headline_clean = headline.replace("Global ", "").replace("global ", "").replace("Market ", "").replace("market ", "").strip()
     headline_def = definitions.get(headline_clean, "Market definition")
 
     table_sections.append(
@@ -392,7 +393,11 @@ def build_table_data(nested_dict: dict, definitions: dict, headline: str) -> lis
     for level_0_name, level_1_dict in nested_dict.items():
         table_rows = []
         for level_1_name in level_1_dict.keys():
-            definition = definitions.get(level_1_name, f"Definition for {level_1_name}")
+            if level_1_name.lower() in ["others", "other"]:
+                unique_key = f"Others_{level_0_name}"
+                definition = definitions.get(unique_key, definitions.get(level_1_name, f"Definition for {level_1_name}"))
+            else:
+                definition = definitions.get(level_1_name, f"Definition for {level_1_name}")
             table_rows.append({"title": level_1_name, "definition": definition})
 
         table_sections.append({"header": level_0_name.upper(), "rows": table_rows})
@@ -977,7 +982,7 @@ class AIService:
             f"The {context['headline']} is valued at {context['cur']} {context['rev_current']} "
             f"{context['value_in']} in {context['base_year']}, and is expected to reach "
             f"{context['cur']} {context['rev_future']} {context['value_in']} by {context['forecast_year']}. "
-            f"The market shows a steady CAGR of {context.get('cagr')}% from 2025 to 2032."
+            f"The market shows a steady CAGR of {context.get('cagr')}% from {int(context['base_year']) + 1} to {context['forecast_year']}."
         )
 
         prompt = f"Write an executive summary for {context['headline']} focusing on key market drivers, trends, and growth factors within 50 words stricly. Do not include market size or revenue figures as they are already provided. Focus on qualitative insights about market dynamics, key players, and future outlook. ( start directly from setence without any intro like 'The executive summary is...')"
@@ -1209,13 +1214,13 @@ Please talk about specific market impacting factors relevant to {market_name}.""
 
     def _generate_company_info(self, context: Dict[str, Any]) -> Dict[str, str]:
         logger.info(f"Generating company info for: {context['company_name']}")
-        prompt = f"""Generate information about {context["company_name"]} in the "{context["headline"]}" domain. 
+        base_year = context.get("base_year", "2024")
+        prompt = f"""Generate information about {context["company_name"]} in the "{context["headline"]}" domain.
         Return the information in the following JSON format:
         {{
             "company_name": "{context["company_name"]}",
             "headquarters": "",
             "employee_count": "",
-            "revenue": "",
             "top_product": "",
             "description_product": "",
             "estd": "",
@@ -1228,20 +1233,19 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         The short_description_company should be around 100 words. I want you to act as a Research Analyst and give Company Overview of "{context["company_name"]}" in around 10-11 lines (In one paragraph only) which should not talk about Headquarter Country, Establishment/Foundation Year, Number of Employees or Revenue and should not use any marketing/promotional words like, largest, prominent, diversified, recognized, among others (You can talk about its product/service related to {context["headline"]}, market presence, business strategy, recent developments, etc) like this for tone:
         Schlumberger Ltd (SLB) provides technology for reservoir characterization, production, drilling and processing to the oil and gas industry. The company supplies its products and services to the industry, from exploration through production and integrated pipeline solutions for hydrocarbon recovery. SLB's products and services include open-hole and cased-hole wireline logging; drilling services; well completion services, including well testing and artificial lift; well services such as cementing, coiled tubing, stimulations, and sand control; interpretation and consulting services; and integrated project management. The company has an operational presence in North America, Latin America, Europe and Africa, the Middle East and Asia. SLB is headquartered in Houston, Texas, the US..
 .       website should be the official website no Https ot http.
-        revenue should be in the format " X.XX billion" or " X.XX million" and should be correct 2024 data in USD only correct data must correct strict.
         ownership should be either "Public" or "Private".
         top product should be a product or service relevant to the headline market.
         description_product should be 50 words describing the top product.
         estd is year of establishment should be correct data.
         headquarters should be "Country" format and should be correct data.
-        employee_count should be in "X,XXX" or "XX,XXX" format and should be correct data.
+        employee_count should be in "X,XXX" or "XX,XXX" format and should be correct {base_year} data.
         Return ONLY valid JSON, no additional text. no urls/citations for references."""
 
         response = client.responses.create(
             model="gpt-5",
             tools=[{
                 "type": "web_search_preview",
-                "search_context_size": "high",
+                "search_context_size": "medium",
             }],
             input=[
                 {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
@@ -1353,21 +1357,26 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         """Generate complete financial overview with PARALLEL API calls"""
         logger.info(f"Generating financial overview for: {context['company_name']}")
         company = context["company_name"]
+        base_yr = int(context.get("base_year", 2024))
+        unit = context.get("value_in", "Billion")
+        yr1 = base_yr - 2
+        yr2 = base_yr - 1
+        yr3 = base_yr
 
         try:
             def get_revenue_data():
-                """Fetch revenue data 2022-2024"""
+                """Fetch revenue data for 3 years around base_year"""
                 revenue_prompt = f"""
-                Search the web and find {company}'s actual annual revenue figures for 2022, 2023, and 2024 in billions USD.
-                
+                Search the web and find {company}'s actual annual revenue figures for {yr1}, {yr2}, and {yr3} in {unit}s USD.
+
                 Return ONLY valid JSON in this EXACT format (no text, no explanations):
                 {{
-                    "2022": <number>,
-                    "2023": <number>,
-                    "2024": <number>
+                    "{yr1}": <number>,
+                    "{yr2}": <number>,
+                    "{yr3}": <number>
                 }}
-                
-                Revenue values must be numeric (one digit after decimal, don't round off strictly - example: if it's 49.95 take 49.9 or if its 13.0 take 13.0 ) and represent billions USD.
+
+                Revenue values must be numeric (two digits after decimal - example: if it's 49.956 take 49.95 or if its 13.0 take 13.00) and represent {unit}s USD.
                 Use realistic estimates based on {company}'s actual business scale and recent financial reports.
                 Do NOT use null, NA, Unknown, or any non-numeric values.
                 """
@@ -1376,7 +1385,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                     model="gpt-5",
                     tools=[{
                         "type": "web_search_preview",
-                        "search_context_size": "medium",
+                        "search_context_size": "high",
                     }],
                     input=[
                         {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
@@ -1397,7 +1406,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
             def get_segment_data():
                 """Fetch segment breakdown"""
                 segment_prompt = f"""
-                Search the web and find ALL main business segments/divisions for {company} along with their 2024 revenue percentage contribution.
+                Search the web and find ALL main business segments/divisions for {company} along with their {yr3} revenue percentage contribution.
                 
                 Return ONLY valid JSON in this EXACT format:
                 {{
@@ -1410,7 +1419,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                 Requirements:
                 1. Include ALL major revenue-generating segments for {company} based on annual reports
                 2. Percentages must add up to approximately 100%
-                3. Use actual 2024 business performance data
+                3. Use actual {yr3} business performance data
                 4. IF segment not available, then take seg-1 100% only
                 """
 
@@ -1418,7 +1427,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                     model="gpt-5",
                     tools=[{
                         "type": "web_search_preview",
-                        "search_context_size": "medium",
+                        "search_context_size": "high",
                     }],
                     input=[
                         {"role": "system", "content": "You are a JSON generator. Always return valid JSON and nothing else."},
@@ -1443,7 +1452,7 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                 segment_data = segment_future.result()
 
             logger.info(
-                f"Revenue data fetched: 2022=${revenue_data[2022]}B, 2023=${revenue_data[2023]}B, 2024=${revenue_data[2024]}B"
+                f"Revenue data fetched: {yr1}=${revenue_data[yr1]}, {yr2}=${revenue_data[yr2]}, {yr3}=${revenue_data[yr3]} {unit}"
             )
 
             segments_dict = {}
@@ -1462,11 +1471,18 @@ Please talk about specific market impacting factors relevant to {market_name}.""
 
             logger.info(f"Found {len(segment_names)} business segments")
 
+            rev_values = [revenue_data[yr1], revenue_data[yr2], revenue_data[yr3]]
+            if unit.lower() == "million" and any(v >= 1000 for v in rev_values):
+                revenue_data[yr1] = round(rev_values[0] / 1000, 2)
+                revenue_data[yr2] = round(rev_values[1] / 1000, 2)
+                revenue_data[yr3] = round(rev_values[2] / 1000, 2)
+                unit = "Billion"
+
             def get_revenue_analysis():
-                return self._generate_revenue_analysis(company, revenue_data)
-            
+                return self._generate_revenue_analysis(company, revenue_data, yr1, yr2, yr3, unit)
+
             def get_segmental_analysis():
-                return self._generate_segmental_analysis(company, revenue_data, segments_dict)
+                return self._generate_segmental_analysis(company, revenue_data, segments_dict, yr3, unit)
 
             with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
                 revenue_analysis_future = executor.submit(get_revenue_analysis)
@@ -1481,6 +1497,10 @@ Please talk about specific market impacting factors relevant to {market_name}.""
                 "segment_names": segment_names,
                 "revenue_analysis": revenue_analysis,
                 "segmental_analysis": segmental_analysis,
+                "unit": unit,
+                "yr1": yr1,
+                "yr2": yr2,
+                "yr3": yr3,
             }
 
             logger.info("Financial overview generated successfully")
@@ -1490,14 +1510,14 @@ Please talk about specific market impacting factors relevant to {market_name}.""
             logger.error(f"Error generating financial overview: {str(e)}")
             raise
 
-    def _generate_revenue_analysis(self, company: str, revenue_data: Dict) -> str:
+    def _generate_revenue_analysis(self, company: str, revenue_data: Dict, yr1: int = 2023, yr2: int = 2024, yr3: int = 2025, unit: str = "Billion") -> str:
         """Generate revenue analysis using gpt-5-mini"""
         prompt = f"""
         Write a professional revenue analysis for {company} based on the following data:
-        - 2022: USD {revenue_data[2022]} Billion
-        - 2023: USD {revenue_data[2023]} Billion  
-        - 2024: USD {revenue_data[2024]} Billion
-        
+        - {yr1}: USD {revenue_data[yr1]:.2f} {unit}
+        - {yr2}: USD {revenue_data[yr2]:.2f} {unit}
+        - {yr3}: USD {revenue_data[yr3]:.2f} {unit}
+
         Requirements:
         1. Write exactly 120-130 words
         2. Focus on year-over-year growth trends and performance
@@ -1520,16 +1540,16 @@ Please talk about specific market impacting factors relevant to {market_name}.""
         return response.choices[0].message.content.strip()
 
     def _generate_segmental_analysis(
-        self, company: str, revenue_data: Dict, segments: Dict
+        self, company: str, revenue_data: Dict, segments: Dict, yr3: int = 2025, unit: str = "Billion"
     ) -> str:
         """Generate segmental analysis using gpt-5-mini"""
         segment_breakdown = [f"- {seg}: {pct:.1f}%" for seg, pct in segments.items()]
         segments_text = "\n".join(segment_breakdown)
 
         prompt = f"""
-        Write a professional business segmental analysis for {company} based on 2024 data:
-        
-        Total Revenue 2024: USD {revenue_data[2024]} Billion
+        Write a professional business segmental analysis for {company} based on {yr3} data:
+
+        Total Revenue {yr3}: USD {revenue_data[yr3]:.2f} {unit}
         Business Segment Breakdown:
         {segments_text}
         
@@ -1921,24 +1941,28 @@ def validate_segment_hierarchy(segment_text):
     return errors
 
 
-def generate_actual_data():
-    data = [
-        [2019, 7.0, 5.0, 4.0, 3.5, 3.1, 2.5, 2.0],
-        [2020, 7.5, 5.4, 4.3, 3.7, 3.3, 2.7, 2.2],
-        [2021, 8.1, 5.7, 4.6, 4.0, 3.6, 2.9, 2.3],
-        [2022, 8.7, 6.1, 5.0, 4.3, 3.8, 3.1, 2.5],
-        [2023, 9.3, 6.6, 5.3, 4.7, 4.1, 3.3, 2.7],
-        [2024, 9.9, 7.1, 5.8, 5.0, 4.4, 3.6, 2.9],
-        [2025, 10.7, 7.7, 6.2, 5.4, 4.8, 3.8, 3.1],
-        [2026, 11.6, 8.2, 6.7, 5.8, 5.1, 4.1, 3.3],
-        [2027, 12.4, 8.9, 7.2, 6.2, 5.5, 4.5, 3.6],
-        [2028, 13.4, 9.6, 7.7, 6.7, 5.9, 4.8, 3.8],
-        [2029, 14.4, 10.3, 8.4, 7.2, 6.4, 5.1, 4.2],
-        [2030, 15.4, 11.1, 9.0, 7.7, 6.8, 5.6, 4.5],
-        [2031, 16.6, 11.9, 9.7, 8.4, 7.3, 5.9, 4.8],
-        [2032, 17.8, 12.8, 10.4, 9.0, 7.9, 6.4, 5.2],
-    ]
-    return data
+def generate_actual_data(end_year=2032):
+    base_data = {
+        2019: [7.0, 5.0, 4.0, 3.5, 3.1, 2.5, 2.0],
+        2020: [7.5, 5.4, 4.3, 3.7, 3.3, 2.7, 2.2],
+        2021: [8.1, 5.7, 4.6, 4.0, 3.6, 2.9, 2.3],
+        2022: [8.7, 6.1, 5.0, 4.3, 3.8, 3.1, 2.5],
+        2023: [9.3, 6.6, 5.3, 4.7, 4.1, 3.3, 2.7],
+        2024: [9.9, 7.1, 5.8, 5.0, 4.4, 3.6, 2.9],
+        2025: [10.7, 7.7, 6.2, 5.4, 4.8, 3.8, 3.1],
+        2026: [11.6, 8.2, 6.7, 5.8, 5.1, 4.1, 3.3],
+        2027: [12.4, 8.9, 7.2, 6.2, 5.5, 4.5, 3.6],
+        2028: [13.4, 9.6, 7.7, 6.7, 5.9, 4.8, 3.8],
+        2029: [14.4, 10.3, 8.4, 7.2, 6.4, 5.1, 4.2],
+        2030: [15.4, 11.1, 9.0, 7.7, 6.8, 5.6, 4.5],
+        2031: [16.6, 11.9, 9.7, 8.4, 7.3, 5.9, 4.8],
+        2032: [17.8, 12.8, 10.4, 9.0, 7.9, 6.4, 5.2],
+    }
+    for yr in range(2033, end_year + 1):
+        prev = base_data[yr - 1]
+        prev2 = base_data[yr - 2]
+        base_data[yr] = [round(prev[i] * (prev[i] / prev2[i]), 1) for i in range(7)]
+    return [[yr] + base_data[yr] for yr in range(2019, end_year + 1)]
 
 
 def parse_segment_input(segment_input: str) -> Dict[str, Dict]:
@@ -1978,8 +2002,12 @@ def generate_toc_data(
     forecast_period: str,
     user_segment: str,
     kmi_items: List[str] = None,
+    historical_year: str = "2019-2023",
+    base_year: str = "2024",
+    forecast_year: str = "2032",
 ) -> Dict[str, int]:
     logger.info("Generating Table of Contents data")
+    full_range = f"{historical_year.split('-')[0]}-{forecast_year}"
     toc_start_levels = {
         "1. Introduction": 0,
         "1.1. Objectives of the Study": 1,
@@ -2013,7 +2041,7 @@ def generate_toc_data(
         "Key Success Factors",
         "Market Impacting Factors",
         "Top Investment Pockets",
-        "Market Attractiveness Index, 2024",
+        f"Market Attractiveness Index, {base_year}",
         "Market Ecosystem",
         "PESTEL Analysis",
         "Pricing Analysis",
@@ -2044,12 +2072,12 @@ def generate_toc_data(
     for type_index, (type_name, points) in enumerate(
         nested_dict.items(), start=main_index
     ):
-        toc_mid[f"{type_index}. {headline} Size by {type_name} (2019-2032)"] = 0
+        toc_mid[f"{type_index}. {headline} Size by {type_name} ({full_range})"] = 0
         add_nested_items(points, str(type_index), 1)
 
     x = len(list(nested_dict.keys())) + 6
     toc_end_levels = {
-        f"{x}. {headline} Size by Region (2019-2032)": 0,
+        f"{x}. {headline} Size by Region ({full_range})": 0,
         f"{x}.1. North America ({user_segment})": 1,
         f"{x}.1.1. US": 2,
         f"{x}.1.2. Canada": 2,
@@ -2076,10 +2104,10 @@ def generate_toc_data(
         f"{x}.5.3. Rest of Middle East & Africa": 2,
         f"{x+1}. Competitive Landscape": 0,
         f"{x+1}.1. Competitive Dashboard": 1,
-        f"{x+1}.2. Market Positioning of Key Players, 2024": 1,
+        f"{x+1}.2. Market Positioning of Key Players, {base_year}": 1,
         f"{x+1}.3. Strategies Adopted by Key Market Players": 1,
         f"{x+1}.4. Recent Developments in the Market": 1,
-        f"{x+1}.5. Company Market Share Analysis, 2024": 1,
+        f"{x+1}.5. Company Market Share Analysis, {base_year}": 1,
         f"{x+2}. Key Company Profiles": 0,
     }
 
@@ -2201,15 +2229,20 @@ def create_chart_on_slide(
 def create_financial_charts_on_slide(slide, financial_data, company):
     """Create bar chart and pie chart for financial overview on slide 36"""
     logger.info(f"Creating financial charts for {company}")
+    yr1 = financial_data.get("yr1", 2023)
+    yr2 = financial_data.get("yr2", 2024)
+    yr3 = financial_data.get("yr3", 2025)
+    unit = financial_data.get("unit", "Billion")
+    unit_short = "Mn" if unit.lower() == "million" else "Bn"
 
     chart_data = CategoryChartData()
-    chart_data.categories = ["2022", "2023", "2024"]
+    chart_data.categories = [str(yr1), str(yr2), str(yr3)]
     chart_data.add_series(
-        "Revenue (USD Bn)",
+        f"Revenue (USD {unit_short})",
         [
-            financial_data["revenue"][2022],
-            financial_data["revenue"][2023],
-            financial_data["revenue"][2024],
+            financial_data["revenue"][yr1],
+            financial_data["revenue"][yr2],
+            financial_data["revenue"][yr3],
         ],
     )
 
@@ -2231,6 +2264,8 @@ def create_financial_charts_on_slide(slide, financial_data, company):
     data_labels.font.size = Pt(10)
     data_labels.font.name = "Poppins"
     data_labels.font.bold = False
+    data_labels.number_format = '0.00'
+    data_labels.number_format_is_linked = False
 
     value_axis = bar_chart.value_axis
     value_axis.visible = False
@@ -2274,10 +2309,19 @@ def create_financial_charts_on_slide(slide, financial_data, company):
     data_labels.font.size = Pt(max(7, 10 - (num_segments - 4)))
     data_labels.font.name = "Poppins"
     data_labels.show_value = False
-    data_labels.show_percentage = True
+    data_labels.show_percentage = False
     data_labels.show_category_name = False
 
     series = pie_chart.series[0]
+    segment_values = list(financial_data["segments"].values())
+    total_seg = sum(segment_values)
+    for i, point in enumerate(series.points):
+        pct = (segment_values[i] / total_seg * 100) if total_seg > 0 else 0
+        point.data_label.text_frame.text = f"{pct:.1f}%"
+        for run in point.data_label.text_frame.paragraphs[0].runs:
+            run.font.size = Pt(max(7, 10 - (num_segments - 4)))
+            run.font.name = "Poppins"
+
     points = series.points
 
     color_palette = [
@@ -2375,10 +2419,10 @@ def generate_ppt():
         headline = form_data["headline"]
         headline_2 = headline.upper()
         headline_3 = headline_2.replace("GLOBAL", "").strip()
-        historical_year = "2019-2023"
-        base_year = "2024"
-        forecast_year = "2032"
-        forecast_period = "2025-2032"
+        historical_year = form_data.get("historical_year", "2019-2023")
+        base_year = form_data.get("base_year", "2024")
+        forecast_year = form_data.get("forecast_year", "2032")
+        forecast_period = form_data.get("forecast_period", "2025-2032")
         cur = "USD"
         value_in = form_data["value_in"]
         currency = f"{cur} {value_in}"
@@ -2403,7 +2447,7 @@ def generate_ppt():
             "Key Success Factors",
             "Market Impacting Factors",
             "Top Investment Pockets",
-            "Market Attractiveness Index, 2024",
+            f"Market Attractiveness Index, {base_year}",
             "Market Ecosystem",
             "PESTEL Analysis",
             "Pricing Analysis",
@@ -2455,7 +2499,8 @@ def generate_ppt():
         logger.info(f"[{request_id}] Context generated successfully")
 
         toc_data_levels = generate_toc_data(
-            nested_dict, headline, forecast_period, user_segment, kmi_items
+            nested_dict, headline, forecast_period, user_segment, kmi_items,
+            historical_year=historical_year, base_year=base_year, forecast_year=forecast_year,
         )
 
         ai_context = {
@@ -2491,6 +2536,10 @@ def generate_ppt():
         industry_associations = ai_results["industry_associations"]
         company_info = ai_results["company_info"]
         financial_overview = ai_results["financial_overview"]
+        fo_final_unit = financial_overview.get("unit", value_in)
+        fo_yr3 = financial_overview.get("yr3", int(base_year))
+        fo_base_rev = financial_overview["revenue"].get(fo_yr3, 0)
+        company_rev_str = f"{fo_base_rev:.2f} {fo_final_unit}"
         success_factors_data = ai_results["success_factors"]
         market_factors_data = ai_results["market_impacting_factors"]
         industry_title_1 = para_15_dict["title"]
@@ -2673,6 +2722,7 @@ def generate_ppt():
             17 + SLIDE_SHIFT: {
                 "heading": headline_2,
                 "timeline": f"HISTORIC YEAR {historical_year} \nFORECAST TO {forecast_year}",
+                "para": f"The {headline} is valued at {cur} {rev_current} {value_in.capitalize()} in {base_year}, and is expected to reach {cur} {rev_future} {value_in.capitalize()} by {forecast_year}. The market shows a steady CAGR of {cagr}% from {int(base_year) + 1} to {forecast_year}.",
             },
             19 + SLIDE_SHIFT: {"industry_title": industry_title, "para": para_14},
             20 + SLIDE_SHIFT: {"industry_title": industry_title_2, "para": para_14_1},
@@ -2692,7 +2742,7 @@ def generate_ppt():
             28 + SLIDE_SHIFT: {
                 "heading": headline_2,
                 "type_1": main_topic[0].upper() if main_topic else "Type 1",
-                "timeline": "2019-2032",
+                "timeline": f"{historical_year.split('-')[0]}-{forecast_year}",
                 "cur": f"{cur.upper()} {value_in.upper()}",
             },
             29 + SLIDE_SHIFT: {
@@ -2701,19 +2751,19 @@ def generate_ppt():
             },
             30 + SLIDE_SHIFT: {
                 "heading": headline_2,
-                "timeline": "2019-2032",
+                "timeline": f"{historical_year.split('-')[0]}-{forecast_year}",
                 "cur": f"{cur.upper()} {value_in.upper()}",
             },
             31 + SLIDE_SHIFT: {
                 "2_heading": headline_3.upper(),
                 "type_1": main_topic[0].upper() if main_topic else "Type 1",
-                "timeline": "2019-2032",
+                "timeline": f"{historical_year.split('-')[0]}-{forecast_year}",
                 "cur": f"{cur.upper()} {value_in.upper()}",
             },
             32 + SLIDE_SHIFT: {
                 "2_heading": headline_3.upper(),
                 "type_1": main_topic[0].upper() if main_topic else "Type 1",
-                "timeline": "2019-2032",
+                "timeline": f"{historical_year.split('-')[0]}-{forecast_year}",
                 "cur": f"{cur.upper()} {value_in.upper()}",
             },
             33 + SLIDE_SHIFT: {
@@ -2727,7 +2777,7 @@ def generate_ppt():
                 "h": company_info["headquarters"],
                 "geo": company_info["geographic_presence"],
                 "es": company_info["estd"],
-                "rev": company_info["revenue"],
+                "rev": company_rev_str,
             },
             36 + SLIDE_SHIFT: {
                 "2_heading": headline_2,
@@ -2742,12 +2792,13 @@ def generate_ppt():
                 "es": company_info["estd"],
                 "product": company_info["top_product"],
                 "para": company_info["short_description_company"],
-                "rev": company_info["revenue"],
+                "rev": company_rev_str,
                 "geo": company_info["geographic_presence"],
                 "description": company_info["description_product"],
             },
             38 + SLIDE_SHIFT: {
                 "company": company_info["company_name"].upper(),
+                "unit": financial_overview.get("unit", value_in).upper(),
                 "revenue_analysis": financial_overview["revenue_analysis"],
                 "segmental_analysis": financial_overview["segmental_analysis"],
             },
@@ -2826,8 +2877,10 @@ def generate_ppt():
         row_labels = graph_table.copy()
         row_labels.append("Total")
 
-        years = [str(y) for y in range(2019, 2033)]
-        columns = [""] + years + ["CAGR (2025–2032)"]
+        start_year_int = int(historical_year.split("-")[0])
+        end_year_int = int(forecast_year)
+        years = [str(y) for y in range(start_year_int, end_year_int + 1)]
+        columns = [""] + years + [f"CAGR ({int(base_year)+1}\u2013{forecast_year})"]
         num_rows = len(row_labels) + 1
         num_cols = len(columns)
 
@@ -2845,10 +2898,17 @@ def generate_ppt():
             if slide_index < len(prs.slides):
                 slide = prs.slides[slide_index]
 
-                left = Inches(0.45)
+                left = Inches(0.3)
                 top = Inches(4.05)
-                width = Inches(8.7)
-                height = Inches(0.72 + num_rows * 0.3)
+                num_year_cols = len(years)
+                first_col_w = 0.9
+                cagr_col_w = 0.7
+                max_table_w = 8.3
+                remaining_w = max_table_w - first_col_w - cagr_col_w
+                year_col_w = remaining_w / num_year_cols
+                table_width = max_table_w
+                width = Inches(table_width)
+                height = Inches(1 + num_rows * 0.3)
                 table = slide.shapes.add_table(
                     num_rows, num_cols, left, top, width, height
                 ).table
@@ -2915,11 +2975,11 @@ def generate_ppt():
 
                 for col_index in range(num_cols):
                     if col_index == 0:
-                        table.columns[col_index].width = Inches(1)
+                        table.columns[col_index].width = Inches(first_col_w)
                     elif col_index == num_cols - 1:
-                        table.columns[col_index].width = Inches(0.8)
+                        table.columns[col_index].width = Inches(cagr_col_w)
                     else:
-                        table.columns[col_index].width = Inches(0.4)
+                        table.columns[col_index].width = Inches(year_col_w)
 
         if main_topic:
             chart_columns = graph_table
@@ -2927,7 +2987,7 @@ def generate_ppt():
             for idx in target_slide_indices:
                 if idx < len(prs.slides):
                     slide = prs.slides[idx]
-                    data = generate_actual_data()
+                    data = generate_actual_data(end_year=end_year_int)
                     create_chart_on_slide(
                         slide,
                         data,
@@ -2981,7 +3041,7 @@ def generate_ppt():
 
         clean_market_name = clean_filename(headline)
         clean_sqcode = clean_filename(sqcode)
-        filename = f"Sample_{clean_market_name}_{clean_sqcode}_Skyquest_2025_GV1.pptx"
+        filename = f"Sample_{clean_market_name}_{clean_sqcode}_Skyquest_{int(base_year)+1}_GV1.pptx"
         filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
 
         logger.info(f"[{request_id}] Saving presentation to: {filepath}")
@@ -3179,7 +3239,7 @@ def write_excel_row(ws, row_idx, values, font=None, fill=None, alignment=None):
         if alignment:
             cell.alignment = alignment
 
-def write_segment_table(ws, country_name, seg_node, years, start_row, headline, max_depth=6, default_fill=LEVEL1_FILL, add_spacer=False):
+def write_segment_table(ws, country_name, seg_node, years, start_row, headline, max_depth=6, default_fill=LEVEL1_FILL, add_spacer=False, cagr_label='CAGR (2025-2032)'):
     """Write segment table to worksheet"""
     def _write_node(node, start_row, depth=0, max_depth=6):
         merge_cols = 2 + len(years)
@@ -3194,7 +3254,7 @@ def write_segment_table(ws, country_name, seg_node, years, start_row, headline, 
         if ws.column_dimensions['A'].width < 32:
             ws.column_dimensions['A'].width = 32
 
-        headings = [node['title']] + years + ['CAGR (2025-2032)']
+        headings = [node['title']] + years + [cagr_label]
         write_excel_row(
             ws, start_row + 1, headings,
             font=Font(name='Poppins', bold=True, color=FONT_WHITE),
@@ -3241,7 +3301,7 @@ def write_segment_table(ws, country_name, seg_node, years, start_row, headline, 
 
     return _write_node(seg_node, start_row, depth=0, max_depth=max_depth)
 
-def generate_tables_for_country(ws, segment_tree, years, start_row, country_name, headline, full_hierarchy=False):
+def generate_tables_for_country(ws, segment_tree, years, start_row, country_name, headline, full_hierarchy=False, cagr_label='CAGR (2025-2032)'):
     """Generate tables for a specific country"""
     row = start_row
     for seg in segment_tree:
@@ -3250,7 +3310,8 @@ def generate_tables_for_country(ws, segment_tree, years, start_row, country_name
                 ws, country_name, seg, years, row, headline,
                 max_depth=6 if full_hierarchy else 1,
                 default_fill=LEVEL1_FILL if full_hierarchy else 'F2F0EF',
-                add_spacer=full_hierarchy
+                add_spacer=full_hierarchy,
+                cagr_label=cagr_label
             )
             if not full_hierarchy:
                 row += 1
@@ -3277,16 +3338,22 @@ def generate_datapack():
         headline = form_data['headline']
         segment_input = form_data['segment_input']
         sqcode = form_data.get('sqcode', 'DATAPACK').strip()
-        
+        historical_year = form_data.get('historical_year', '2019-2023')
+        base_year = form_data.get('base_year', '2024')
+        forecast_year = form_data.get('forecast_year', '2032')
+
         logger.info(f"[{request_id}] Processing datapack for: {headline}")
-        
+
         # Parse segment data
         segment_lines = [line.strip() for line in segment_input.split('\n') if line.strip()]
         segments = parse_excel_segment_data(segment_lines)
         segment_tree = build_excel_segment_tree(segments)
         assign_subsegment_colors(segment_tree)
-        
-        years = [str(y) for y in range(2019, 2033)]
+
+        start_year_int = int(historical_year.split("-")[0])
+        end_year_int = int(forecast_year)
+        years = [str(y) for y in range(start_year_int, end_year_int + 1)]
+        cagr_label = f"CAGR ({int(base_year)+1}-{forecast_year})"
         
         regions = ["Global Market Size", "North America", "Europe", "Asia-Pacific", "LATAM", "MEA"]
         region_countries = {
@@ -3336,14 +3403,16 @@ def generate_datapack():
                     ws, header_name, seg_node, years, row, headline,
                     max_depth=1,
                     default_fill='F2F0EF',
-                    add_spacer=full_hierarchy
+                    add_spacer=full_hierarchy,
+                    cagr_label=cagr_label
                 )
                 row += 1
-            
+
             for country in region_countries.get(region, []):
                 row = generate_tables_for_country(
                     ws, segment_tree, years, row, country, headline,
-                    full_hierarchy=full_hierarchy
+                    full_hierarchy=full_hierarchy,
+                    cagr_label=cagr_label
                 )
         
         wb_tables.save(temp_tables_path)
@@ -3459,7 +3528,7 @@ def generate_datapack():
         
         clean_market_name = clean_filename(headline)
         clean_sqcode = clean_filename(sqcode)
-        filename = f"Datapack_{clean_market_name}_{clean_sqcode}_SkyQuest_2025.xlsx"
+        filename = f"Datapack_{clean_market_name}_{clean_sqcode}_SkyQuest_{int(base_year)+1}.xlsx"
         
         elapsed = time.time() - start_time
         timing_logger.info(f"[{request_id}] Datapack generation completed in {elapsed:.2f}s")

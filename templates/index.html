@@ -646,19 +646,26 @@
                         Specify market valuation and growth projections
                     </div>
                     
-                    <div class="info-panel">
-                        <div class="info-panel-header">
-                            <i class="fas fa-info-circle info-icon"></i>
-                            <span class="info-title">Fixed Parameters</span>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="hist_start">Historical Start Year <span class="required-indicator">*</span></label>
+                            <input type="number" id="hist_start" name="hist_start" value="2019" min="2000" max="2050" required oninput="updateYearFields()">
                         </div>
-                        <div class="info-content">
-                            <ul class="info-list">
-                                <li>Historical Analysis: 2019-2023</li>
-                                <li>Base Year: 2024</li>
-                                <li>Forecast Period: 2025-2032</li>
-                                <li>Currency: USD</li>
-                            </ul>
+                        <div class="form-group">
+                            <label for="hist_end">Historical End Year <span class="required-indicator">*</span></label>
+                            <input type="number" id="hist_end" name="hist_end" value="2023" min="2000" max="2050" required oninput="updateYearFields()">
                         </div>
+                        <div class="form-group">
+                            <label for="base_year_input">Base Year <span class="required-indicator">*</span></label>
+                            <input type="number" id="base_year_input" name="base_year_input" value="2024" min="2000" max="2050" required oninput="updateYearFields()">
+                        </div>
+                        <div class="form-group">
+                            <label for="forecast_year_input">Forecast End Year <span class="required-indicator">*</span></label>
+                            <input type="number" id="forecast_year_input" name="forecast_year_input" value="2032" min="2000" max="2050" required oninput="updateYearFields()">
+                        </div>
+                    </div>
+                    <div id="year-summary" style="margin-top: 0.5rem; padding: 0.5rem 0.75rem; background: #f0f4ff; border-radius: 6px; font-size: 0.85rem; color: #4a5568;">
+                        Historical: 2019-2023 | Base: 2024 | Forecast: 2025-2032 | Currency: USD
                     </div>
                     
                     <div class="form-grid">
@@ -676,7 +683,7 @@
                             <div class="error-message" id="value_in-error">Please select a value unit</div>
                         </div>
                         <div class="form-group">
-                            <label for="rev_current">
+                            <label for="rev_current" id="label_rev_current">
                                 Market Size 2024
                                 <span class="required-indicator">*</span>
                             </label>
@@ -692,7 +699,7 @@
                             <div class="error-message" id="rev_current-error">Current market size is required</div>
                         </div>
                         <div class="form-group">
-                            <label for="rev_future">
+                            <label for="rev_future" id="label_rev_future">
                                 Projected Size 2032
                                 <span class="required-indicator">*</span>
                             </label>
@@ -708,7 +715,7 @@
                             <div class="error-message" id="rev_future-error">Future market size is required</div>
                         </div>
                         <div class="form-group">
-                            <label for="cagr">
+                            <label for="cagr" id="label_cagr">
                                 CAGR (2025-2032) %
                                 <span class="required-indicator">*</span>
                             </label>
@@ -831,10 +838,10 @@ Tesla Inc.</div>
                 </div>
 
                 <input type="hidden" name="headline_2" id="headline_2">
-                <input type="hidden" name="historical_year" value="2019-2023">
-                <input type="hidden" name="base_year" value="2024">
-                <input type="hidden" name="forecast_year" value="2032">
-                <input type="hidden" name="forecast_period" value="2025-2032">
+                <input type="hidden" name="historical_year" value="">
+                <input type="hidden" name="base_year" value="">
+                <input type="hidden" name="forecast_year" value="">
+                <input type="hidden" name="forecast_period" value="">
                 <input type="hidden" name="cur" value="USD">
 
                 <div class="submit-section">
@@ -909,6 +916,33 @@ Tesla Inc.</div>
     </div>
 
     <script>
+        function updateYearFields() {
+            const histStart = document.getElementById('hist_start').value;
+            const histEnd = document.getElementById('hist_end').value;
+            const baseYear = document.getElementById('base_year_input').value;
+            const forecastYear = document.getElementById('forecast_year_input').value;
+            const forecastStart = parseInt(baseYear) + 1;
+
+            document.querySelector('input[name="historical_year"]').value = histStart + '-' + histEnd;
+            document.querySelector('input[name="base_year"]').value = baseYear;
+            document.querySelector('input[name="forecast_year"]').value = forecastYear;
+            document.querySelector('input[name="forecast_period"]').value = forecastStart + '-' + forecastYear;
+
+            document.getElementById('year-summary').textContent =
+                'Historical: ' + histStart + '-' + histEnd +
+                ' | Base: ' + baseYear +
+                ' | Forecast: ' + forecastStart + '-' + forecastYear +
+                ' | Currency: USD';
+
+            document.getElementById('label_rev_current').innerHTML =
+                'Market Size ' + baseYear + ' <span class="required-indicator">*</span>';
+            document.getElementById('label_rev_future').innerHTML =
+                'Projected Size ' + forecastYear + ' <span class="required-indicator">*</span>';
+            document.getElementById('label_cagr').innerHTML =
+                'CAGR (' + forecastStart + '-' + forecastYear + ') % <span class="required-indicator">*</span>';
+        }
+        document.addEventListener('DOMContentLoaded', updateYearFields);
+
         let startTime;
         let timerInterval;
         let isGenerating = false;
