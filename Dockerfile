@@ -34,4 +34,4 @@ RUN touch /app/logs/app.log /app/logs/timing.log && \
 
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--workers", "4", "--threads", "4", "--timeout", "300", "--capture-output", "--enable-stdio-inheritance"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--workers", "4", "--threads", "4", "--timeout", "600", "--capture-output", "--enable-stdio-inheritance"]

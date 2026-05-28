@@ -1200,12 +1200,15 @@ Tesla Inc.</div>
             showModal();
             try {
                 const resp = await fetch('/gii/generate-ppt', { method:'POST', body: new FormData(this) });
+                const contentType = resp.headers.get('content-type') || '';
                 if (resp.ok) {
                     const result = await resp.json();
                     showSuccess(`/gii/download-gii/${encodeURIComponent(result.filename)}`);
-                } else {
+                } else if (contentType.includes('application/json')) {
                     const err = await resp.json();
                     throw new Error(err.message||'Report generation failed');
+                } else {
+                    throw new Error(`Server error (${resp.status}). The request may have timed out — please try again.`);
                 }
             } catch(err) { showError(err.message||'An error occurred'); }
         });
